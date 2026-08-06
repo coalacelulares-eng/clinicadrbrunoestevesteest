@@ -31,6 +31,7 @@ import fachada from "@/assets/clinica-2.webp";
 import recepcao from "@/assets/clinica-3.webp";
 import lounge from "@/assets/clinica-4.webp";
 import estar from "@/assets/clinica-1.webp";
+import clinicaVideo from "@/assets/clinicathebit.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -119,12 +120,15 @@ function Home() {
 
           <div className="relative mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-[2rem] border border-gold/40 p-1.5">
-              <img
-                src={lounge}
-                alt="Lounge de espera da clínica Thebit"
-                width={652}
-                height={1020}
-                className="animate-hero-zoom h-[26rem] w-full rounded-[1.7rem] object-cover md:h-[34rem]"
+              <video
+                src={clinicaVideo.url}
+                poster={lounge}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Vídeo institucional da Clínica Thebit"
+                className="h-[26rem] w-full rounded-[1.7rem] object-cover md:h-[34rem]"
               />
             </div>
             <Fleur className="animate-fleur absolute -bottom-6 -left-6 size-12 text-gold" />
