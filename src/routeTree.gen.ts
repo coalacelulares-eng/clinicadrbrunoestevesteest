@@ -16,6 +16,7 @@ import { Route as EspecialidadesRouteImport } from './routes/especialidades'
 import { Route as EstruturaRouteImport } from './routes/estrutura'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TecnologiasRouteImport } from './routes/tecnologias'
+import { Route as ApiSimulacaoRouteImport } from './routes/api/simulacao'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -52,6 +53,11 @@ const TecnologiasRoute = TecnologiasRouteImport.update({
   path: '/tecnologias',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSimulacaoRoute = ApiSimulacaoRouteImport.update({
+  id: '/api/simulacao',
+  path: '/api/simulacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
+  '/api/simulacao': typeof ApiSimulacaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
+  '/api/simulacao': typeof ApiSimulacaoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
+  '/api/simulacao': typeof ApiSimulacaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/estrutura'
     | '/sobre'
     | '/tecnologias'
+    | '/api/simulacao'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/estrutura'
     | '/sobre'
     | '/tecnologias'
+    | '/api/simulacao'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/estrutura'
     | '/sobre'
     | '/tecnologias'
+    | '/api/simulacao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   EstruturaRoute: typeof EstruturaRoute
   SobreRoute: typeof SobreRoute
   TecnologiasRoute: typeof TecnologiasRoute
+  ApiSimulacaoRoute: typeof ApiSimulacaoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TecnologiasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/simulacao': {
+      id: '/api/simulacao'
+      path: '/api/simulacao'
+      fullPath: '/api/simulacao'
+      preLoaderRoute: typeof ApiSimulacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,17 +203,8 @@ const rootRouteChildren: RootRouteChildren = {
   EstruturaRoute: EstruturaRoute,
   SobreRoute: SobreRoute,
   TecnologiasRoute: TecnologiasRoute,
+  ApiSimulacaoRoute: ApiSimulacaoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Fleur } from "@/components/site/Fleur";
 import { ProcedureQuizDialog } from "@/components/site/ProcedureQuizDialog";
 import { BeforeAfterShowcase } from "@/components/site/BeforeAfterShowcase";
+import { AiVisualizer } from "@/components/site/AiVisualizer";
 import { Faq, GoalQuiz } from "@/components/site/HomeExtraSections";
 import { useI18n } from "@/lib/i18n";
 import { CLINIC, whatsappLink } from "@/lib/site";
@@ -306,6 +307,8 @@ function Home() {
       </section>
 
       <BeforeAfterShowcase />
+
+      <AiVisualizer />
 
       {/* Depoimentos */}
       <section className="px-6 pb-24" id="depoimentos">
