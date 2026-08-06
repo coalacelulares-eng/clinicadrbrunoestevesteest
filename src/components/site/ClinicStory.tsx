@@ -98,7 +98,7 @@ export function ClinicStory() {
                 Esse legado se traduziu em método — e hoje segue vivo na conduta de toda a equipe,
                 sob a continuidade do seu filho, Dr. Daniel Thebit.
               </p>
-              <ul className="mt-7 grid gap-3 text-sm">
+              <ul className="mt-7 grid gap-3 text-sm uppercase tracking-[0.08em]">
                 {[
                   "Fundação da clínica e formação da primeira equipe",
                   "Cultura de diagnóstico honesto e acompanhamento de longo prazo",
