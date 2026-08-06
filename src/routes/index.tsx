@@ -84,8 +84,8 @@ function Home() {
           height={854}
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-graphite/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-graphite/70 via-graphite/85 to-graphite" />
+        <div className="absolute inset-0 bg-graphite/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-graphite/30 via-graphite/50 to-graphite/85" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-36 md:pt-44 lg:grid-cols-2">
           <div className="animate-fade-up text-off-white">
             <div className="flex items-center gap-4">
