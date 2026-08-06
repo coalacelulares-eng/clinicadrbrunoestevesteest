@@ -88,7 +88,7 @@ function Home() {
           <div className="animate-fade-up text-off-white">
             <div className="flex items-center gap-4">
               <span className="gold-rule w-12" />
-              <span className="eyebrow">{t("hero.eyebrow")}</span>
+              <span className="eyebrow" style={{ ["--lux-alt" as string]: "var(--off-white)" }}>{t("hero.eyebrow")}</span>
             </div>
             <h1 className="title-display mt-6 text-5xl md:text-7xl">
               {t("hero.title.a")} <span className="gold-text">{t("hero.title.gold")}</span>{" "}
