@@ -145,6 +145,22 @@
 }
 
 /* Legendas pequenas do site — maiúsculas, negrito e um pouco maiores */
+@utility section-lede {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  font-weight: 450;
+  letter-spacing: 0.005em;
+  color: color-mix(in oklab, var(--foreground) 82%, transparent);
+  text-wrap: pretty;
+}
+
+@utility section-lede-sm {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--foreground) 78%, transparent);
+  text-wrap: pretty;
+}
+
 @utility micro-label {
   font-family: var(--font-grotesk);
   font-size: 0.7rem;
