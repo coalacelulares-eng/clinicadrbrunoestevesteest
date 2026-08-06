@@ -209,3 +209,14 @@ export const TESTIMONIALS = [
 
 export const LEGAL_NOTICE =
   "Esta simulação possui caráter exclusivamente ilustrativo. Os resultados reais podem variar conforme as características individuais de cada paciente e serão confirmados durante a avaliação presencial realizada pelos especialistas da Clínica Thebit.";
+export const DENTAL_GOAL_IDS = [
+  "clareamento",
+  "espacos",
+  "alinhamento",
+  "facetas",
+  "implantes",
+  "avaliacao",
+];
+
+export const DENTAL_GOALS = GOALS.filter((g) => DENTAL_GOAL_IDS.includes(g.id));
+export const FACIAL_GOALS = GOALS.filter((g) => !DENTAL_GOAL_IDS.includes(g.id));
