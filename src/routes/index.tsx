@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Activity,
-  Flower2,
   HeartPulse,
   Quote,
   Ruler,
   Scissors,
+  Smile,
   Sparkles,
-  UserRound,
+  Stethoscope,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -17,24 +17,25 @@ import { BeforeAfterShowcase } from "@/components/site/BeforeAfterShowcase";
 import { Faq, GoalQuiz } from "@/components/site/HomeExtraSections";
 import { useI18n } from "@/lib/i18n";
 import { CLINIC, whatsappLink } from "@/lib/site";
-import portrait from "@/assets/dra-portrait.jpg";
-import silk from "@/assets/silk-texture.jpg";
-import reception from "@/assets/clinic-reception.jpg";
+import fachada from "@/assets/clinica-2.webp";
+import recepcao from "@/assets/clinica-3.webp";
+import lounge from "@/assets/clinica-4.webp";
+import estar from "@/assets/clinica-1.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dra. Jackline Félix | Cirurgia Plástica no Rio de Janeiro" },
+      { title: "Thebit Saúde e Estética | Odontologia em Belo Horizonte" },
       {
         name: "description",
         content:
-          "Cirurgia plástica autoral na Barra da Tijuca: mama, corpo, face e íntima. Planejamento individual, resultado natural e acompanhamento de 12 meses.",
+          "Clínica odontológica e médica no Anchieta, BH. Lentes de contato, implantes, Invisalign, harmonização orofacial e dermatologia. Mais de 35 anos de história.",
       },
-      { property: "og:title", content: "Dra. Jackline Félix | Cirurgia Plástica" },
+      { property: "og:title", content: "Thebit Saúde e Estética | Odontologia em BH" },
       {
         property: "og:description",
         content:
-          "Cirurgia plástica de alta precisão no Rio de Janeiro. Agende sua avaliação com a Dra. Jackline Félix.",
+          "Estética avançada e especialistas em Dentística no Anchieta, Belo Horizonte. Agende sua avaliação.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -48,23 +49,23 @@ function Home() {
   const [area, setArea] = useState<string | null>(null);
 
   const specialties = [
-    { icon: HeartPulse, title: "spec.breast", desc: "spec.breast.d" },
+    { icon: Smile, title: "spec.breast", desc: "spec.breast.d" },
     { icon: Activity, title: "spec.body", desc: "spec.body.d" },
-    { icon: UserRound, title: "spec.face", desc: "spec.face.d" },
-    { icon: Flower2, title: "spec.intimate", desc: "spec.intimate.d" },
+    { icon: Sparkles, title: "spec.face", desc: "spec.face.d" },
+    { icon: HeartPulse, title: "spec.intimate", desc: "spec.intimate.d" },
   ];
 
   const techniques = [
     { icon: Scissors, title: "tech.mila", desc: "tech.mila.d" },
     { icon: Ruler, title: "tech.bra", desc: "tech.bra.d" },
-    { icon: Sparkles, title: "tech.hd", desc: "tech.hd.d" },
+    { icon: Stethoscope, title: "tech.hd", desc: "tech.hd.d" },
   ];
 
   const stats = [
-    { v: "3.000+", k: "authority.s1" },
-    { v: "12", k: "authority.s2" },
-    { v: "400+", k: "authority.s3" },
-    { v: "98%", k: "authority.s4" },
+    { v: "35+", k: "authority.s1" },
+    { v: "5.0", k: "authority.s2" },
+    { v: "8", k: "authority.s3" },
+    { v: "18", k: "authority.s4" },
   ];
 
   return (
@@ -72,11 +73,10 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <img
-          src={silk}
-          alt=""
-          aria-hidden="true"
-          width={1600}
-          height={900}
+          src={fachada}
+          alt="Fachada da Thebit Saúde e Estética com jardim vertical"
+          width={1280}
+          height={854}
           className="absolute inset-0 size-full object-cover"
         />
         <div className="absolute inset-0 bg-graphite/75" />
@@ -116,11 +116,11 @@ function Home() {
           <div className="relative mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-[2rem] border border-gold/40 p-1.5">
               <img
-                src={portrait}
-                alt={`${CLINIC.doctor}, ${CLINIC.specialty}`}
-                width={1024}
-                height={1280}
-                className="animate-hero-zoom h-[26rem] w-full rounded-[1.7rem] object-cover object-left md:h-[34rem]"
+                src={lounge}
+                alt="Lounge de espera da clínica Thebit"
+                width={652}
+                height={1020}
+                className="animate-hero-zoom h-[26rem] w-full rounded-[1.7rem] object-cover md:h-[34rem]"
               />
             </div>
             <Fleur className="animate-fleur absolute -bottom-6 -left-6 size-12 text-gold" />
@@ -128,17 +128,17 @@ function Home() {
         </div>
       </section>
 
-      {/* Muito prazer */}
+      {/* A clínica */}
       <section className="px-6 py-24" id="sobre">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div data-reveal className="order-2 lg:order-1">
             <img
-              src={portrait}
-              alt={CLINIC.doctor}
+              src={recepcao}
+              alt="Recepção da Thebit Saúde e Estética"
               loading="lazy"
-              width={1024}
-              height={1280}
-              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left shadow-[var(--shadow-luxe)] md:h-[32rem]"
+              width={1280}
+              height={854}
+              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover shadow-[var(--shadow-luxe)] md:h-[32rem]"
             />
           </div>
           <div data-reveal className="order-1 lg:order-2">
@@ -156,7 +156,7 @@ function Home() {
               ))}
             </ul>
             <p className="mt-6 font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-text-soft">
-              {CLINIC.crm}
+              {CLINIC.director} · {CLINIC.crm}
             </p>
             <Link to="/sobre" className="btn-slide-gold mt-8 text-foreground">
               {t("cta.trajectory")}
@@ -165,11 +165,11 @@ function Home() {
         </div>
       </section>
 
-      {/* Fábrica de Barbies */}
+      {/* Método */}
       <section
         className="relative overflow-hidden px-6 py-24 text-off-white"
         style={{ background: "var(--gradient-onyx)" }}
-        id="fabrica"
+        id="metodo"
       >
         <span className="animate-spin-glow absolute -right-24 top-1/4 size-72 rounded-full border border-gold/20" />
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
@@ -189,24 +189,24 @@ function Home() {
                 </div>
               ))}
             </div>
-            <Link to="/fabrica-de-barbies" className="btn-slide-gold mt-8 text-off-white">
-              {t("nav.barbies")}
+            <Link to="/tecnologias" className="btn-slide-gold mt-8 text-off-white">
+              {t("nav.tech")}
             </Link>
           </div>
           <div data-reveal className="relative">
             <img
-              src={silk}
-              alt="Assinatura estética da clínica"
+              src={estar}
+              alt="Sala de espera da clínica"
               loading="lazy"
-              width={1600}
-              height={900}
+              width={695}
+              height={1020}
               className="h-72 w-full rounded-[2rem] border border-gold/25 object-cover md:h-96"
             />
           </div>
         </div>
       </section>
 
-      {/* Especialidades */}
+      {/* Tratamentos */}
       <section className="px-6 py-24" id="especialidades">
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="max-w-2xl">
@@ -281,11 +281,11 @@ function Home() {
       {/* Experiência */}
       <section className="relative overflow-hidden">
         <img
-          src={reception}
-          alt="Ambiente da clínica"
+          src={recepcao}
+          alt="Ambiente da clínica Thebit"
           loading="lazy"
-          width={1600}
-          height={1008}
+          width={1280}
+          height={854}
           className="h-[30rem] w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-graphite/90 via-graphite/60 to-transparent" />
@@ -330,21 +330,21 @@ function Home() {
       <GoalQuiz />
       <Faq />
 
-      {/* Consulta internacional */}
+      {/* Estrutura */}
       <section
         className="px-6 py-24"
         style={{ background: "var(--gradient-champagne)" }}
-        id="internacional"
+        id="estrutura"
       >
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <div data-reveal>
             <img
-              src={portrait}
-              alt={`${CLINIC.doctor} — atendimento internacional`}
+              src={estar}
+              alt="Sala de espera da Thebit Saúde e Estética"
               loading="lazy"
-              width={1024}
-              height={1280}
-              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left md:h-[30rem]"
+              width={695}
+              height={1020}
+              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover md:h-[30rem]"
             />
           </div>
           <div data-reveal>
@@ -359,8 +359,8 @@ function Home() {
                 </li>
               ))}
             </ul>
-            <Link to="/consulta-internacional" className="btn-slide-gold mt-8 text-foreground">
-              {t("nav.international")}
+            <Link to="/estrutura" className="btn-slide-gold mt-8 text-foreground">
+              {t("nav.structure")}
             </Link>
           </div>
         </div>
@@ -369,13 +369,13 @@ function Home() {
       {/* CTA final */}
       <section className="relative overflow-hidden">
         <img
-          src={portrait}
+          src={fachada}
           alt=""
           aria-hidden="true"
           loading="lazy"
-          width={1024}
-          height={1280}
-          className="h-[28rem] w-full object-cover object-[30%_20%]"
+          width={1280}
+          height={854}
+          className="h-[28rem] w-full object-cover"
         />
         <div className="absolute inset-0 bg-graphite/80" />
         <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
