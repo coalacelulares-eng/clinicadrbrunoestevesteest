@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 import { PageShell } from "@/components/site/PageShell";
-import { CLINIC, whatsappLink } from "@/lib/site";
+import { CLINIC, FIRST_VISIT, whatsappLink } from "@/lib/site";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contato")({
@@ -59,6 +59,19 @@ function Contato() {
           ))}
         </div>
 
+        <div data-reveal className="mx-auto mt-12 max-w-5xl vellum rounded-[2rem] p-8">
+          <span className="eyebrow">Primeira consulta</span>
+          <h2 className="title-display mt-3 text-2xl md:text-3xl">Como funciona a sua avaliação</h2>
+          <ul className="mt-6 grid gap-3 text-sm leading-relaxed text-text-soft">
+            {FIRST_VISIT.steps.map((s) => (
+              <li key={s} className="flex gap-3">
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div data-reveal className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-[2rem] border border-gold/25">
           <iframe
             title="Mapa da Thebit Saúde e Estética"
@@ -66,6 +79,17 @@ function Contato() {
             loading="lazy"
             className="h-80 w-full border-0"
           />
+        </div>
+
+        <div className="mt-6 text-center">
+          <a
+            href={CLINIC.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-gold"
+          >
+            Abrir no Google Maps
+          </a>
         </div>
 
         <div className="mt-12 text-center">

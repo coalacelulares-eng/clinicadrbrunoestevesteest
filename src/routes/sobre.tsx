@@ -63,6 +63,12 @@ function Sobre() {
               “E tudo isso a fim de transformar e melhorar vidas, e não apenas sorrisos. Essa é a
               nossa missão aqui na Thebit.”
             </p>
+            <p>
+              O Dr. Daniel Thebit tem formação avançada em estética e reabilitação oral pelo ILAPEO
+              (Instituto Latino Americano de Pesquisa e Ensino Odontológico, PR), com atuação
+              focada em facetas de resina composta, laminados cerâmicos (lentes de contato dentais)
+              e recontorno estético. Fora do consultório, é faixa preta de Jiu-Jitsu (FP Team BJJ).
+            </p>
             <ul className="grid gap-3 text-sm text-foreground">
               {[
                 "Nota máxima 5.0 nas avaliações dos pacientes",

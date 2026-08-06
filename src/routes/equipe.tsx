@@ -42,14 +42,24 @@ function Equipe() {
               <span className="eyebrow">{p.role}</span>
               <h2 className="title-display mt-3 text-xl">{p.name}</h2>
               <p className="mt-3 text-sm leading-relaxed text-text-soft">{p.desc}</p>
-              <a
-                href={whatsappLink(`Olá! Gostaria de agendar com ${p.name}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-slide-gold mt-6 text-foreground"
-              >
-                Agendar
-              </a>
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                <a
+                  href={whatsappLink(`Olá! Gostaria de agendar com ${p.name}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-slide-gold text-foreground"
+                >
+                  Agendar
+                </a>
+                <a
+                  href={p.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-gold"
+                >
+                  Instagram
+                </a>
+              </div>
             </article>
           ))}
         </div>
