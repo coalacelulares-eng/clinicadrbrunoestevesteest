@@ -106,14 +106,35 @@
   letter-spacing: -0.028em;
   font-variation-settings: "opsz" 120;
   line-height: 1.03;
+  text-shadow:
+    0 1px 0 oklch(100% 0 0 / 0.55),
+    0 12px 34px oklch(30% 0.02 60 / 0.14);
+}
+
+/* Títulos sobre fundos escuros: luz suave em vez de relevo claro */
+@utility title-lux-dark {
+  text-shadow:
+    0 1px 0 oklch(100% 0 0 / 0.12),
+    0 18px 50px oklch(72.5% 0.088 78 / 0.28);
 }
 
 @utility eyebrow {
   font-family: var(--font-grotesk);
-  font-size: 0.65rem;
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.34em;
   color: var(--gold);
+}
+
+/* Legendas pequenas do site — maiúsculas, negrito e um pouco maiores */
+@utility micro-label {
+  font-family: var(--font-grotesk);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
 }
 
 @utility gold-rule {
@@ -159,7 +180,8 @@
   border-radius: 9999px;
   padding: 0.95rem 2rem;
   font-family: var(--font-grotesk);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--graphite);
@@ -191,7 +213,8 @@
   border-radius: 9999px;
   padding: 0.95rem 2rem;
   font-family: var(--font-grotesk);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   border: 1px solid oklch(72.5% 0.088 78 / 0.7);
