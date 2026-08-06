@@ -15,6 +15,15 @@ import { Fleur } from "@/components/site/Fleur";
 import { ProcedureQuizDialog } from "@/components/site/ProcedureQuizDialog";
 import { BeforeAfterShowcase } from "@/components/site/BeforeAfterShowcase";
 import { SmileConsultant } from "@/components/site/SmileConsultant";
+import { FacialConsultant } from "@/components/site/FacialConsultant";
+import { Spotlight } from "@/components/site/Spotlight";
+import { Marquee } from "@/components/site/Marquee";
+import { StatsCounters } from "@/components/site/StatsCounters";
+import { Differentials } from "@/components/site/Differentials";
+import { ClinicStory } from "@/components/site/ClinicStory";
+import { SuccessCases } from "@/components/site/SuccessCases";
+import { PremiumForm } from "@/components/site/PremiumForm";
+import { DENTAL_GOALS } from "@/lib/smile-consultant";
 import { Faq, GoalQuiz } from "@/components/site/HomeExtraSections";
 import { useI18n } from "@/lib/i18n";
 import { CLINIC, whatsappLink } from "@/lib/site";
@@ -62,17 +71,11 @@ function Home() {
     { icon: Stethoscope, title: "tech.hd", desc: "tech.hd.d" },
   ];
 
-  const stats = [
-    { v: "35+", k: "authority.s1" },
-    { v: "5.0", k: "authority.s2" },
-    { v: "8", k: "authority.s3" },
-    { v: "18", k: "authority.s4" },
-  ];
 
   return (
     <main>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <Spotlight className="relative overflow-hidden">
         <img
           src={fachada}
           alt="Fachada da Thebit Saúde e Estética com jardim vertical"
@@ -127,7 +130,9 @@ function Home() {
             <Fleur className="animate-fleur absolute -bottom-6 -left-6 size-12 text-gold" />
           </div>
         </div>
-      </section>
+      </Spotlight>
+
+      <Marquee tone="light" />
 
       {/* A clínica */}
       <section className="px-6 py-24" id="sobre">
@@ -165,6 +170,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ClinicStory />
 
       {/* Método */}
       <section
@@ -235,6 +242,8 @@ function Home() {
         </div>
       </section>
 
+      <Differentials />
+
       {/* Técnicas */}
       <section
         className="px-6 py-24 text-off-white"
@@ -261,23 +270,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Autoridade */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <div data-reveal className="text-center">
-            <span className="eyebrow">{t("authority.eyebrow")}</span>
-            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("authority.title")}</h2>
-          </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.k} data-reveal className="vellum rounded-3xl p-7 text-center">
-                <p className="title-display text-4xl text-gold">{s.v}</p>
-                <p className="mt-2 text-xs leading-relaxed text-text-soft">{t(s.k)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsCounters />
 
       {/* Experiência */}
       <section className="relative overflow-hidden">
@@ -308,7 +301,11 @@ function Home() {
 
       <BeforeAfterShowcase />
 
-      <SmileConsultant />
+      <SuccessCases />
+
+      <SmileConsultant goals={DENTAL_GOALS} />
+
+      <FacialConsultant />
 
       {/* Depoimentos */}
       <section className="px-6 pb-24" id="depoimentos">
@@ -367,6 +364,10 @@ function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="px-6 py-24" id="agendar">
+        <PremiumForm />
       </section>
 
       {/* CTA final */}

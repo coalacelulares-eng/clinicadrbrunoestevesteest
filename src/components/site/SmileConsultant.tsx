@@ -46,7 +46,31 @@ const GOAL_ICONS: Record<string, LucideIcon> = {
   avaliacao: CircleHelp,
 };
 
-export function SmileConsultant() {
+export type ConsultantProps = {
+  id?: string;
+  goals?: Goal[];
+  eyebrow?: string;
+  title?: React.ReactNode;
+  description?: string;
+  stepLabel?: string;
+  reportTitle?: string;
+  ctaTitle?: string;
+};
+
+export function SmileConsultant({
+  id = "consultor",
+  goals = GOALS,
+  eyebrow = "Consultor Estético Inteligente",
+  title = (
+    <>
+      Faça uma simulação do <span className="gold-text">seu sorriso</span>.
+    </>
+  ),
+  description = "Veja uma simulação ilustrativa personalizada e descubra quais tratamentos podem transformar seu sorriso. Esta simulação não substitui uma avaliação clínica, mas ajuda você a visualizar possibilidades reais antes da consulta.",
+  stepLabel = "Passo 1 · Qual é o seu objetivo?",
+  reportTitle = "Análise Inteligente do Seu Sorriso",
+  ctaTitle = "Gostou da simulação?",
+}: ConsultantProps = {}) {
   const fileRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
   const compareRef = useRef<HTMLDivElement>(null);
@@ -291,27 +315,21 @@ export function SmileConsultant() {
   );
 
   return (
-    <section className="relative overflow-hidden px-6 py-24" id="consultor">
+    <section className="relative overflow-hidden px-6 py-24" id={id}>
       <div className="mx-auto max-w-6xl">
         <div data-reveal className="max-w-2xl">
-          <span className="eyebrow">Consultor Estético Inteligente</span>
-          <h2 className="title-display mt-4 text-3xl md:text-5xl">
-            Descubra o potencial do <span className="gold-text">seu sorriso</span>.
-          </h2>
-          <p className="mt-5 text-sm leading-relaxed text-text-soft">
-            Veja uma simulação ilustrativa personalizada e descubra quais tratamentos podem
-            transformar seu sorriso e sua estética facial. Esta simulação não substitui uma
-            avaliação clínica, mas ajuda você a visualizar possibilidades reais antes da consulta.
-          </p>
+          <span className="eyebrow">{eyebrow}</span>
+          <h2 className="title-display mt-4 text-3xl md:text-5xl">{title}</h2>
+          <p className="mt-5 text-sm leading-relaxed text-text-soft">{description}</p>
         </div>
 
         {/* Passo 1 */}
         <div data-reveal className="mt-14">
           <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
-            Passo 1 · Qual é o seu objetivo?
+            {stepLabel}
           </p>
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {GOALS.map((g) => {
+            {goals.map((g) => {
               const active = goal?.id === g.id;
               const Icon = GOAL_ICONS[g.id] ?? Sparkles;
               return (
@@ -496,7 +514,7 @@ export function SmileConsultant() {
           <div data-reveal className="mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
             <div className="vellum rounded-3xl p-8">
               <span className="eyebrow">Relatório personalizado</span>
-              <h3 className="title-display mt-3 text-2xl">Análise Inteligente do Seu Sorriso</h3>
+              <h3 className="title-display mt-3 text-2xl">{reportTitle}</h3>
               {report ? (
                 <>
                   <p className="mt-4 text-sm leading-relaxed text-text-soft">{report.resumo}</p>
@@ -609,7 +627,7 @@ export function SmileConsultant() {
           className="mt-16 rounded-[28px] border border-gold/25 p-10 text-center"
           style={{ background: "var(--gradient-champagne)" }}
         >
-          <h3 className="title-display text-2xl md:text-4xl">Gostou da simulação?</h3>
+          <h3 className="title-display text-2xl md:text-4xl">{ctaTitle}</h3>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-text-soft">
             Agende agora sua avaliação personalizada. Na Clínica Thebit você receberá um
             planejamento completo realizado por especialistas.
