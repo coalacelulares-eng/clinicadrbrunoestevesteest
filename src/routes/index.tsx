@@ -71,12 +71,6 @@ function Home() {
     { icon: Stethoscope, title: "tech.hd", desc: "tech.hd.d" },
   ];
 
-  const stats = [
-    { v: "35+", k: "authority.s1" },
-    { v: "5.0", k: "authority.s2" },
-    { v: "8", k: "authority.s3" },
-    { v: "18", k: "authority.s4" },
-  ];
 
   return (
     <main>
