@@ -48,7 +48,7 @@ function Sobre() {
               className="h-[26rem] w-full rounded-[2rem] border border-gold/25 object-cover shadow-[var(--shadow-luxe)]"
             />
           </div>
-          <div data-reveal className="space-y-6 text-base leading-relaxed text-text-soft">
+          <div data-reveal className="section-lede space-y-6">
             <p>
               Fundada pelo Dr. Jorge Thebit há mais de 35 anos e totalmente renovada há 5 anos, a
               clínica é hoje administrada por seu filho, o Dr. Daniel Thebit, cirurgião-dentista

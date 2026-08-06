@@ -75,7 +75,7 @@ export function Faq() {
               <AccordionTrigger className="text-left font-display text-lg tracking-tight">
                 {t(q!)}
               </AccordionTrigger>
-              <AccordionContent className="text-sm leading-relaxed text-text-soft">
+              <AccordionContent className="section-lede-sm">
                 {t(a!)}
               </AccordionContent>
             </AccordionItem>

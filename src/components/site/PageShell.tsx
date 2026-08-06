@@ -28,7 +28,7 @@ export function PageShell({
           </div>
           <h1 className="title-display mt-6 text-4xl md:text-6xl">{title}</h1>
           {intro && (
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-soft">
+            <p className="section-lede mx-auto mt-6 max-w-2xl">
               {intro}
             </p>
           )}

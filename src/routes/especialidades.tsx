@@ -98,7 +98,7 @@ function Especialidades() {
                     className="vellum vellum-hover block rounded-3xl p-6"
                   >
                     <h3 className="font-display text-lg text-foreground">{title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-text-soft">{desc}</p>
+                    <p className="section-lede-sm mt-2">{desc}</p>
                   </a>
                 ))}
               </div>

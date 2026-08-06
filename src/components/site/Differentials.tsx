@@ -43,7 +43,7 @@ export function Differentials() {
                   <item.icon className="size-5 text-gold" />
                 </span>
                 <h3 className="title-display mt-6 text-xl">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-soft">{item.desc}</p>
+                <p className="section-lede-sm mt-2">{item.desc}</p>
               </div>
             </article>
           ))}
