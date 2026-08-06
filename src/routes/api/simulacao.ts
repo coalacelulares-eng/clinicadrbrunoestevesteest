@@ -8,6 +8,7 @@ export const Route = createFileRoute("/api/simulacao")({
           image?: string;
           mimeType?: string;
           prompt?: string;
+          instruction?: string;
         };
         if (!body.image || !body.prompt) {
           return new Response("Imagem e tratamento são obrigatórios", { status: 400 });
@@ -33,6 +34,7 @@ export const Route = createFileRoute("/api/simulacao")({
                     type: "text",
                     text:
                       `Edite esta fotografia de forma sutil e realista para criar uma SIMULAÇÃO ILUSTRATIVA de: ${body.prompt}. ` +
+                      (body.instruction ? `${body.instruction} ` : "") +
                       "Preserve a identidade, a iluminação, o enquadramento e as proporções naturais da pessoa. " +
                       "Não exagere o efeito, não altere idade, etnia ou traços de identidade. " +
                       "O resultado deve parecer uma possibilidade plausível e conservadora, nunca uma promessa de resultado.",
