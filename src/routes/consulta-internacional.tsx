@@ -23,7 +23,7 @@ export const Route = createFileRoute("/consulta-internacional")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Internacional;
+  component: Internacional,
 });
 
 function Internacional() {
