@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Fleur } from "./Fleur";
+import logoThebit from "@/assets/logo-thebit.webp";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 

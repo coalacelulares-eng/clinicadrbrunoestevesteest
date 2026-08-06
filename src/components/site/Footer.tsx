@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import { Fleur } from "./Fleur";
+import logoThebit from "@/assets/logo-thebit.webp";
 import { useI18n } from "@/lib/i18n";
 import { CLINIC } from "@/lib/site";
 
