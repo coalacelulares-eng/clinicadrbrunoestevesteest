@@ -1,4 +1,4 @@
-import { Award, Building2, GraduationCap, Sparkles } from "lucide-react";
+import { Award, Building2, GraduationCap, MapPin, Sparkles } from "lucide-react";
 
 import { Spotlight } from "./Spotlight";
 import { CLINIC, whatsappLink } from "@/lib/site";
