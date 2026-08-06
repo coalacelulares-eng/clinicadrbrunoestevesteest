@@ -98,6 +98,9 @@
     letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
   }
+  li {
+    font-size: 17px;
+  }
 }
 
 @utility title-display {
