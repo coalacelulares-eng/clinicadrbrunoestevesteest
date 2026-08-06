@@ -526,11 +526,12 @@
 
 /* Faixa premium: letras com brilho dourado em movimento */
 @utility marquee-lux {
-  background: var(--gradient-gold);
-  background-size: 220% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer-text 5s linear infinite;
-  filter: drop-shadow(0 1px 8px oklch(72.5% 0.088 78 / 0.35));
+  color: var(--gold);
+  animation: word-gold-black 3.2s ease-in-out infinite alternate;
+  animation-delay: var(--lux-delay, 0s);
+}
+
+@keyframes word-gold-black {
+  0% { color: var(--gold); }
+  100% { color: var(--foreground); }
 }

@@ -34,7 +34,7 @@ export function Marquee({ tone = "dark" }: { tone?: "dark" | "light" }) {
             <span key={`${item}-${i}`} className="flex shrink-0 items-center">
               <span className="micro-label flex items-center gap-2 px-6 text-[0.85rem] md:text-[1rem]">
                 <span>{item.slice(0, item.indexOf(" "))}</span>
-                <span className="marquee-lux">{item.slice(item.indexOf(" ") + 1)}</span>
+                <span className="marquee-lux" style={{ "--lux-delay": `${(i % 7) * 0.35}s` } as React.CSSProperties}>{item.slice(item.indexOf(" ") + 1)}</span>
               </span>
               <span className="size-1.5 rounded-full bg-gold" />
             </span>
