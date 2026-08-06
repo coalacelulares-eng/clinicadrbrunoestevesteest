@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import beforeAfter from "@/assets/before-after.jpg";
+import beforeAfter from "@/assets/sorriso-antes-depois.jpg";
 
 export function BeforeAfterShowcase() {
   const { t } = useI18n();

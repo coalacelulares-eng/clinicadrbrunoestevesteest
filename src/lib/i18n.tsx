@@ -36,7 +36,7 @@ const pt: Dict = {
   "about.text":
     "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e hoje administrada por seu filho, o Dr. Daniel Thebit, a Thebit Saúde e Estética une toda a equipe em torno de um propósito: ir além do tratamento do dente. Entendemos o paciente por inteiro e alinhamos saúde e estética.",
   "about.c1": "Especialistas em Dentística e Estética Dental Avançada",
-  "above.c1": "",
+
   "about.c2": "Equipe multidisciplinar de odontologia e medicina",
   "about.c3": "Nota máxima 5.0 nas avaliações dos pacientes",
 

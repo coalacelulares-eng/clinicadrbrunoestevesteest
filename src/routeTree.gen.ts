@@ -10,10 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ConsultaInternacionalRouteImport } from './routes/consulta-internacional'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as EquipeRouteImport } from './routes/equipe'
 import { Route as EspecialidadesRouteImport } from './routes/especialidades'
-import { Route as FabricaDeBarbiesRouteImport } from './routes/fabrica-de-barbies'
+import { Route as EstruturaRouteImport } from './routes/estrutura'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TecnologiasRouteImport } from './routes/tecnologias'
 
@@ -22,14 +22,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ConsultaInternacionalRoute = ConsultaInternacionalRouteImport.update({
-  id: '/consulta-internacional',
-  path: '/consulta-internacional',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipeRoute = EquipeRouteImport.update({
+  id: '/equipe',
+  path: '/equipe',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EspecialidadesRoute = EspecialidadesRouteImport.update({
@@ -37,9 +37,9 @@ const EspecialidadesRoute = EspecialidadesRouteImport.update({
   path: '/especialidades',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FabricaDeBarbiesRoute = FabricaDeBarbiesRouteImport.update({
-  id: '/fabrica-de-barbies',
-  path: '/fabrica-de-barbies',
+const EstruturaRoute = EstruturaRouteImport.update({
+  id: '/estrutura',
+  path: '/estrutura',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SobreRoute = SobreRouteImport.update({
@@ -55,29 +55,29 @@ const TecnologiasRoute = TecnologiasRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/consulta-internacional': typeof ConsultaInternacionalRoute
   '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
   '/especialidades': typeof EspecialidadesRoute
-  '/fabrica-de-barbies': typeof FabricaDeBarbiesRoute
+  '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/consulta-internacional': typeof ConsultaInternacionalRoute
   '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
   '/especialidades': typeof EspecialidadesRoute
-  '/fabrica-de-barbies': typeof FabricaDeBarbiesRoute
+  '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/consulta-internacional': typeof ConsultaInternacionalRoute
   '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
   '/especialidades': typeof EspecialidadesRoute
-  '/fabrica-de-barbies': typeof FabricaDeBarbiesRoute
+  '/estrutura': typeof EstruturaRoute
   '/sobre': typeof SobreRoute
   '/tecnologias': typeof TecnologiasRoute
 }
@@ -85,38 +85,38 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/consulta-internacional'
     | '/contato'
+    | '/equipe'
     | '/especialidades'
-    | '/fabrica-de-barbies'
+    | '/estrutura'
     | '/sobre'
     | '/tecnologias'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/consulta-internacional'
     | '/contato'
+    | '/equipe'
     | '/especialidades'
-    | '/fabrica-de-barbies'
+    | '/estrutura'
     | '/sobre'
     | '/tecnologias'
   id:
     | '__root__'
     | '/'
-    | '/consulta-internacional'
     | '/contato'
+    | '/equipe'
     | '/especialidades'
-    | '/fabrica-de-barbies'
+    | '/estrutura'
     | '/sobre'
     | '/tecnologias'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ConsultaInternacionalRoute: typeof ConsultaInternacionalRoute
   ContatoRoute: typeof ContatoRoute
+  EquipeRoute: typeof EquipeRoute
   EspecialidadesRoute: typeof EspecialidadesRoute
-  FabricaDeBarbiesRoute: typeof FabricaDeBarbiesRoute
+  EstruturaRoute: typeof EstruturaRoute
   SobreRoute: typeof SobreRoute
   TecnologiasRoute: typeof TecnologiasRoute
 }
@@ -130,18 +130,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/consulta-internacional': {
-      id: '/consulta-internacional'
-      path: '/consulta-internacional'
-      fullPath: '/consulta-internacional'
-      preLoaderRoute: typeof ConsultaInternacionalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contato': {
       id: '/contato'
       path: '/contato'
       fullPath: '/contato'
       preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipe': {
+      id: '/equipe'
+      path: '/equipe'
+      fullPath: '/equipe'
+      preLoaderRoute: typeof EquipeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/especialidades': {
@@ -151,11 +151,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspecialidadesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/fabrica-de-barbies': {
-      id: '/fabrica-de-barbies'
-      path: '/fabrica-de-barbies'
-      fullPath: '/fabrica-de-barbies'
-      preLoaderRoute: typeof FabricaDeBarbiesRouteImport
+    '/estrutura': {
+      id: '/estrutura'
+      path: '/estrutura'
+      fullPath: '/estrutura'
+      preLoaderRoute: typeof EstruturaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sobre': {
@@ -177,10 +177,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ConsultaInternacionalRoute: ConsultaInternacionalRoute,
   ContatoRoute: ContatoRoute,
+  EquipeRoute: EquipeRoute,
   EspecialidadesRoute: EspecialidadesRoute,
-  FabricaDeBarbiesRoute: FabricaDeBarbiesRoute,
+  EstruturaRoute: EstruturaRoute,
   SobreRoute: SobreRoute,
   TecnologiasRoute: TecnologiasRoute,
 }

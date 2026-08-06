@@ -6,7 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 import silk from "@/assets/silk-texture.jpg";
 
-export const Route = createFileRoute("/fabrica-de-barbies")({
+export const Route = createFileRoute("/equipe")({
   head: () => ({
     meta: [
       { title: "A Fábrica de Barbies | Dra. Jackline Félix" },

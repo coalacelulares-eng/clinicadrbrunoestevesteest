@@ -5,7 +5,7 @@ import { useI18n } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 import portrait from "@/assets/dra-portrait.jpg";
 
-export const Route = createFileRoute("/consulta-internacional")({
+export const Route = createFileRoute("/estrutura")({
   head: () => ({
     meta: [
       { title: "Consulta internacional | Dra. Jackline Félix" },
