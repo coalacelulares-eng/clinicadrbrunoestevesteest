@@ -41,9 +41,12 @@ export function Header() {
         }`}
       >
         <Link to="/" className="flex items-center gap-2.5">
-          <Fleur className="size-6 text-gold" />
+          <img
+            src={logoThebit}
+            alt="Thebit Odontologia"
+            className="size-10 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
+          />
           <span className="font-display text-sm tracking-[0.16em] uppercase">Thebit</span>
-
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

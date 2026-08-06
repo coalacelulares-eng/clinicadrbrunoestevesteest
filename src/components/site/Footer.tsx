@@ -13,7 +13,11 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <Fleur className="size-7 text-gold animate-fleur" />
+              <img
+                src={logoThebit}
+                alt="Thebit Odontologia"
+                className="size-14 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
+              />
               <span className="font-display text-lg tracking-[0.1em] uppercase">
                 Thebit Saúde e Estética
               </span>
