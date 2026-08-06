@@ -127,13 +127,9 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  background: var(--gradient-gold);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer-text 6s linear infinite;
-  filter: drop-shadow(0 2px 10px oklch(72.5% 0.088 78 / 0.35));
+  color: var(--gold);
+  animation: word-gold-black 3.2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 10px oklch(72.5% 0.088 78 / 0.25));
   &::before {
     content: "";
     width: 2.25rem;
