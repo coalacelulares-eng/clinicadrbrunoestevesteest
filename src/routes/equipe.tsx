@@ -1,78 +1,59 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/site/PageShell";
-import { BeforeAfterShowcase } from "@/components/site/BeforeAfterShowcase";
-import { useI18n } from "@/lib/i18n";
-import { whatsappLink } from "@/lib/site";
-import silk from "@/assets/silk-texture.jpg";
+import { TEAM, whatsappLink } from "@/lib/site";
 
 export const Route = createFileRoute("/equipe")({
   head: () => ({
     meta: [
-      { title: "A Fábrica de Barbies | Dra. Jackline Félix" },
+      { title: "Equipe | Thebit Saúde e Estética — BH" },
       {
         name: "description",
         content:
-          "O método de harmonia entre mama, cintura e quadril: proporção, movimento e identidade em cada plano cirúrgico.",
+          "Conheça os especialistas da Thebit: dentística, harmonização orofacial, periodontia integrativa, odontopediatria e dermatologia clínica em BH.",
       },
-      { property: "og:title", content: "A Fábrica de Barbies" },
+      { property: "og:title", content: "Equipe | Thebit Saúde e Estética" },
       {
         property: "og:description",
-        content: "Um método autoral de harmonia corporal, não um molde.",
+        content: "Oito especialistas em odontologia e medicina estética em Belo Horizonte.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Barbies,
+  component: Equipe,
 });
 
-function Barbies() {
-  const { t } = useI18n();
-
+function Equipe() {
   return (
     <PageShell
-      eyebrow={t("barbies.eyebrow")}
-      title={t("barbies.title")}
-      intro={t("barbies.text")}
+      eyebrow="Equipe"
+      title={
+        <>
+          Especialistas que <span className="gold-text">trabalham juntos</span>.
+        </>
+      }
+      intro="Uma equipe multidisciplinar de odontologia e medicina, reunida para cuidar do paciente por inteiro."
     >
-      <section
-        className="px-6 py-20 text-off-white"
-        style={{ background: "var(--gradient-onyx)" }}
-      >
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          <div data-reveal className="grid gap-3">
-            {["barbies.p1", "barbies.p2", "barbies.p3"].map((p) => (
-              <div
-                key={p}
-                className="rounded-2xl border border-gold/25 bg-off-white/5 px-6 py-4 text-sm"
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {TEAM.map((p) => (
+            <article key={p.name} data-reveal className="vellum vellum-hover rounded-3xl p-7">
+              <span className="eyebrow">{p.role}</span>
+              <h2 className="title-display mt-3 text-xl">{p.name}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-text-soft">{p.desc}</p>
+              <a
+                href={whatsappLink(`Olá! Gostaria de agendar com ${p.name}.`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-slide-gold mt-6 text-foreground"
               >
-                {t(p)}
-              </div>
-            ))}
-            <a
-              href={whatsappLink(t("wa.default"))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold-lux mt-4 w-fit"
-              data-magnetic
-            >
-              {t("cta.book")}
-            </a>
-          </div>
-          <img
-            data-reveal
-            src={silk}
-            alt="Assinatura estética"
-            loading="lazy"
-            width={1600}
-            height={900}
-            className="h-80 w-full rounded-[2rem] border border-gold/25 object-cover"
-          />
+                Agendar
+              </a>
+            </article>
+          ))}
         </div>
       </section>
-
-      <BeforeAfterShowcase />
     </PageShell>
   );
 }

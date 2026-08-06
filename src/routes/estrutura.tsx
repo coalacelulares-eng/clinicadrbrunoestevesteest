@@ -1,66 +1,78 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/site/PageShell";
-import { useI18n } from "@/lib/i18n";
-import { whatsappLink } from "@/lib/site";
-import portrait from "@/assets/dra-portrait.jpg";
+import { CLINIC, whatsappLink } from "@/lib/site";
+import fachada from "@/assets/clinica-2.webp";
+import recepcao from "@/assets/clinica-3.webp";
+import lounge from "@/assets/clinica-4.webp";
+import estar from "@/assets/clinica-1.webp";
+
+const gallery = [
+  { src: fachada, alt: "Fachada com jardim vertical da Thebit Saúde e Estética", w: 1280, h: 854 },
+  { src: recepcao, alt: "Recepção em mármore com logo da Thebit", w: 1280, h: 854 },
+  { src: lounge, alt: "Lounge de espera com iluminação indireta", w: 652, h: 1020 },
+  { src: estar, alt: "Sala de espera com sofás claros", w: 695, h: 1020 },
+];
 
 export const Route = createFileRoute("/estrutura")({
   head: () => ({
     meta: [
-      { title: "Consulta internacional | Dra. Jackline Félix" },
+      { title: "Estrutura | Thebit Saúde e Estética — Anchieta, BH" },
       {
         name: "description",
         content:
-          "Protocolo para pacientes de outros estados e países: avaliação por vídeo, agenda concentrada e retornos remotos.",
+          "Conheça a estrutura da Thebit na Av. dos Bandeirantes, 466 — Anchieta, Belo Horizonte: fachada com jardim vertical, recepção ampla e consultórios modernos.",
       },
-      { property: "og:title", content: "Consulta internacional" },
+      { property: "og:title", content: "Estrutura | Thebit Saúde e Estética" },
       {
         property: "og:description",
-        content: "Atendimento em português, inglês e espanhol para pacientes de fora do Rio.",
+        content: "Fotos da clínica Thebit no Anchieta, Belo Horizonte.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Internacional,
+  component: Estrutura,
 });
 
-function Internacional() {
-  const { t } = useI18n();
-
+function Estrutura() {
   return (
-    <PageShell eyebrow={t("intl.eyebrow")} title={t("intl.title")} intro={t("intl.text")}>
+    <PageShell
+      eyebrow="Estrutura"
+      title={
+        <>
+          Um espaço pensado para o seu <span className="gold-text">conforto</span>.
+        </>
+      }
+      intro={CLINIC.address}
+    >
       <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          <img
-            data-reveal
-            src={portrait}
-            alt="Atendimento internacional"
-            loading="lazy"
-            width={1024}
-            height={1280}
-            className="h-[26rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left shadow-[var(--shadow-luxe)]"
-          />
-          <div data-reveal>
-            <ul className="grid gap-4 text-sm text-foreground">
-              {["intl.b1", "intl.b2", "intl.b3", "intl.b4"].map((b) => (
-                <li key={b} className="flex gap-3">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
-                  {t(b)}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={whatsappLink(t("wa.default"))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold-lux mt-8"
-              data-magnetic
-            >
-              {t("cta.book")}
-            </a>
-          </div>
+        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
+          {gallery.map((g) => (
+            <img
+              key={g.alt}
+              data-reveal
+              src={g.src}
+              alt={g.alt}
+              loading="lazy"
+              width={g.w}
+              height={g.h}
+              className="h-80 w-full rounded-[2rem] border border-gold/25 object-cover shadow-[var(--shadow-soft)] md:h-96"
+            />
+          ))}
+        </div>
+
+        <div data-reveal className="mx-auto mt-14 max-w-3xl text-center">
+          <p className="text-base leading-relaxed text-text-soft">{CLINIC.hours}</p>
+          <a
+            href={whatsappLink("Olá! Gostaria de conhecer a clínica e agendar uma visita.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold-lux mt-8"
+            data-magnetic
+          >
+            Agendar visita
+          </a>
         </div>
       </section>
     </PageShell>
