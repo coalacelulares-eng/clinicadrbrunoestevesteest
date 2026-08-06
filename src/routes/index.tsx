@@ -148,13 +148,7 @@ function Home() {
             />
           </div>
           <div data-reveal className="order-1 lg:order-2">
-            <span className="flex items-center gap-3 font-display text-3xl leading-none md:text-5xl">
-              <span className="animate-fleur">✨</span>
-              <span className="gold-text drop-shadow-[0_2px_12px_color-mix(in_oklab,var(--gold)_45%,transparent)]">
-                {t("about.eyebrow")}
-              </span>
-              <span className="animate-fleur">💎</span>
-            </span>
+            <span className="eyebrow">{t("about.eyebrow")}</span>
             <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("about.title")}</h2>
             <p className="drop-cap mt-6 text-base leading-relaxed text-text-soft">
               {t("about.text")}
