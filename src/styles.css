@@ -237,6 +237,25 @@
   &:hover::before {
     transform: scaleX(1);
   }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent 25%,
+      oklch(72.5% 0.088 78 / 0.45) 50%,
+      transparent 75%
+    );
+    transform: translateX(-100%);
+    animation: gold-sweep-back 3.4s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes gold-sweep-back {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
 }
 
 @utility reveal-init {
