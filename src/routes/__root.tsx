@@ -84,13 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dra. Jackline Félix — Cirurgia Plástica" },
+      { title: "Thebit Saúde e Estética — Odontologia em Belo Horizonte" },
       {
         name: "description",
         content:
-          "Cirurgia plástica de alta precisão no Rio de Janeiro. Planejamento individual, resultado natural e acompanhamento completo.",
+          "Clínica odontológica e médica no Anchieta, BH. Estética dental avançada, reabilitação, harmonização orofacial e dermatologia.",
       },
-      { name: "author", content: "Dra. Jackline Félix" },
+      { name: "author", content: "Thebit Saúde e Estética" },
+
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
