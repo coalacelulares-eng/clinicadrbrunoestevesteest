@@ -26,7 +26,12 @@ export function Marquee({ tone = "dark" }: { tone?: "dark" | "light" }) {
       className={`overflow-hidden border-y border-gold/25 py-5 ${
         dark ? "text-off-white" : "text-foreground"
       }`}
-      style={{ background: dark ? "var(--gradient-onyx)" : "var(--gradient-champagne)" }}
+      style={
+        {
+          background: dark ? "var(--gradient-onyx)" : "var(--gradient-champagne)",
+          "--lux-alt": dark ? "var(--off-white)" : "var(--foreground)",
+        } as Record<string, string>
+      }
     >
       <div className="marquee-mask">
         <div className="animate-marquee">
@@ -34,7 +39,7 @@ export function Marquee({ tone = "dark" }: { tone?: "dark" | "light" }) {
             <span key={`${item}-${i}`} className="flex shrink-0 items-center">
               <span className="micro-label flex items-center gap-2 px-6 text-[0.85rem] md:text-[1rem]">
                 <span>{item.slice(0, item.indexOf(" "))}</span>
-                <span className="marquee-lux">{item.slice(item.indexOf(" ") + 1)}</span>
+                <span className="marquee-lux" style={{ "--lux-delay": `${(i % 7) * 0.35}s` } as Record<string, string>}>{item.slice(item.indexOf(" ") + 1)}</span>
               </span>
               <span className="size-1.5 rounded-full bg-gold" />
             </span>
