@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 import { PageShell } from "@/components/site/PageShell";
-import { CLINIC, whatsappLink } from "@/lib/site";
+import { CLINIC, FIRST_VISIT, whatsappLink } from "@/lib/site";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contato")({
