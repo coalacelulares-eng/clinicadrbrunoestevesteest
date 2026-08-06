@@ -229,6 +229,7 @@
     transform-origin: left;
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: -1;
+    animation: gold-fill-loop 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
   }
   &:hover {
     color: var(--graphite);
@@ -236,6 +237,7 @@
   }
   &:hover::before {
     transform: scaleX(1);
+    animation: none;
   }
   &::after {
     content: "";
@@ -256,6 +258,13 @@
 @keyframes gold-sweep-back {
   from { transform: translateX(-100%); }
   to { transform: translateX(100%); }
+}
+
+@keyframes gold-fill-loop {
+  0% { transform: scaleX(0); transform-origin: left; }
+  40% { transform: scaleX(1); transform-origin: left; }
+  55% { transform: scaleX(1); transform-origin: right; }
+  95%, 100% { transform: scaleX(0); transform-origin: right; }
 }
 
 @utility reveal-init {
