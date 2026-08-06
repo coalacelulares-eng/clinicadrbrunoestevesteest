@@ -1,4 +1,4 @@
-import { Award, Building2, GraduationCap, Sparkles } from "lucide-react";
+import { Award, Building2, GraduationCap, MapPin, Sparkles } from "lucide-react";
 
 import { Spotlight } from "./Spotlight";
 import { CLINIC, whatsappLink } from "@/lib/site";
@@ -173,9 +173,12 @@ export function ClinicStory() {
             </div>
           </div>
 
-          <p className="mt-16 text-center micro-label opacity-60">
-            {CLINIC.address}
-          </p>
+          <div className="mt-16 flex flex-col items-center gap-3 text-center">
+            <MapPin className="h-8 w-8 text-gold" aria-hidden />
+            <p className="micro-label opacity-80" style={{ fontSize: "27px", lineHeight: 1.4 }}>
+              {CLINIC.address}
+            </p>
+          </div>
         </div>
       </section>
     </Spotlight>
