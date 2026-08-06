@@ -347,3 +347,131 @@
   background-image: radial-gradient(oklch(100% 0 0 / 0.06) 1px, transparent 1px);
   background-size: 3px 3px;
 }
+
+/* ---------- Vidro suave / superfícies premium ---------- */
+@utility glass-lux {
+  background: linear-gradient(150deg, oklch(100% 0 0 / 0.72), oklch(100% 0 0 / 0.42));
+  backdrop-filter: blur(18px) saturate(1.15);
+  border: 1px solid oklch(72.5% 0.088 78 / 0.28);
+  box-shadow: var(--shadow-soft);
+}
+@utility glass-dark {
+  background: linear-gradient(150deg, oklch(100% 0 0 / 0.09), oklch(100% 0 0 / 0.03));
+  backdrop-filter: blur(18px) saturate(1.1);
+  border: 1px solid oklch(72.5% 0.088 78 / 0.28);
+}
+
+/* ---------- Cartão 3D discreto ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s;
+  will-change: transform;
+}
+.tilt-card > * {
+  transform: translateZ(22px);
+}
+.tilt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s;
+  background: radial-gradient(
+    360px circle at var(--tilt-x, 50%) var(--tilt-y, 50%),
+    oklch(100% 0 0 / 0.5),
+    transparent 62%
+  );
+}
+.tilt-card:hover::after {
+  opacity: 1;
+}
+.tilt-card:hover {
+  box-shadow: var(--shadow-luxe);
+}
+
+/* ---------- Feixe de luz que segue o cursor ---------- */
+.spotlight-host {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight-beam {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+  background:
+    radial-gradient(
+      620px circle at var(--spot-x, 50%) var(--spot-y, 35%),
+      oklch(72.5% 0.088 78 / 0.26),
+      transparent 62%
+    ),
+    radial-gradient(
+      1100px circle at var(--spot-x, 50%) var(--spot-y, 35%),
+      oklch(100% 0 0 / 0.12),
+      transparent 70%
+    );
+}
+
+/* ---------- Marquee infinito ---------- */
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-slide 42s linear infinite;
+}
+.animate-marquee-slow {
+  animation-duration: 68s;
+}
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- Ripple discreto nos botões ---------- */
+@keyframes ripple-out {
+  from { transform: scale(0); opacity: 0.45; }
+  to { transform: scale(2.6); opacity: 0; }
+}
+.ripple-ink {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: oklch(100% 0 0 / 0.65);
+  animation: ripple-out 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ---------- Imagens premium ---------- */
+.img-lux {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+.img-lux img {
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1), filter 1s;
+  will-change: transform;
+}
+.img-lux:hover img {
+  transform: scale(1.06);
+}
+
+@keyframes shine-sweep {
+  0% { transform: translateX(-140%) skewX(-12deg); }
+  100% { transform: translateX(240%) skewX(-12deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
