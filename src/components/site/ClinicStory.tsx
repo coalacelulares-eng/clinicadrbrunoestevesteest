@@ -173,11 +173,29 @@ export function ClinicStory() {
             </div>
           </div>
 
-          <div className="mt-16 flex flex-col items-center gap-3 text-center">
-            <MapPin className="h-8 w-8 text-gold" aria-hidden />
-            <p className="micro-label opacity-80" style={{ fontSize: "17px", lineHeight: 1.4 }}>
-              {CLINIC.address}
-            </p>
+          <div data-reveal="scale" className="mt-16 flex justify-center">
+            <a
+              href={CLINIC.maps}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-magnetic
+              className="glass-dark group flex flex-col items-center gap-3 rounded-3xl border border-gold/30 px-8 py-7 text-center transition-all duration-500 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_18px_50px_-18px_rgba(197,160,89,0.55)]"
+            >
+              <span className="relative grid size-14 place-items-center rounded-full border border-gold/50 bg-graphite">
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 animate-ping rounded-full border border-gold/40 opacity-60"
+                />
+                <MapPin className="size-6 text-gold transition-transform duration-500 group-hover:scale-110" aria-hidden />
+              </span>
+              <p
+                className="micro-label max-w-md opacity-90 transition-opacity group-hover:opacity-100"
+                style={{ fontSize: "17px", lineHeight: 1.4 }}
+              >
+                {CLINIC.address}
+              </p>
+              <span className="h-px w-0 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-500 group-hover:w-40" />
+            </a>
           </div>
         </div>
       </section>
