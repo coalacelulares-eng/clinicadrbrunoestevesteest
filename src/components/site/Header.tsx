@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -23,6 +23,9 @@ export function Header() {
   const { t, lang, setLang } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  // Só a home tem hero escuro atrás do menu; nas demais páginas o topo é claro.
+  const solid = scrolled || pathname !== "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -35,7 +38,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div
         className={`mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full px-5 py-3 transition-all duration-500 ${
-          scrolled
+          solid
             ? "border border-border bg-background/85 text-foreground shadow-[var(--shadow-soft)] backdrop-blur-xl"
             : "border border-transparent text-off-white [text-shadow:0_1px_18px_oklch(20%_0.02_45_/_0.65)]"
         }`}
