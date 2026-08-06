@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 import { PageShell } from "@/components/site/PageShell";
-import { useI18n } from "@/lib/i18n";
 import { CLINIC, whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato e agendamento | Dra. Jackline Félix" },
+      { title: "Contato | Thebit Saúde e Estética — Belo Horizonte" },
       {
         name: "description",
         content:
-          "Agende sua avaliação na Barra da Tijuca, Rio de Janeiro. Atendimento por WhatsApp em português, inglês e espanhol.",
+          "Fale com a Thebit Saúde e Estética: Av. dos Bandeirantes, 466 — Anchieta, BH. WhatsApp +55 31 98458-9016. Seg a sex 09h–20h, sáb 09h–12h.",
       },
-      { property: "og:title", content: "Contato | Dra. Jackline Félix" },
+      { property: "og:title", content: "Contato | Thebit Saúde e Estética" },
       {
         property: "og:description",
-        content: "Fale com a equipe e agende sua avaliação.",
+        content: "Endereço, horários e WhatsApp da clínica Thebit em Belo Horizonte.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,33 +29,46 @@ export const Route = createFileRoute("/contato")({
 function Contato() {
   const { t } = useI18n();
 
+  const cards = [
+    { icon: MapPin, label: "Endereço", value: CLINIC.address },
+    { icon: Phone, label: "WhatsApp", value: CLINIC.phone },
+    { icon: Mail, label: "E-mail", value: CLINIC.email },
+    { icon: Clock, label: "Horários", value: CLINIC.hours },
+  ];
+
   return (
-    <PageShell eyebrow={t("nav.contact")} title={t("final.title")} intro={t("final.text")}>
+    <PageShell
+      eyebrow={t("nav.contact")}
+      title={
+        <>
+          Vamos <span className="gold-text">conversar</span>.
+        </>
+      }
+      intro="Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário."
+    >
       <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-3">
-          <div data-reveal className="vellum rounded-3xl p-7">
-            <MapPin className="size-5 text-gold" />
-            <p className="mt-5 text-sm leading-relaxed text-text-soft">{CLINIC.address}</p>
-          </div>
-          <div data-reveal className="vellum rounded-3xl p-7">
-            <Mail className="size-5 text-gold" />
-            <p className="mt-5 text-sm text-text-soft">{CLINIC.email}</p>
-          </div>
-          <a
-            data-reveal
-            href={whatsappLink(t("wa.default"))}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="vellum vellum-hover rounded-3xl p-7"
-          >
-            <MessageCircle className="size-5 text-gold" />
-            <p className="mt-5 font-grotesk text-[0.6rem] uppercase tracking-[0.22em] text-foreground">
-              {t("cta.whatsapp")}
-            </p>
-          </a>
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
+          {cards.map((c) => (
+            <div key={c.label} data-reveal className="vellum rounded-3xl p-7">
+              <span className="grid size-11 place-items-center rounded-full border border-gold/40">
+                <c.icon className="size-4 text-gold" />
+              </span>
+              <p className="eyebrow mt-5">{c.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-text-soft">{c.value}</p>
+            </div>
+          ))}
         </div>
 
-        <div className="mx-auto mt-12 max-w-4xl text-center">
+        <div data-reveal className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-[2rem] border border-gold/25">
+          <iframe
+            title="Mapa da Thebit Saúde e Estética"
+            src="https://www.google.com/maps?q=Av.+dos+Bandeirantes,+466,+Anchieta,+Belo+Horizonte+-+MG&output=embed"
+            loading="lazy"
+            className="h-80 w-full border-0"
+          />
+        </div>
+
+        <div className="mt-12 text-center">
           <a
             href={whatsappLink(t("wa.default"))}
             target="_blank"
@@ -63,9 +76,8 @@ function Contato() {
             className="btn-gold-lux"
             data-magnetic
           >
-            {t("cta.book")}
+            {t("cta.whatsapp")}
           </a>
-          <p className="mt-6 text-xs leading-relaxed text-text-soft">{t("footer.disclaimer")}</p>
         </div>
       </section>
     </PageShell>

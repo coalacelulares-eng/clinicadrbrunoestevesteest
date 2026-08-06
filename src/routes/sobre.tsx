@@ -1,25 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/site/PageShell";
-import { useI18n } from "@/lib/i18n";
-import { CLINIC, whatsappLink } from "@/lib/site";
-import portrait from "@/assets/dra-portrait.jpg";
+import { CLINIC } from "@/lib/site";
+import recepcao from "@/assets/clinica-3.webp";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre a Dra. Jackline Félix | Trajetória e formação" },
+      { title: "A Clínica | Thebit Saúde e Estética — Belo Horizonte" },
       {
         name: "description",
         content:
-          "Conheça a trajetória, formação e filosofia cirúrgica da Dra. Jackline Félix, cirurgiã plástica na Barra da Tijuca.",
+          "Fundada há mais de 35 anos pelo Dr. Jorge Thebit e hoje conduzida pelo Dr. Daniel Thebit: saúde bucal e estética avançada no Anchieta, BH.",
       },
-      { property: "og:title", content: "Sobre a Dra. Jackline Félix" },
+      { property: "og:title", content: "A Clínica | Thebit Saúde e Estética" },
       {
         property: "og:description",
-        content: "Trajetória, formação e filosofia de uma cirurgia plástica autoral e segura.",
+        content: "35 anos de história em odontologia e estética avançada em Belo Horizonte.",
       },
-      { property: "og:type", content: "profile" },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -27,43 +26,59 @@ export const Route = createFileRoute("/sobre")({
 });
 
 function Sobre() {
-  const { t } = useI18n();
-
   return (
-    <PageShell eyebrow={t("about.eyebrow")} title={t("about.title")} intro={t("about.text")}>
+    <PageShell
+      eyebrow="A Thebit"
+      title={
+        <>
+          Transformar vidas, <span className="gold-text">não apenas sorrisos</span>.
+        </>
+      }
+      intro="Estética avançada e especialistas em Dentística no coração do Anchieta, em Belo Horizonte."
+    >
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          <img
-            data-reveal
-            src={portrait}
-            alt={CLINIC.doctor}
-            loading="lazy"
-            width={1024}
-            height={1280}
-            className="h-[26rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left shadow-[var(--shadow-luxe)] md:h-[34rem]"
-          />
           <div data-reveal>
-            <h2 className="title-display text-3xl md:text-4xl">{t("authority.title")}</h2>
-            <ul className="mt-8 space-y-4 text-sm text-foreground">
-              {["about.c1", "about.c2", "about.c3", "exp.i3", "exp.i4"].map((c) => (
-                <li key={c} className="flex gap-3">
+            <img
+              src={recepcao}
+              alt="Recepção da Thebit Saúde e Estética"
+              loading="lazy"
+              width={1280}
+              height={854}
+              className="h-[26rem] w-full rounded-[2rem] border border-gold/25 object-cover shadow-[var(--shadow-luxe)]"
+            />
+          </div>
+          <div data-reveal className="space-y-6 text-base leading-relaxed text-text-soft">
+            <p>
+              Fundada pelo Dr. Jorge Thebit há mais de 35 anos e totalmente renovada há 5 anos, a
+              clínica é hoje administrada por seu filho, o Dr. Daniel Thebit, cirurgião-dentista
+              com foco internacional em Estética Dental Avançada.
+            </p>
+            <p>
+              Em conjunto com todos os colaboradores, nossa equipe utiliza o que há de mais recente
+              em ciência e tecnologia para ir além dos tratamentos de dente. Abrangemos os problemas
+              de cada paciente e alinhamos saúde e estética.
+            </p>
+            <p className="font-display text-xl text-foreground">
+              “E tudo isso a fim de transformar e melhorar vidas, e não apenas sorrisos. Essa é a
+              nossa missão aqui na Thebit.”
+            </p>
+            <ul className="grid gap-3 text-sm text-foreground">
+              {[
+                "Nota máxima 5.0 nas avaliações dos pacientes",
+                "Trabalhos de alta estética em facetas e resinas",
+                "Estrutura moderna e tecnologias avançadas",
+                "Atendimento acolhedor desde a recepção",
+              ].map((i) => (
+                <li key={i} className="flex gap-3">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
-                  {t(c)}
+                  {i}
                 </li>
               ))}
             </ul>
-            <p className="mt-8 font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-text-soft">
-              {CLINIC.crm}
+            <p className="font-grotesk text-[0.6rem] uppercase tracking-[0.24em]">
+              {CLINIC.director} · {CLINIC.crm}
             </p>
-            <a
-              href={whatsappLink(t("wa.default"))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold-lux mt-8"
-              data-magnetic
-            >
-              {t("cta.book")}
-            </a>
           </div>
         </div>
       </section>

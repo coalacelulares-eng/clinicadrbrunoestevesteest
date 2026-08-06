@@ -1,24 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Activity, Flower2, HeartPulse, UserRound } from "lucide-react";
-import { useState } from "react";
 
 import { PageShell } from "@/components/site/PageShell";
-import { ProcedureQuizDialog } from "@/components/site/ProcedureQuizDialog";
-import { useI18n } from "@/lib/i18n";
+import { whatsappLink } from "@/lib/site";
+
+const groups = [
+  {
+    name: "Estética Dental e Cosmética",
+    items: [
+      ["Facetas e Lentes de Contato", "Correções de formato, cor e espaçamento dos dentes."],
+      [
+        "Restaurações em Resina Composta",
+        "Fechamento de diastemas e recontorno cosmético do sorriso.",
+      ],
+      ["Clareamento Dental", "Remoção de manchas e restauração do brilho natural."],
+    ],
+  },
+  {
+    name: "Reabilitação Oral e Ortodontia",
+    items: [
+      ["Implante Dentário", "Substituição de dentes perdidos com pinos de titânio."],
+      ["Prótese Protocolo", "Reabilitação total e fixa de arcadas dentárias."],
+      ["Invisalign / Alinhadores", "Aparelhos ortodônticos invisíveis e removíveis."],
+      ["Aparelho Ortodôntico", "Modelos convencionais e estéticos para alinhamento."],
+      ["Prótese Dentária", "Opções removíveis ou fixas parciais."],
+    ],
+  },
+  {
+    name: "Harmonização e Estética Avançada",
+    items: [
+      [
+        "Harmonização Orofacial",
+        "Procedimentos injetáveis e tecnologias para equilíbrio estético facial.",
+      ],
+      ["Dermatologia Clínica e Estética", "Tratamentos focados na saúde e rejuvenescimento da pele."],
+    ],
+  },
+  {
+    name: "Cuidados Clínicos e Saúde Bucal",
+    items: [
+      ["Consulta Geral", "Avaliações de rotina e diagnóstico preventivo."],
+      ["Limpeza Dental", "Profilaxia para remoção de tártaro e placa bacteriana."],
+      ["Tratamento de Canal", "Procedimentos endodônticos para infecções internas."],
+      ["Tratamento Periodontal", "Cuidados com a gengiva e os tecidos de suporte."],
+      ["Extração de Siso", "Remoção cirúrgica de dentes inclusos ou desalinhados."],
+      ["Bruxismo e DTM", "Diagnóstico e placas de mordida para disfunções na mandíbula."],
+      ["Odontopediatria", "Atendimento especializado voltado para crianças."],
+      ["Radiografia Odontológica", "Exames de imagem realizados na própria clínica."],
+    ],
+  },
+];
 
 export const Route = createFileRoute("/especialidades")({
   head: () => ({
     meta: [
-      { title: "Especialidades | Dra. Jackline Félix" },
+      { title: "Tratamentos | Thebit Saúde e Estética — BH" },
       {
         name: "description",
         content:
-          "Cirurgia de mama, contorno corporal, face e íntima com planejamento individual e acompanhamento completo.",
+          "Lentes de contato, implantes, Invisalign, harmonização orofacial, dermatologia, canal, periodontia, odontopediatria e mais no Anchieta, BH.",
       },
-      { property: "og:title", content: "Especialidades | Dra. Jackline Félix" },
+      { property: "og:title", content: "Tratamentos | Thebit Saúde e Estética" },
       {
         property: "og:description",
-        content: "Procedimentos assinados: mama, corpo, face e íntima.",
+        content: "Todas as especialidades da clínica Thebit em Belo Horizonte.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -28,43 +72,40 @@ export const Route = createFileRoute("/especialidades")({
 });
 
 function Especialidades() {
-  const { t } = useI18n();
-  const [area, setArea] = useState<string | null>(null);
-
-  const items = [
-    { icon: HeartPulse, title: "spec.breast", desc: "spec.breast.d" },
-    { icon: Activity, title: "spec.body", desc: "spec.body.d" },
-    { icon: UserRound, title: "spec.face", desc: "spec.face.d" },
-    { icon: Flower2, title: "spec.intimate", desc: "spec.intimate.d" },
-  ];
-
   return (
-    <PageShell eyebrow={t("spec.eyebrow")} title={t("spec.title")} intro={t("spec.text")}>
+    <PageShell
+      eyebrow="Tratamentos"
+      title={
+        <>
+          Tudo em <span className="gold-text">um só lugar</span>.
+        </>
+      }
+      intro="Odontologia estética, reabilitação, harmonização e saúde bucal integrativa em uma clínica só."
+    >
       <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2">
-          {items.map((s) => (
-            <button
-              key={s.title}
-              type="button"
-              data-reveal
-              onClick={() => setArea(t(s.title))}
-              className="vellum vellum-hover rounded-3xl p-8 text-left"
-            >
-              <span className="grid size-12 place-items-center rounded-full border border-gold/40">
-                <s.icon className="size-5 text-gold" />
-              </span>
-              <h2 className="title-display mt-6 text-2xl">{t(s.title)}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-text-soft">{t(s.desc)}</p>
-            </button>
+        <div className="mx-auto max-w-6xl space-y-16">
+          {groups.map((g) => (
+            <div key={g.name} data-reveal>
+              <h2 className="title-display text-2xl md:text-3xl">{g.name}</h2>
+              <span className="gold-rule mt-4 block w-20" />
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {g.items.map(([title, desc]) => (
+                  <a
+                    key={title}
+                    href={whatsappLink(`Olá! Gostaria de saber mais sobre: ${title}`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vellum vellum-hover block rounded-3xl p-6"
+                  >
+                    <h3 className="font-display text-lg text-foreground">{title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-text-soft">{desc}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
-
-      <ProcedureQuizDialog
-        area={area}
-        open={area !== null}
-        onOpenChange={(open) => !open && setArea(null)}
-      />
     </PageShell>
   );
 }

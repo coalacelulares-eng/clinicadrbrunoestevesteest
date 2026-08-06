@@ -11,10 +11,11 @@ const links = [
   { to: "/sobre", key: "nav.about" },
   { to: "/especialidades", key: "nav.specialties" },
   { to: "/tecnologias", key: "nav.tech" },
-  { to: "/fabrica-de-barbies", key: "nav.barbies" },
-  { to: "/consulta-internacional", key: "nav.international" },
+  { to: "/equipe", key: "nav.team" },
+  { to: "/estrutura", key: "nav.structure" },
   { to: "/contato", key: "nav.contact" },
 ] as const;
+
 
 const langs: Lang[] = ["pt", "en", "es"];
 
@@ -41,9 +42,8 @@ export function Header() {
       >
         <Link to="/" className="flex items-center gap-2.5">
           <Fleur className="size-6 text-gold" />
-          <span className="font-display text-sm tracking-[0.16em] uppercase">
-            Jackline Félix
-          </span>
+          <span className="font-display text-sm tracking-[0.16em] uppercase">Thebit</span>
+
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

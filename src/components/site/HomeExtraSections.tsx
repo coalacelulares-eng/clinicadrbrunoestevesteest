@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { useI18n } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
-import reception from "@/assets/clinic-reception.jpg";
+import reception from "@/assets/clinica-3.webp";
 
 export function GoalQuiz() {
   const { t } = useI18n();
