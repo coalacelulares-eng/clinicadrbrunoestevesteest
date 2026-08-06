@@ -533,5 +533,5 @@
 
 @keyframes word-gold-black {
   0% { color: var(--gold); }
-  100% { color: var(--foreground); }
+  100% { color: var(--lux-alt, var(--foreground)); }
 }
