@@ -175,7 +175,7 @@ export function ClinicStory() {
 
           <div className="mt-16 flex flex-col items-center gap-3 text-center">
             <MapPin className="h-8 w-8 text-gold" aria-hidden />
-            <p className="micro-label opacity-80" style={{ fontSize: "19px", lineHeight: 1.4 }}>
+            <p className="micro-label opacity-80" style={{ fontSize: "17px", lineHeight: 1.4 }}>
               {CLINIC.address}
             </p>
           </div>
