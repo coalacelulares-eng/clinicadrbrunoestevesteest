@@ -1,16 +1,23 @@
 import {
   Camera,
   Check,
+  CircleHelp,
   Download,
+  Gem,
   Loader2,
   Maximize2,
+  Scan,
+  Smile,
   Share2,
   Sparkles,
   Star,
+  Sun,
   Upload,
+  Wand2,
   X,
   ZoomIn,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { streamImage } from "@/lib/stream-image";
@@ -27,6 +34,17 @@ import {
 
 type Report = { resumo?: string; observacoes?: string[]; protocolo?: string[] };
 type ViewMode = "comparar" | "antes" | "depois" | "lado";
+
+const GOAL_ICONS: Record<string, LucideIcon> = {
+  clareamento: Sun,
+  espacos: Smile,
+  alinhamento: Scan,
+  facetas: Gem,
+  implantes: Wand2,
+  hof: Sparkles,
+  pele: Star,
+  avaliacao: CircleHelp,
+};
 
 export function SmileConsultant() {
   const fileRef = useRef<HTMLInputElement>(null);
@@ -295,6 +313,7 @@ export function SmileConsultant() {
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {GOALS.map((g) => {
               const active = goal?.id === g.id;
+              const Icon = GOAL_ICONS[g.id] ?? Sparkles;
               return (
                 <button
                   key={g.id}
@@ -304,7 +323,13 @@ export function SmileConsultant() {
                     active ? "ring-2 ring-gold" : ""
                   }`}
                 >
-                  <span className="text-xl">{g.icon}</span>
+                  <span
+                    className={`grid size-10 place-items-center rounded-full border transition-colors duration-500 ${
+                      active ? "border-gold bg-gold/10 text-gold" : "border-border text-text-soft"
+                    }`}
+                  >
+                    <Icon className="size-4" />
+                  </span>
                   <p className="mt-3 text-sm leading-snug text-foreground">{g.label}</p>
                   {active && (
                     <span className="mt-3 inline-flex items-center gap-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-gold">
