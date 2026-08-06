@@ -12,15 +12,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img
                 src={logoThebit}
                 alt="Thebit Odontologia"
-                className="size-14 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
+                className="size-28 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
               />
-              <span className="font-display text-lg tracking-[0.1em] uppercase">
-                Thebit Saúde e Estética
-              </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed opacity-70">
               {CLINIC.specialty} · {CLINIC.crm}

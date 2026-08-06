@@ -40,13 +40,12 @@ export function Header() {
             : "border border-transparent text-off-white [text-shadow:0_1px_18px_oklch(20%_0.02_45_/_0.65)]"
         }`}
       >
-        <Link to="/" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center">
           <img
             src={logoThebit}
             alt="Thebit Odontologia"
-            className="size-10 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
+            className="size-16 rounded-full bg-graphite object-cover ring-1 ring-gold/30 md:size-20"
           />
-          <span className="font-display text-sm tracking-[0.16em] uppercase">Thebit</span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
