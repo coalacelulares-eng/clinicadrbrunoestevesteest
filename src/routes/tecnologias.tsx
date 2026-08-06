@@ -76,7 +76,7 @@ function Tecnologias() {
                 <i.icon className="size-5 text-gold" />
               </span>
               <h2 className="title-display mt-6 text-xl">{i.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-text-soft">{i.desc}</p>
+              <p className="section-lede-sm mt-2">{i.desc}</p>
             </div>
           ))}
         </div>

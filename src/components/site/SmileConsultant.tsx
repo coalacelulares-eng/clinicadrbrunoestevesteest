@@ -320,7 +320,7 @@ export function SmileConsultant({
         <div data-reveal className="max-w-2xl">
           <span className="eyebrow">{eyebrow}</span>
           <h2 className="title-display mt-4 text-3xl md:text-5xl">{title}</h2>
-          <p className="mt-5 text-sm leading-relaxed text-text-soft">{description}</p>
+          <p className="section-lede-sm mt-5">{description}</p>
         </div>
 
         {/* Passo 1 */}

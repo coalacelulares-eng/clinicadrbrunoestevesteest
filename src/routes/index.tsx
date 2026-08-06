@@ -150,7 +150,7 @@ function Home() {
           <div data-reveal className="order-1 lg:order-2">
             <span className="eyebrow">{t("about.eyebrow")}</span>
             <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("about.title")}</h2>
-            <p className="drop-cap mt-6 text-base leading-relaxed text-text-soft">
+            <p className="drop-cap section-lede mt-6">
               {t("about.text")}
             </p>
             <ul className="mt-8 space-y-3">
@@ -220,7 +220,7 @@ function Home() {
           <div data-reveal className="max-w-2xl">
             <span className="eyebrow">{t("spec.eyebrow")}</span>
             <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("spec.title")}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-text-soft">{t("spec.text")}</p>
+            <p className="section-lede-sm mt-4">{t("spec.text")}</p>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {specialties.map((s) => (
@@ -235,7 +235,7 @@ function Home() {
                   <s.icon className="size-5 text-gold" />
                 </span>
                 <h3 className="title-display mt-6 text-xl">{t(s.title)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-soft">{t(s.desc)}</p>
+                <p className="section-lede-sm mt-2">{t(s.desc)}</p>
               </button>
             ))}
           </div>
@@ -350,7 +350,7 @@ function Home() {
           <div data-reveal>
             <span className="eyebrow">{t("intl.eyebrow")}</span>
             <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("intl.title")}</h2>
-            <p className="mt-6 text-base leading-relaxed text-text-soft">{t("intl.text")}</p>
+            <p className="section-lede mt-6">{t("intl.text")}</p>
             <ul className="mt-7 grid gap-3 text-sm">
               {["intl.b1", "intl.b2", "intl.b3", "intl.b4"].map((b) => (
                 <li key={b} className="flex gap-3 text-foreground">

@@ -44,7 +44,7 @@ export function SuccessCases() {
           <h2 className="title-display mt-4 text-3xl md:text-5xl">
             Resultados que falam por si.
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-text-soft">
+          <p className="section-lede-sm mt-4">
             Imagens ilustrativas e autorizadas. Cada caso é único e os resultados variam conforme
             anatomia e indicação clínica.
           </p>

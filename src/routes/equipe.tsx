@@ -41,7 +41,7 @@ function Equipe() {
             <article key={p.name} data-reveal className="vellum vellum-hover rounded-3xl p-7">
               <span className="eyebrow">{p.role}</span>
               <h2 className="title-display mt-3 text-xl">{p.name}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-text-soft">{p.desc}</p>
+              <p className="section-lede-sm mt-3">{p.desc}</p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a
                   href={whatsappLink(`Olá! Gostaria de agendar com ${p.name}.`)}
