@@ -1,522 +1,406 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import heroImage from "@/assets/hero-gemini.jpg";
+  Activity,
+  Flower2,
+  HeartPulse,
+  Quote,
+  Ruler,
+  Scissors,
+  Sparkles,
+  UserRound,
+} from "lucide-react";
+import { useState } from "react";
 
-const WHATSAPP =
-  "https://wa.me/552139509590?text=Ol%C3%A1!%20Quero%20ativar%20o%20Google%20AI%20Pro%20por%2018%20meses.";
+import { Fleur } from "@/components/site/Fleur";
+import { ProcedureQuizDialog } from "@/components/site/ProcedureQuizDialog";
+import { BeforeAfterShowcase } from "@/components/site/BeforeAfterShowcase";
+import { Faq, GoalQuiz } from "@/components/site/HomeExtraSections";
+import { useI18n } from "@/lib/i18n";
+import { CLINIC, whatsappLink } from "@/lib/site";
+import portrait from "@/assets/dra-portrait.jpg";
+import silk from "@/assets/silk-texture.jpg";
+import reception from "@/assets/clinic-reception.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EU SOU O MELHOR por 18 meses — R$ 97 único | Ativação Oficial" },
+      { title: "Dra. Jackline Félix | Cirurgia Plástica no Rio de Janeiro" },
       {
         name: "description",
         content:
-          "EU SOU O MELHOR por 18 meses com um pagamento único de R$ 97. Ativação automática em até 3 minutos na sua conta Google, sem mensalidade e sem renovação.",
+          "Cirurgia plástica autoral na Barra da Tijuca: mama, corpo, face e íntima. Planejamento individual, resultado natural e acompanhamento de 12 meses.",
       },
-      { property: "og:title", content: "EU SOU O MELHOR por 18 meses — R$ 97 único" },
+      { property: "og:title", content: "Dra. Jackline Félix | Cirurgia Plástica" },
       {
         property: "og:description",
         content:
-          "Um pagamento de R$ 97, 18 meses de EU SOU O MELHOR ativados de uma vez na sua conta Google. Garantia total de ativação.",
+          "Cirurgia plástica de alta precisão no Rio de Janeiro. Agende sua avaliação com a Dra. Jackline Félix.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Index,
+  component: Home,
 });
 
-const perks = [
-  "18 meses de uma vez",
-  "R$ 97 único",
-  "Nano Banana Pro ilimitado",
-  "Conta Google oficial",
-  "Sem renovação",
-];
+function Home() {
+  const { t } = useI18n();
+  const [area, setArea] = useState<string | null>(null);
 
-const testimonials = [
-  {
-    quote:
-      "Achei que era pegadinha. Paguei e em poucos minutos já estava tudo ativo na minha conta. Hoje uso o Gemini todo santo dia.",
-    name: "Camila Nunes",
-    role: "Designer",
-  },
-  {
-    quote:
-      "O que eu pagava todo mês em ferramenta, aqui paguei uma vez só. Já indiquei pra metade do meu time.",
-    name: "Thiago Ramalho",
-    role: "Analista de marketing",
-  },
-  {
-    quote:
-      "Gero imagem o dia inteiro pros clientes sem me preocupar com crédito. Só isso já pagou o investimento.",
-    name: "Priscila Gomes",
-    role: "Social media",
-  },
-];
+  const specialties = [
+    { icon: HeartPulse, title: "spec.breast", desc: "spec.breast.d" },
+    { icon: Activity, title: "spec.body", desc: "spec.body.d" },
+    { icon: UserRound, title: "spec.face", desc: "spec.face.d" },
+    { icon: Flower2, title: "spec.intimate", desc: "spec.intimate.d" },
+  ];
 
-const stats = [
-  { value: "120+", label: "Ativações entregues", note: "em tempo real" },
-  { value: "5,0★", label: "Avaliação dos clientes", note: "nota máxima" },
-  { value: "até 3 min", label: "Ativação automática", note: "sem espera" },
-  { value: "100%", label: "Reembolso se não ativar", note: "garantia" },
-];
+  const techniques = [
+    { icon: Scissors, title: "tech.mila", desc: "tech.mila.d" },
+    { icon: Ruler, title: "tech.bra", desc: "tech.bra.d" },
+    { icon: Sparkles, title: "tech.hd", desc: "tech.hd.d" },
+  ];
 
-const included = [
-  "Gemini Pro por 18 meses",
-  "5 TB de armazenamento no Google One",
-  "Nano Banana Pro, Veo 3, Flow e Whisk",
-  "NotebookLM, Deep Research e Code Assist",
-  "Antigravity 4× para máxima produtividade",
-  "Ativação segura na sua conta Google",
-  "Suporte especializado durante todo o período",
-];
+  const stats = [
+    { v: "3.000+", k: "authority.s1" },
+    { v: "12", k: "authority.s2" },
+    { v: "400+", k: "authority.s3" },
+    { v: "98%", k: "authority.s4" },
+  ];
 
-const features = [
-  "Gemini Pro",
-  "Nano Banana Pro",
-  "Veo 3",
-  "Flow",
-  "Whisk",
-  "NotebookLM",
-  "Deep Research",
-  "Code Assist",
-  "Antigravity 4×",
-  "Google One 5 TB",
-];
-
-const steps = [
-  {
-    tag: "2 min",
-    num: "01",
-    title: "Você garante o plano",
-    text: "R$ 97 únicos por Pix ou cartão. Sem assinatura, sem fidelidade.",
-  },
-  {
-    tag: "até 3 min",
-    num: "02",
-    title: "Ativação automática",
-    text: "Assim que o pagamento confirma, o sistema ativa e envia seu acesso por WhatsApp e e-mail.",
-  },
-  {
-    tag: "1 clique",
-    num: "03",
-    title: "Ativado na sua conta",
-    text: "Você aceita logado e os 18 meses aparecem no Google One e no app Gemini.",
-  },
-];
-
-const faqs = [
-  {
-    q: "Esse é o EU SOU O MELHOR oficial?",
-    a: "Sim. É o mesmo plano vendido em gemini.google, ativado na sua conta Google com todos os recursos oficiais.",
-  },
-  {
-    q: "Preciso informar minha senha?",
-    a: "Nunca. Você mesmo autoriza a ativação já logado na sua conta Google. Sua senha não é pedida em nenhum momento.",
-  },
-  {
-    q: "O que significa 18 meses de uma vez?",
-    a: "Os 18 meses entram no seu plano em uma única ativação. Não existe cobrança mensal, renovação automática ou cartão preso.",
-  },
-  {
-    q: "Em quanto tempo recebo?",
-    a: "A ativação é automática e normalmente leva até 3 minutos após a confirmação do pagamento. Você recebe o acesso por WhatsApp e e-mail.",
-  },
-  {
-    q: "Vocês são parceiros do Google?",
-    a: "Não. Somos um revendedor independente. O que segura o preço é a compra em grande volume somada a parcerias com fornecedores — a ativação acontece nos servidores do próprio Google.",
-  },
-];
-
-function CtaButton({ children, className = "" }: { children: string; className?: string }) {
   return (
-    <a
-      href={WHATSAPP}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90 ${className}`}
-    >
-      {children}
-    </a>
-  );
-}
-
-function Index() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5">
-          <div className="flex items-center gap-3">
-            <span className="grid size-8 place-items-center rounded-lg bg-secondary text-sm font-bold">
-              G
-            </span>
-            <span className="text-sm font-semibold tracking-tight">AI Pro Brasil</span>
-          </div>
-          <div className="hidden items-center gap-3 text-xs text-muted-foreground sm:flex">
-            <span className="text-foreground">Gemini AI Pro</span>
-            <span>18 meses ·</span>
-            <span className="font-semibold text-foreground">R$ 97</span>
-          </div>
-          <CtaButton className="px-5 py-2 text-xs">Ativar</CtaButton>
-        </div>
-      </header>
-
+    <main>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border">
+      <section className="relative overflow-hidden">
         <img
-          src={heroImage}
-          alt="Luz abstrata representando o EU SOU O MELHOR"
+          src={silk}
+          alt=""
+          aria-hidden="true"
           width={1600}
-          height={1200}
-          className="absolute inset-0 size-full object-cover opacity-40"
+          height={900}
+          className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-32">
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="rounded-full border border-border bg-card/70 px-3 py-1 text-muted-foreground">
-              Plano oficial Google
-            </span>
-            <span className="rounded-full bg-chart-2/15 px-3 py-1 font-semibold text-chart-2">
-              −94%
-            </span>
-          </div>
-          <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-            Google <span className="text-muted-foreground">AI Pro,</span>
-            <br />
-            por 18 meses.
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Um pagamento de <span className="font-semibold text-foreground">R$ 97</span>, ativado de
-            uma vez na sua conta Google. Sem mensalidade, sem renovação, sem cartão preso.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <CtaButton>Ativar 18 meses</CtaButton>
-            <a href="#preco" className="text-sm text-muted-foreground underline-offset-4 hover:underline">
-              Por que R$ 97?
-            </a>
-          </div>
-          <div className="mt-12 flex flex-wrap items-end gap-x-8 gap-y-3 text-sm">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-muted-foreground">No Google</p>
-              <p className="mt-1 text-lg text-muted-foreground line-through">R$ 1.745,82</p>
+        <div className="absolute inset-0 bg-graphite/75" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-36 md:pt-44 lg:grid-cols-2">
+          <div className="animate-fade-up text-off-white">
+            <div className="flex items-center gap-4">
+              <span className="gold-rule w-12" />
+              <span className="eyebrow">{t("hero.eyebrow")}</span>
             </div>
-            <div>
-              <p className="text-3xl font-semibold tracking-tight">R$ 97</p>
-              <p className="text-xs text-muted-foreground">único · R$ 5,39/mês</p>
+            <h1 className="title-display mt-6 text-5xl md:text-7xl">
+              {t("hero.title.a")} <span className="gold-text">{t("hero.title.gold")}</span>{" "}
+              {t("hero.title.b")}
+            </h1>
+            <p className="mt-6 max-w-md text-base leading-relaxed opacity-80">{t("hero.text")}</p>
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href={whatsappLink(t("wa.default"))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold-lux"
+                data-magnetic
+              >
+                {t("cta.book")}
+              </a>
+              <Link to="/sobre" className="btn-slide-gold text-off-white">
+                {t("cta.trajectory")}
+              </Link>
             </div>
-            <div className="text-xs text-muted-foreground">
-              <p>Ativação automática, até 3 min</p>
+            <div className="mt-14 hidden items-center gap-3 md:flex">
+              <span className="animate-scroll-hint text-gold">↓</span>
+              <span className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] opacity-70">
+                {t("hero.scroll")}
+              </span>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Marquee */}
-      <div className="overflow-hidden border-b border-border bg-card/40 py-3">
-        <div className="animate-marquee flex w-max gap-10 whitespace-nowrap text-xs uppercase tracking-widest text-muted-foreground">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="flex gap-10">
-              {perks.map((p) => (
-                <span key={p} className="flex items-center gap-3">
-                  <span className="size-1 rounded-full bg-chart-3" />
-                  {p}
-                </span>
-              ))}
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="overflow-hidden rounded-[2rem] border border-gold/40 p-1.5">
+              <img
+                src={portrait}
+                alt={`${CLINIC.doctor}, ${CLINIC.specialty}`}
+                width={1024}
+                height={1280}
+                className="animate-hero-zoom h-[26rem] w-full rounded-[1.7rem] object-cover object-left md:h-[34rem]"
+              />
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Testimonials */}
-      <section className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">Quem já ativou</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Antes de explicar, veja quem já confiou.
-        </h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure
-              key={t.name}
-              className="rounded-2xl border border-border bg-card p-6 transition hover:border-input"
-            >
-              <div className="text-sm text-chart-4">★★★★★</div>
-              <blockquote className="mt-4 text-sm leading-relaxed text-foreground/90">
-                “{t.quote}”
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <span className="grid size-9 place-items-center rounded-full bg-secondary text-xs font-semibold">
-                  {t.name.charAt(0)}
-                </span>
-                <span className="text-sm">
-                  <span className="block font-medium">{t.name}</span>
-                  <span className="block text-xs text-muted-foreground">{t.role}</span>
-                </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="rounded-2xl border border-border bg-card/60 p-6">
-              <p className="text-2xl font-semibold tracking-tight">{s.value}</p>
-              <p className="mt-1 text-sm">{s.label}</p>
-              <p className="text-xs text-muted-foreground">{s.note}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-chart-2/25 bg-chart-2/5 p-6">
-            <h3 className="text-base font-semibold">Ativou, ou seu dinheiro de volta.</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Se o plano não puder ser ativado na sua conta, devolvemos 100% do valor. Sem perguntas.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-border bg-card/60 p-6">
-            <h3 className="text-base font-semibold">Sua senha nunca é pedida.</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Você mesmo autoriza, logado no Google. Ninguém entra na sua conta.
-            </p>
+            <Fleur className="animate-fleur absolute -bottom-6 -left-6 size-12 text-gold" />
           </div>
         </div>
       </section>
 
-      {/* Offer */}
-      <section id="oferta" className="border-y border-border bg-card/30 py-20 md:py-28">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-muted-foreground">A oferta</p>
-            <p className="mt-4 text-6xl font-semibold tracking-tighter text-foreground/15 md:text-8xl">
-              18MESES
-            </p>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              No Google são R$ 96,99 todo mês, pra sempre. Aqui, R$ 97 uma vez, e os 18 meses
-              inteiros ficam seus.
-            </p>
+      {/* Muito prazer */}
+      <section className="px-6 py-24" id="sobre">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div data-reveal className="order-2 lg:order-1">
+            <img
+              src={portrait}
+              alt={CLINIC.doctor}
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left shadow-[var(--shadow-luxe)] md:h-[32rem]"
+            />
           </div>
-
-          <div className="rounded-3xl border border-border bg-card p-8">
-            <span className="rounded-full bg-destructive/15 px-3 py-1 text-xs font-medium text-destructive">
-              Oferta por tempo limitado
-            </span>
-            <div className="mt-6 flex items-end gap-3">
-              <p className="text-5xl font-semibold tracking-tight">R$97</p>
-              <p className="pb-2 text-sm text-muted-foreground">pagamento único</p>
-            </div>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Pague 1 vez e use por <span className="text-foreground">18 meses</span>
+          <div data-reveal className="order-1 lg:order-2">
+            <span className="eyebrow">{t("about.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("about.title")}</h2>
+            <p className="drop-cap mt-6 text-base leading-relaxed text-text-soft">
+              {t("about.text")}
             </p>
-            <ul className="mt-7 space-y-3 text-sm">
-              {included.map((i) => (
-                <li key={i} className="flex gap-3 text-foreground/90">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-chart-2" />
-                  {i}
+            <ul className="mt-8 space-y-3">
+              {["about.c1", "about.c2", "about.c3"].map((c) => (
+                <li key={c} className="flex gap-3 text-sm text-foreground">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                  {t(c)}
                 </li>
               ))}
             </ul>
-            <CtaButton className="mt-8 w-full">Ativar por R$ 97 no WhatsApp</CtaButton>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
-              Reembolso total se a ativação não for concluída
+            <p className="mt-6 font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-text-soft">
+              {CLINIC.crm}
             </p>
+            <Link to="/sobre" className="btn-slide-gold mt-8 text-foreground">
+              {t("cta.trajectory")}
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Included */}
-      <section className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">O que está incluso</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Tudo que o Google entrega no AI Pro.
-        </h2>
-        <div className="mt-8 flex flex-wrap gap-2">
-          {features.map((f) => (
-            <span
-              key={f}
-              className="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground/90"
-            >
-              {f}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          <div className="rounded-3xl border border-border bg-card p-8">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground">Google Flow</p>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-              Cinema gerado por descrição.
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              O estúdio de vídeo com IA do Google. Cenas cinematográficas com Nano Banana Pro
-              incluso.
+      {/* Fábrica de Barbies */}
+      <section
+        className="relative overflow-hidden px-6 py-24 text-off-white"
+        style={{ background: "var(--gradient-onyx)" }}
+        id="fabrica"
+      >
+        <span className="animate-spin-glow absolute -right-24 top-1/4 size-72 rounded-full border border-gold/20" />
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+          <div data-reveal>
+            <span className="eyebrow">{t("barbies.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("barbies.title")}</h2>
+            <p className="mt-6 max-w-md text-base leading-relaxed opacity-80">
+              {t("barbies.text")}
             </p>
-            <div className="mt-6 flex gap-8">
-              <div>
-                <p className="text-xl font-semibold">1.000</p>
-                <p className="text-xs text-muted-foreground">créditos / mês</p>
-              </div>
-              <div>
-                <p className="text-xl font-semibold">18.000</p>
-                <p className="text-xs text-muted-foreground">no total</p>
-              </div>
+            <div className="mt-8 grid gap-3">
+              {["barbies.p1", "barbies.p2", "barbies.p3"].map((p) => (
+                <div
+                  key={p}
+                  className="rounded-2xl border border-gold/25 bg-off-white/5 px-5 py-3 text-sm"
+                >
+                  {t(p)}
+                </div>
+              ))}
             </div>
+            <Link to="/fabrica-de-barbies" className="btn-slide-gold mt-8 text-off-white">
+              {t("nav.barbies")}
+            </Link>
           </div>
-          <div className="rounded-3xl border border-border bg-card p-8">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground">NotebookLM</p>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-              Sua pesquisa vira áudio.
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Resumos em áudio 5× maiores e notebooks ilimitados para estudo, escrita e pesquisa.
-            </p>
-            <div className="mt-6 flex gap-8">
-              <div>
-                <p className="text-xl font-semibold">5×</p>
-                <p className="text-xs text-muted-foreground">mais áudio</p>
-              </div>
-              <div>
-                <p className="text-xl font-semibold">∞</p>
-                <p className="text-xs text-muted-foreground">notebooks</p>
-              </div>
-            </div>
+          <div data-reveal className="relative">
+            <img
+              src={silk}
+              alt="Assinatura estética da clínica"
+              loading="lazy"
+              width={1600}
+              height={900}
+              className="h-72 w-full rounded-[2rem] border border-gold/25 object-cover md:h-96"
+            />
           </div>
         </div>
       </section>
 
-      {/* Price explained */}
-      <section id="preco" className="border-y border-border bg-card/30 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground">
-            Por que esse preço existe
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            O preço, explicado. Sem pegadinha.
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Aqui não tem truque. Trabalhamos com compra de planos EU SOU O MELHOR em{" "}
-              <span className="text-foreground">grande quantidade</span>, direto e dentro das regras,
-              e mantemos <span className="text-foreground">parcerias com fornecedores</span> que
-              abrem condições impossíveis pra quem tenta comprar sozinho.
-            </p>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Esse desconto de volume a gente passa adiante. Você recebe{" "}
-              <span className="text-foreground">exatamente o mesmo plano</span> que o Google vende,
-              ativado nos servidores do próprio Google, dentro da conta que já é sua. O que muda é só
-              quanto sai do seu bolso.
-            </p>
+      {/* Especialidades */}
+      <section className="px-6 py-24" id="especialidades">
+        <div className="mx-auto max-w-6xl">
+          <div data-reveal className="max-w-2xl">
+            <span className="eyebrow">{t("spec.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("spec.title")}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-text-soft">{t("spec.text")}</p>
           </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            Não somos parceiros nem afiliados do Google. É a escala da compra somada às parcerias que
-            segura o preço lá embaixo.
-          </p>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
-            {[
-              { n: "1", t: "Compra em escala", s: "custo cai" },
-              { n: "2", t: "Parcerias com fornecedores", s: "oferta melhor" },
-              { n: "3", t: "Ativação pelos servidores do Google", s: "oficial" },
-            ].map((c) => (
-              <div key={c.n} className="rounded-2xl border border-border bg-card p-6">
-                <span className="text-xs text-muted-foreground">{c.n}</span>
-                <p className="mt-3 text-sm font-medium">{c.t}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{c.s}</p>
-              </div>
-            ))}
-            <div className="rounded-2xl border border-chart-2/25 bg-chart-2/5 p-6">
-              <span className="text-xs text-chart-2">→</span>
-              <p className="mt-3 text-sm font-medium">Seu preço final</p>
-              <p className="mt-1 text-xs text-muted-foreground">R$ 97, uma vez</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Steps */}
-      <section className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">Como funciona</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Três passos. Uma ativação só.
-        </h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {steps.map((s) => (
-            <div key={s.num} className="rounded-2xl border border-border bg-card p-6">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl font-semibold text-foreground/20">{s.num}</span>
-                <span className="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                  {s.tag}
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {specialties.map((s) => (
+              <button
+                key={s.title}
+                type="button"
+                data-reveal
+                onClick={() => setArea(t(s.title))}
+                className="vellum vellum-hover rounded-3xl p-7 text-left"
+              >
+                <span className="grid size-12 place-items-center rounded-full border border-gold/40">
+                  <s.icon className="size-5 text-gold" />
                 </span>
-              </div>
-              <h3 className="mt-5 text-base font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="border-t border-border bg-card/30 py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-5">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground">
-            Perguntas frequentes
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            O essencial antes de ativar.
-          </h2>
-          <Accordion type="single" collapsible className="mt-8">
-            {faqs.map((f) => (
-              <AccordionItem key={f.q} value={f.q}>
-                <AccordionTrigger className="text-left text-base">{f.q}</AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  {f.a}
-                </AccordionContent>
-              </AccordionItem>
+                <h3 className="title-display mt-6 text-xl">{t(s.title)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-text-soft">{t(s.desc)}</p>
+              </button>
             ))}
-          </Accordion>
+          </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="mx-auto max-w-3xl px-5 py-24 text-center">
-        <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Ative seus 18 meses.</h2>
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          R$ 97 únicos, ativados de uma vez na sua conta Google. Ativação automática em até 3
-          minutos.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <CtaButton>Comprar por R$ 97</CtaButton>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-input px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-accent"
-          >
-            Falar com suporte
-          </a>
+      {/* Técnicas */}
+      <section
+        className="px-6 py-24 text-off-white"
+        style={{ background: "var(--gradient-onyx)" }}
+      >
+        <div className="mx-auto max-w-6xl">
+          <div data-reveal className="max-w-2xl">
+            <span className="eyebrow">{t("tech.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("tech.title")}</h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {techniques.map((s) => (
+              <div
+                key={s.title}
+                data-reveal
+                className="rounded-3xl border border-gold/25 bg-off-white/5 p-7 backdrop-blur-sm"
+              >
+                <s.icon className="animate-float-soft size-6 text-gold" />
+                <h3 className="title-display mt-6 text-xl">{t(s.title)}</h3>
+                <p className="mt-2 text-sm leading-relaxed opacity-75">{t(s.desc)}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <p className="mt-6 text-xs text-muted-foreground">
-          Pagamento seguro · Sem fidelidade · Garantia de ativação
-        </p>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 text-xs text-muted-foreground">
-          <span>AI Pro Brasil · Revendedor independente</span>
-          <span>
-            <span className="line-through">R$ 1.745,82</span> · −94%
-          </span>
-          <span className="text-foreground">R$ 97 / 18 meses</span>
+      {/* Autoridade */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <div data-reveal className="text-center">
+            <span className="eyebrow">{t("authority.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("authority.title")}</h2>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((s) => (
+              <div key={s.k} data-reveal className="vellum rounded-3xl p-7 text-center">
+                <p className="title-display text-4xl text-gold">{s.v}</p>
+                <p className="mt-2 text-xs leading-relaxed text-text-soft">{t(s.k)}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      {/* Experiência */}
+      <section className="relative overflow-hidden">
+        <img
+          src={reception}
+          alt="Ambiente da clínica"
+          loading="lazy"
+          width={1600}
+          height={1008}
+          className="h-[30rem] w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-graphite/90 via-graphite/60 to-transparent" />
+        <div className="absolute inset-0 flex items-center px-6">
+          <div className="mx-auto w-full max-w-6xl text-off-white">
+            <span className="eyebrow">{t("exp.eyebrow")}</span>
+            <h2 className="title-display mt-4 max-w-md text-3xl md:text-5xl">{t("exp.title")}</h2>
+            <ul className="mt-7 grid max-w-lg gap-3 text-sm">
+              {["exp.i1", "exp.i2", "exp.i3", "exp.i4"].map((i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                  {t(i)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <BeforeAfterShowcase />
+
+      {/* Depoimentos */}
+      <section className="px-6 pb-24" id="depoimentos">
+        <div className="mx-auto max-w-6xl">
+          <div data-reveal className="text-center">
+            <span className="eyebrow">{t("test.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("test.title")}</h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {["test.q1", "test.q2", "test.q3"].map((q) => (
+              <figure key={q} data-reveal className="vellum vellum-hover rounded-3xl p-7">
+                <Quote className="size-5 text-gold" />
+                <blockquote className="mt-5 font-display text-lg leading-snug text-foreground">
+                  {t(q)}
+                </blockquote>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <GoalQuiz />
+      <Faq />
+
+      {/* Consulta internacional */}
+      <section
+        className="px-6 py-24"
+        style={{ background: "var(--gradient-champagne)" }}
+        id="internacional"
+      >
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+          <div data-reveal>
+            <img
+              src={portrait}
+              alt={`${CLINIC.doctor} — atendimento internacional`}
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="h-[24rem] w-full rounded-[2rem] border border-gold/25 object-cover object-left md:h-[30rem]"
+            />
+          </div>
+          <div data-reveal>
+            <span className="eyebrow">{t("intl.eyebrow")}</span>
+            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("intl.title")}</h2>
+            <p className="mt-6 text-base leading-relaxed text-text-soft">{t("intl.text")}</p>
+            <ul className="mt-7 grid gap-3 text-sm">
+              {["intl.b1", "intl.b2", "intl.b3", "intl.b4"].map((b) => (
+                <li key={b} className="flex gap-3 text-foreground">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                  {t(b)}
+                </li>
+              ))}
+            </ul>
+            <Link to="/consulta-internacional" className="btn-slide-gold mt-8 text-foreground">
+              {t("nav.international")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="relative overflow-hidden">
+        <img
+          src={portrait}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          width={1024}
+          height={1280}
+          className="h-[28rem] w-full object-cover object-[30%_20%]"
+        />
+        <div className="absolute inset-0 bg-graphite/80" />
+        <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
+          <div className="max-w-2xl text-off-white">
+            <Fleur className="animate-fleur mx-auto size-9 text-gold" />
+            <h2 className="title-display mt-6 text-3xl md:text-5xl">{t("final.title")}</h2>
+            <p className="mt-4 text-sm leading-relaxed opacity-80">{t("final.text")}</p>
+            <a
+              href={whatsappLink(t("wa.default"))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold-lux mt-8"
+              data-magnetic
+            >
+              {t("cta.book")}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <ProcedureQuizDialog
+        area={area}
+        open={area !== null}
+        onOpenChange={(open) => !open && setArea(null)}
+      />
+    </main>
   );
 }
