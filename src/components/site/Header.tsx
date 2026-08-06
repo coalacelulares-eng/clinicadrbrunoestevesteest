@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Fleur } from "./Fleur";
+import logoThebit from "@/assets/logo-thebit.webp";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 
@@ -41,9 +41,12 @@ export function Header() {
         }`}
       >
         <Link to="/" className="flex items-center gap-2.5">
-          <Fleur className="size-6 text-gold" />
+          <img
+            src={logoThebit}
+            alt="Thebit Odontologia"
+            className="size-10 rounded-full bg-graphite object-cover ring-1 ring-gold/30"
+          />
           <span className="font-display text-sm tracking-[0.16em] uppercase">Thebit</span>
-
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
