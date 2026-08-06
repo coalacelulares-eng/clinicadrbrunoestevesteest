@@ -13,17 +13,17 @@ const WHATSAPP =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Google AI Pro por 18 meses — R$ 97 único | Ativação Oficial" },
+      { title: "EU SOU O MELHOR por 18 meses — R$ 97 único | Ativação Oficial" },
       {
         name: "description",
         content:
-          "Google AI Pro por 18 meses com um pagamento único de R$ 97. Ativação automática em até 3 minutos na sua conta Google, sem mensalidade e sem renovação.",
+          "EU SOU O MELHOR por 18 meses com um pagamento único de R$ 97. Ativação automática em até 3 minutos na sua conta Google, sem mensalidade e sem renovação.",
       },
-      { property: "og:title", content: "Google AI Pro por 18 meses — R$ 97 único" },
+      { property: "og:title", content: "EU SOU O MELHOR por 18 meses — R$ 97 único" },
       {
         property: "og:description",
         content:
-          "Um pagamento de R$ 97, 18 meses de Google AI Pro ativados de uma vez na sua conta Google. Garantia total de ativação.",
+          "Um pagamento de R$ 97, 18 meses de EU SOU O MELHOR ativados de uma vez na sua conta Google. Garantia total de ativação.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -114,7 +114,7 @@ const steps = [
 
 const faqs = [
   {
-    q: "Esse é o Google AI Pro oficial?",
+    q: "Esse é o EU SOU O MELHOR oficial?",
     a: "Sim. É o mesmo plano vendido em gemini.google, ativado na sua conta Google com todos os recursos oficiais.",
   },
   {
@@ -173,7 +173,7 @@ function Index() {
       <section className="relative overflow-hidden border-b border-border">
         <img
           src={heroImage}
-          alt="Luz abstrata representando o Google AI Pro"
+          alt="Luz abstrata representando o EU SOU O MELHOR"
           width={1600}
           height={1200}
           className="absolute inset-0 size-full object-cover opacity-40"
@@ -402,7 +402,7 @@ function Index() {
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Aqui não tem truque. Trabalhamos com compra de planos Google AI Pro em{" "}
+              Aqui não tem truque. Trabalhamos com compra de planos EU SOU O MELHOR em{" "}
               <span className="text-foreground">grande quantidade</span>, direto e dentro das regras,
               e mantemos <span className="text-foreground">parcerias com fornecedores</span> que
               abrem condições impossíveis pra quem tenta comprar sozinho.
