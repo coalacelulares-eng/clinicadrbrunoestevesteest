@@ -3,7 +3,6 @@ import { Award, Building2, GraduationCap, Sparkles } from "lucide-react";
 import { Spotlight } from "./Spotlight";
 import { CLINIC, whatsappLink } from "@/lib/site";
 import fachada from "@/assets/clinica-2.webp";
-import recepcao from "@/assets/clinica-3.webp";
 import lounge from "@/assets/clinica-4.webp";
 
 const TIMELINE = [
@@ -177,7 +176,6 @@ export function ClinicStory() {
           <p className="mt-16 text-center micro-label opacity-60">
             {CLINIC.address}
           </p>
-          <img src={recepcao} alt="" aria-hidden="true" className="hidden" />
         </div>
       </section>
     </Spotlight>
