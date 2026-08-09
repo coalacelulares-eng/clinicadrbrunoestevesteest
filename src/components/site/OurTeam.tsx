@@ -49,7 +49,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/dra.katiellymendes/",
     specialty: "Harmonização FACIAL & CORPORAL",
     description: "Especialista em procedimentos faciais e corporáis injetáveis e rejuvenescimento.",
-    photo: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=800&auto=format&fit=crop",
+    photo: katiellyAsset.url,
   },
   {
     name: "Luiza Francino",
