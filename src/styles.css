@@ -178,13 +178,8 @@
 }
 
 @utility gold-text {
-  background: var(--gradient-gold);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #c5a059;
   font-style: italic;
-  animation: shimmer-text 6s linear infinite;
 }
 
 @utility vellum {
