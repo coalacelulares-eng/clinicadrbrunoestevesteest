@@ -47,7 +47,7 @@ export function Header() {
           <img
             src={logoThebit}
             alt="Thebit Odontologia"
-            className="size-16 rounded-full bg-graphite object-cover ring-1 ring-gold/30 md:size-20"
+            className="size-20 rounded-full bg-graphite object-cover ring-1 ring-gold/30 md:size-28"
           />
         </Link>
 
