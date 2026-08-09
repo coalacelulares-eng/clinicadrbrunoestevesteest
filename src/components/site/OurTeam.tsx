@@ -46,8 +46,8 @@ const TEAM: TeamMember[] = [
   {
     name: "Dra. Katielly Mendes",
     instagram: "https://www.instagram.com/dra.katiellymendes/",
-    specialty: "Harmonização Orofacial",
-    description: "Especialista em procedimentos faciais injetáveis e rejuvenescimento.",
+    specialty: "Harmonização FACIAL & CORPORAL",
+    description: "Especialista em procedimentos faciais e corporáis injetáveis e rejuvenescimento.",
     photo: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=800&auto=format&fit=crop",
   },
   {
