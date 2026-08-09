@@ -7,6 +7,7 @@ import gabrielaAsset from "@/assets/gabriela-jards.png.asset.json";
 import danielAsset from "@/assets/dr-daniel-thebit.png.asset.json";
 import katiellyAsset from "@/assets/dra-katielly-mendes.png.asset.json";
 import luizaAsset from "@/assets/dra-luiza-francino.png.asset.json";
+import biancaAsset from "@/assets/dra-bianca.png.asset.json";
 
 interface TeamMember {
   name: string;
@@ -69,9 +70,9 @@ const TEAM: TeamMember[] = [
   {
     name: "Dra. Bianca Medeiros",
     instagram: "https://www.instagram.com/drabiancamedeiros/",
-    specialty: "Dermatologia",
-    description: "Especialista em saúde da pele e protocolos premium de skincare.",
-    photo: "https://images.unsplash.com/photo-1622902046580-2b47f47f0871?q=80&w=800&auto=format&fit=crop",
+    specialty: "Harmonização orofacial & Odontologia",
+    description: "Focada em tratamentos de pele e tecnologias regenerativas.",
+    photo: biancaAsset.url,
   },
 ];
 
