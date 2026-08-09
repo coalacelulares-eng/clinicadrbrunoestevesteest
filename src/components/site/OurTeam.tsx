@@ -2,6 +2,7 @@ import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import camilaAsset from "@/assets/dra-camila-attie.png.asset.json";
 import isabelaAsset from "@/assets/isabela-garzedin.png.asset.json";
+import fernandaAsset from "@/assets/dra-fernanda-montrezor.png.asset.json";
 
 interface TeamMember {
   name: string;
@@ -17,7 +18,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/dra.fernandamontrezor/",
     specialty: "Odontologia Estética",
     description: "Especialista em reabilitação oral e estética dental avançada.",
-    photo: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop",
+    photo: fernandaAsset.url,
   },
   {
     name: "Dra. Camila Attie",
