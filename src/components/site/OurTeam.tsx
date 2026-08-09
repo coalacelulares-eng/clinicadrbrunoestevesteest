@@ -33,7 +33,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/gabrielajards/",
     specialty: "Gestão & Atendimento",
     description: "Responsável pela experiência premium e acolhimento dos pacientes.",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+    photo: gabrielaAsset.url,
   },
   {
     name: "Dr. Daniel Thebit",
