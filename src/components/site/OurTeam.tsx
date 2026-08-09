@@ -60,10 +60,10 @@ const TEAM: TeamMember[] = [
     photo: luizaAsset.url,
   },
   {
-    name: "Isabela Garzedin",
+    name: "Dra. Isabela Garzedin",
     instagram: "https://www.instagram.com/isabela.garzedin/",
-    specialty: "Consultoria Estética",
-    description: "Planejamento personalizado e acompanhamento de resultados.",
+    specialty: "Cirurgiã-Dentista & Periodontia",
+    description: "Especialista em reabilitação oral e estética dental avançada.",
     photo: isabelaAsset.url,
   },
   {
