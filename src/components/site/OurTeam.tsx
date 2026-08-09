@@ -59,7 +59,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/isabela.garzedin/",
     specialty: "Consultoria Estética",
     description: "Planejamento personalizado e acompanhamento de resultados.",
-    photo: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop",
+    photo: isabelaAsset.url,
   },
   {
     name: "Dra. Bianca Medeiros",
