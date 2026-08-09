@@ -4,6 +4,7 @@ import camilaAsset from "@/assets/dra-camila-attie.png.asset.json";
 import isabelaAsset from "@/assets/isabela-garzedin.png.asset.json";
 import fernandaAsset from "@/assets/dra-fernanda-montrezor.png.asset.json";
 import gabrielaAsset from "@/assets/gabriela-jards.png.asset.json";
+import danielAsset from "@/assets/dr-daniel-thebit.png.asset.json";
 
 interface TeamMember {
   name: string;
@@ -40,7 +41,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/dr.danielthebit/",
     specialty: "Implantodontia",
     description: "Especialista em implantes de alta complexidade e carga imediata.",
-    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
+    photo: danielAsset.url,
   },
   {
     name: "Dra. Katielly Mendes",
