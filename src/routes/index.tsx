@@ -23,6 +23,7 @@ import { Differentials } from "@/components/site/Differentials";
 import { ClinicStory } from "@/components/site/ClinicStory";
 import { SuccessCases } from "@/components/site/SuccessCases";
 import { PremiumForm } from "@/components/site/PremiumForm";
+import { OurTeam } from "@/components/site/OurTeam";
 import { DENTAL_GOALS } from "@/lib/smile-consultant";
 import { Faq, GoalQuiz } from "@/components/site/HomeExtraSections";
 import { useI18n } from "@/lib/i18n";
@@ -311,6 +312,8 @@ function Home() {
       <SmileConsultant goals={DENTAL_GOALS} />
 
       <FacialConsultant />
+
+      <OurTeam />
 
       {/* Depoimentos */}
       <section className="px-6 pb-24" id="depoimentos">
