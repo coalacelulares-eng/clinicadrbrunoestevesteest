@@ -5,6 +5,7 @@ import isabelaAsset from "@/assets/isabela-garzedin.png.asset.json";
 import fernandaAsset from "@/assets/dra-fernanda-montrezor.png.asset.json";
 import gabrielaAsset from "@/assets/gabriela-jards.png.asset.json";
 import danielAsset from "@/assets/dr-daniel-thebit.png.asset.json";
+import katiellyAsset from "@/assets/dra-katielly-mendes.png.asset.json";
 
 interface TeamMember {
   name: string;
