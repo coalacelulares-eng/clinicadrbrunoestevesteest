@@ -196,7 +196,7 @@ function Home() {
               {["barbies.p1", "barbies.p2", "barbies.p3"].map((p) => (
                 <div
                   key={p}
-                  className="rounded-2xl border border-gold/25 bg-off-white/5 px-5 py-3 text-sm"
+                  className="rounded-2xl border border-gold/25 bg-off-white/5 px-5 py-3 text-[17px] uppercase tracking-[0.08em]"
                 >
                   {t(p)}
                 </div>
