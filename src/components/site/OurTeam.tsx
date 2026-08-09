@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import camilaAsset from "@/assets/dra-camila-attie.png.asset.json";
 
 interface TeamMember {
   name: string;
@@ -22,7 +23,7 @@ const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/dra.camilaattie/",
     specialty: "Ortodontia & Invisalign",
     description: "Referência em alinhadores invisíveis e ortodontia moderna.",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71f153678e?q=80&w=800&auto=format&fit=crop",
+    photo: camilaAsset.url,
   },
   {
     name: "Gabriela Jards",
