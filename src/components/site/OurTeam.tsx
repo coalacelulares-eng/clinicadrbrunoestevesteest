@@ -6,6 +6,7 @@ import fernandaAsset from "@/assets/dra-fernanda-montrezor.png.asset.json";
 import gabrielaAsset from "@/assets/gabriela-jards.png.asset.json";
 import danielAsset from "@/assets/dr-daniel-thebit.png.asset.json";
 import katiellyAsset from "@/assets/dra-katielly-mendes.png.asset.json";
+import luizaAsset from "@/assets/dra-luiza-francino.png.asset.json";
 
 interface TeamMember {
   name: string;
@@ -52,11 +53,11 @@ const TEAM: TeamMember[] = [
     photo: katiellyAsset.url,
   },
   {
-    name: "Luiza Francino",
+    name: "Dra. Luiza Francino",
     instagram: "https://www.instagram.com/luizafrancino/",
-    specialty: "Estética Avançada",
+    specialty: "Odontologia estética & restauradora",
     description: "Focada em tratamentos de pele e tecnologias regenerativas.",
-    photo: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=800&auto=format&fit=crop",
+    photo: luizaAsset.url,
   },
   {
     name: "Isabela Garzedin",
