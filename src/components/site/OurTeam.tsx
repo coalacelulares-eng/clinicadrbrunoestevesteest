@@ -1,6 +1,7 @@
 import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import camilaAsset from "@/assets/dra-camila-attie.png.asset.json";
+import isabelaAsset from "@/assets/isabela-garzedin.png.asset.json";
 
 interface TeamMember {
   name: string;
