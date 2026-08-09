@@ -29,10 +29,10 @@ const TEAM: TeamMember[] = [
     photo: camilaAsset.url,
   },
   {
-    name: "Gabriela Jards",
+    name: "Dra. Gabriela Jardim",
     instagram: "https://www.instagram.com/gabrielajards/",
-    specialty: "Gestão & Atendimento",
-    description: "Responsável pela experiência premium e acolhimento dos pacientes.",
+    specialty: "Odontologia Estética",
+    description: "Especialista em reabilitação oral e estética dental avançada.",
     photo: gabrielaAsset.url,
   },
   {
