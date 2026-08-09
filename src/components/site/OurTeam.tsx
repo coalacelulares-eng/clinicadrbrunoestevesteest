@@ -24,7 +24,7 @@ const TEAM: TeamMember[] = [
   {
     name: "Dra. Camila Attie",
     instagram: "https://www.instagram.com/dra.camilaattie/",
-    specialty: "Ortodontia & Invisalign",
+    specialty: "Dermatologia Clínica & Estética",
     description: "Referência em alinhadores invisíveis e ortodontia moderna.",
     photo: camilaAsset.url,
   },
