@@ -39,8 +39,8 @@ const TEAM: TeamMember[] = [
   {
     name: "Dr. Daniel Thebit",
     instagram: "https://www.instagram.com/dr.danielthebit/",
-    specialty: "Implantodontia",
-    description: "Especialista em implantes de alta complexidade e carga imediata.",
+    specialty: "CEO Thebit & Implantodontia",
+    description: "CEO Thebit, e especialista em implantes de alta complexidade e carga imediata.",
     photo: danielAsset.url,
   },
   {
