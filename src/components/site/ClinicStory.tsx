@@ -135,7 +135,7 @@ export function ClinicStory() {
                 ].map((b) => (
                   <div
                     key={b}
-                    className="glass-dark rounded-2xl px-5 py-3 text-sm uppercase tracking-[0.08em]"
+                    className="glass-dark rounded-2xl px-5 py-3 text-[17px] tracking-[0.02em]"
                   >
                     {b}
                   </div>
