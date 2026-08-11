@@ -179,12 +179,13 @@ export const PROGRESS_STEPS = [
 ];
 
 export const PHOTO_TIPS = [
-  "Tire uma foto sorrindo.",
-  "Utilize boa iluminação.",
-  "Fotografe de frente.",
-  "Evite filtros.",
-  "Deixe os dentes totalmente aparentes.",
+  "tips.photo",
+  "tips.light",
+  "tips.front",
+  "tips.filter",
+  "tips.teeth",
 ];
+
 
 export const TESTIMONIALS = [
   {
@@ -207,8 +208,8 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const LEGAL_NOTICE =
-  "Esta simulação possui caráter exclusivamente ilustrativo. Os resultados reais podem variar conforme as características individuais de cada paciente e serão confirmados durante a avaliação presencial realizada pelos especialistas da Clínica Thebit.";
+export const LEGAL_NOTICE = "consultant.legal";
+
 export const DENTAL_GOAL_IDS = [
   "clareamento",
   "espacos",
