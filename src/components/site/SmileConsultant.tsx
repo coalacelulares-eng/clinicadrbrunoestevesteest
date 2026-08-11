@@ -123,7 +123,7 @@ export function SmileConsultant({
   const onFile = (file: File | undefined) => {
     if (!file) return;
     if (file.size > 8 * 1024 * 1024) {
-      setError("Envie uma imagem de até 8 MB.");
+      setError(t("consultant.error.size"));
       return;
     }
     const reader = new FileReader();
@@ -171,7 +171,7 @@ export function SmileConsultant({
       setProgress(100);
       setReport(await analysis);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Não foi possível gerar a simulação.");
+      setError(e instanceof Error ? e.message : t("consultant.error.gen"));
     } finally {
       setLoading(false);
     }

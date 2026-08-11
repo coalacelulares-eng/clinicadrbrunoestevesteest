@@ -535,8 +535,11 @@ const pt: Dict = {
   "facial.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
   "facial.analysis": "O que foi melhorado",
   "facial.simulation": "Simulação realizada",
+  "consultant.error.size": "Envie uma imagem de até 8 MB.",
+  "consultant.error.gen": "Não foi possível gerar a simulação.",
   "consultant.view.simulation_tag": "Simulação ilustrativa",
 };
+
 
 
 const en: Dict = {
@@ -1039,7 +1042,10 @@ const en: Dict = {
   "progress.step.2": "Applying aesthetic protocols...",
   "progress.step.3": "Generating illustrative simulation...",
   "progress.step.4": "Wait a few seconds...",
+  "consultant.error.size": "Upload an image up to 8 MB.",
+  "consultant.error.gen": "Could not generate the simulation.",
   "wa.smile.message": "Hi! I just performed the illustrative smile simulation on the Thebit Clinic website. Chosen treatment: {simulation}. I would like to schedule an evaluation.",
+
   "wa.facial.message": "Hi! I just performed the illustrative facial simulation on the Thebit Clinic website. Chosen treatment: {simulation}. I would like to schedule an evaluation.",
 
 
