@@ -895,7 +895,7 @@ const es: Dict = {
   "stats.title": "Una trayectoria que se mide en confianza.",
   "stats.item1.label": "Años de historia",
   "stats.item2.label": "Nota máxima en Google",
-  "stats.item3.label": "Sorrisos transformados",
+  "stats.item3.label": "Sonrisas transformadas",
   "stats.item4.label": "Planificación personalizada",
 
   "final.title": "Tu evaluación empieza con una conversación.",
