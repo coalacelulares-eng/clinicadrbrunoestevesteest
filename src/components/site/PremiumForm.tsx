@@ -64,6 +64,7 @@ function validate(field: Field, value: string): string | null {
 }
 
 export function PremiumForm() {
+  const { t } = useI18n();
   const [values, setValues] = useState<Record<Field, string>>({
     nome: "",
     telefone: "",
