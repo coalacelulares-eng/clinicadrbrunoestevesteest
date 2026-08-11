@@ -22,6 +22,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { streamImage } from "@/lib/stream-image";
 import { whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 import {
   GOALS,
   LEGAL_NOTICE,
@@ -60,20 +61,23 @@ export type ConsultantProps = {
 export function SmileConsultant({
   id = "consultor",
   goals = GOALS,
-  eyebrow = "Consultor Estético Inteligente",
-  title = (
-    <>
-      Faça uma simulação do <span className="gold-text">seu sorriso</span>.
-    </>
-  ),
-  description = "Veja uma simulação ilustrativa personalizada e descubra quais tratamentos podem transformar seu sorriso. Esta simulação não substitui uma avaliação clínica, mas ajuda você a visualizar possibilidades reais antes da consulta.",
-  stepLabel = "Passo 1 · Qual é o seu objetivo?",
-  reportTitle = "Análise Inteligente do Seu Sorriso",
-  ctaTitle = "Gostou da simulação?",
-}: ConsultantProps = {}) {
+}: Omit<ConsultantProps, "eyebrow" | "title" | "description" | "stepLabel" | "reportTitle" | "ctaTitle"> = {}) {
+  const { t } = useI18n();
   const fileRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
   const compareRef = useRef<HTMLDivElement>(null);
+
+  const eyebrow = t("consultant.eyebrow");
+  const title = (
+    <>
+      {t("consultant.title.a")}{" "}
+      <span className="gold-text">{t("consultant.title.gold")}</span>.
+    </>
+  );
+  const description = t("consultant.description");
+  const stepLabel = t("consultant.step1");
+  const reportTitle = "Análise Inteligente do Seu Sorriso";
+  const ctaTitle = "Gostou da simulação?";
 
   const [goal, setGoal] = useState<Goal | null>(null);
   const [original, setOriginal] = useState<string | null>(null);
@@ -254,7 +258,7 @@ export function SmileConsultant({
                 className="absolute right-4 top-4 rounded-full px-3 py-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-graphite"
                 style={{ background: "var(--gradient-gold)" }}
               >
-                Depois · ilustrativo
+                {t("consultant.after_tag")}
               </span>
             )}
             {result && mode === "comparar" && (
@@ -289,7 +293,7 @@ export function SmileConsultant({
           <div>
             <Sparkles className="mx-auto size-6 text-gold" />
             <p className="mt-3 font-grotesk text-[0.6rem] uppercase tracking-[0.24em]">
-              Sua simulação aparecerá aqui
+              {t("consultant.placeholder")}
             </p>
           </div>
         </div>
@@ -351,7 +355,7 @@ export function SmileConsultant({
                   <p className="mt-3 text-sm leading-snug text-foreground">{g.label}</p>
                   {active && (
                     <span className="mt-3 inline-flex items-center gap-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-gold">
-                      <Check className="size-3" /> Selecionado
+                      <Check className="size-3" /> {t("consultant.selected")}
                     </span>
                   )}
                 </button>
@@ -367,7 +371,7 @@ export function SmileConsultant({
           <div className="flex flex-col gap-6">
             <div>
               <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
-                Passo 2 · Sua fotografia
+                {t("consultant.step2")}
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <input
@@ -390,14 +394,14 @@ export function SmileConsultant({
                   onClick={() => cameraRef.current?.click()}
                   className="btn-slide-gold text-foreground md:hidden"
                 >
-                  <Camera className="size-4" /> Tirar foto
+                  <Camera className="size-4" /> {t("consultant.btn.camera")}
                 </button>
                 <button
                   type="button"
                   onClick={() => fileRef.current?.click()}
                   className="btn-slide-gold text-foreground"
                 >
-                  <Upload className="size-4" /> {original ? "Trocar foto" : "Enviar foto"}
+                  <Upload className="size-4" /> {original ? t("consultant.btn.change") : t("consultant.btn.upload")}
                 </button>
               </div>
               <ul className="mt-5 grid gap-2 text-xs text-text-soft">
@@ -421,7 +425,7 @@ export function SmileConsultant({
               ) : (
                 <Sparkles className="size-4" />
               )}
-              Gerar simulação
+              {t("consultant.btn.generate")}
             </button>
 
             {error && <p className="text-xs leading-relaxed text-destructive">{error}</p>}
@@ -430,10 +434,10 @@ export function SmileConsultant({
               <div className="flex flex-wrap gap-2">
                 {(
                   [
-                    ["comparar", "Comparação"],
-                    ["antes", "Antes"],
-                    ["depois", "Depois"],
-                    ["lado", "Lado a lado"],
+                    ["comparar", t("consultant.view.compare")],
+                    ["antes", t("consultant.view.before")],
+                    ["depois", t("consultant.view.after")],
+                    ["lado", t("consultant.view.side")],
                   ] as [ViewMode, string][]
                 ).map(([m, label]) => (
                   <button
@@ -455,28 +459,28 @@ export function SmileConsultant({
                   onClick={() => setZoom((z) => (z >= 1.6 ? 1 : z + 0.2))}
                   className="rounded-full border border-border px-3 py-1.5 text-xs text-text-soft hover:text-foreground"
                 >
-                  <ZoomIn className="inline size-3.5" /> Zoom
+                  <ZoomIn className="inline size-3.5" /> {t("consultant.view.zoom")}
                 </button>
                 <button
                   type="button"
                   onClick={() => setFullscreen(true)}
                   className="rounded-full border border-border px-3 py-1.5 text-xs text-text-soft hover:text-foreground"
                 >
-                  <Maximize2 className="inline size-3.5" /> Tela cheia
+                  <Maximize2 className="inline size-3.5" /> {t("consultant.view.fullscreen")}
                 </button>
                 <button
                   type="button"
                   onClick={download}
                   className="rounded-full border border-border px-3 py-1.5 text-xs text-text-soft hover:text-foreground"
                 >
-                  <Download className="inline size-3.5" /> Baixar
+                  <Download className="inline size-3.5" /> {t("consultant.view.download")}
                 </button>
                 <button
                   type="button"
                   onClick={share}
                   className="rounded-full border border-border px-3 py-1.5 text-xs text-text-soft hover:text-foreground"
                 >
-                  <Share2 className="inline size-3.5" /> Compartilhar
+                  <Share2 className="inline size-3.5" /> {t("consultant.view.share")}
                 </button>
               </div>
             )}

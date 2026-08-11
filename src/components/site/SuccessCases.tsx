@@ -5,64 +5,46 @@ import clinica1 from "@/assets/clinica-1.webp";
 import clinica3 from "@/assets/clinica-3.webp";
 import clinica4 from "@/assets/clinica-4.webp";
 import { whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 
-const CASES = [
-  {
-    image: beforeAfter,
-    treatment: "Lentes de Contato",
-    quote: "O resultado ficou absolutamente natural. Ninguém percebe que não são meus dentes.",
-    author: "Paciente · Belo Horizonte",
-  },
-  {
-    image: clinica4,
-    treatment: "Clareamento + Recontorno",
-    quote: "Em duas sessões meu sorriso mudou completamente, sem parecer artificial.",
-    author: "Paciente · Anchieta",
-  },
-  {
-    image: clinica1,
-    treatment: "Harmonização Orofacial",
-    quote: "Um trabalho discreto, exatamente o que eu queria. Continuo parecendo eu mesma.",
-    author: "Paciente · Comiteco",
-  },
-  {
-    image: clinica3,
-    treatment: "Implantes e Reabilitação",
-    quote: "Voltei a mastigar e a sorrir sem medo. Mudou a minha autoestima por completo.",
-    author: "Paciente · BH",
-  },
-];
+const CASES_IDS = ["case1", "case2", "case3", "case4"];
+const IMAGES: Record<string, string> = {
+  case1: beforeAfter,
+  case2: clinica4,
+  case3: clinica1,
+  case4: clinica3,
+};
 
 export function SuccessCases() {
-  const row = [...CASES, ...CASES];
+  const { t } = useI18n();
+  const row = [...CASES_IDS, ...CASES_IDS];
 
   return (
     <section className="overflow-hidden py-24" id="casos">
       <div className="mx-auto max-w-6xl px-6">
         <div data-reveal className="max-w-2xl">
-          <span className="eyebrow">Casos de sucesso</span>
+          <span className="eyebrow">{t("success.eyebrow")}</span>
           <h2 className="title-display mt-4 text-3xl md:text-5xl">
-            Resultados que falam por si.
+            {t("success.title")}
           </h2>
           <p className="section-lede-sm mt-4">
-            Imagens ilustrativas e autorizadas. Cada caso é único e os resultados variam conforme
-            anatomia e indicação clínica.
+            {t("success.disclaimer")}
           </p>
         </div>
       </div>
 
       <div className="marquee-mask mt-12">
         <div className="animate-marquee animate-marquee-slow gap-5">
-          {row.map((c, i) => (
+          {row.map((id, i) => (
             <article
-              key={`${c.treatment}-${i}`}
+              key={`${id}-${i}`}
               className="tilt-card vellum relative mr-5 w-[19rem] shrink-0 overflow-hidden rounded-[2rem] p-0 sm:w-[23rem]"
             >
               <div>
                 <div className="img-lux rounded-none">
                   <img
-                    src={c.image}
-                    alt={`Caso de ${c.treatment} na Clínica Thebit`}
+                    src={IMAGES[id]}
+                    alt={`Caso de ${t(`success.${id}.t`)} na Clínica Thebit`}
                     loading="lazy"
                     width={900}
                     height={600}
@@ -75,12 +57,12 @@ export function SuccessCases() {
                       <Star key={s} className="size-3.5 fill-current" />
                     ))}
                   </div>
-                  <p className="micro-label mt-4 text-gold">{c.treatment}</p>
+                  <p className="micro-label mt-4 text-gold">{t(`success.${id}.t`)}</p>
                   <Quote className="mt-4 size-4 text-gold" />
                   <blockquote className="mt-3 font-display text-lg leading-snug text-foreground">
-                    {c.quote}
+                    {t(`success.${id}.q`)}
                   </blockquote>
-                  <p className="mt-4 text-xs text-text-soft">{c.author}</p>
+                  <p className="mt-4 text-xs text-text-soft">{t(`success.${id}.a`)}</p>
                 </div>
               </div>
             </article>
@@ -90,13 +72,13 @@ export function SuccessCases() {
 
       <div className="mt-12 text-center">
         <a
-          href={whatsappLink("Olá! Vi os casos de sucesso e gostaria de agendar uma avaliação.")}
+          href={whatsappLink(t("wa.default"))}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold-lux"
           data-magnetic
         >
-          Quero um resultado assim
+          {t("success.cta")}
         </a>
       </div>
     </section>
