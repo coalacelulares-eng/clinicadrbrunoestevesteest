@@ -1570,8 +1570,11 @@ const es: Dict = {
   "progress.step.2": "Aplicando protocolos estéticos...",
   "progress.step.3": "Generando simulación ilustrativa...",
   "progress.step.4": "Espere unos segundos...",
-  "wa.smile.message": "¡Hola! Acabo de realizar la simulación ilustrativa de mi sonrisa en el sitio web de Clínica Thebit. Tratamento elegido: {simulation}. Me gustaría programar una evaluación.",
+  "consultant.error.size": "Envíe una imagen de hasta 8 MB.",
+  "consultant.error.gen": "No se pudo generar la simulación.",
+  "wa.smile.message": "¡Hola! Acabo de realizar la simulación ilustrativa de mi sonrisa en el sitio web de Clínica Thebit. Tratamiento elegido: {simulation}. Me gustaría programar una evaluación.",
   "wa.facial.message": "¡Hola! Acabo de realizar la simulación ilustrativa facial en el sitio web de Clínica Thebit. Tratamiento elegido: {simulation}. Me gustaría programar una evaluación.",
+
 
 
   // Photo Tips
