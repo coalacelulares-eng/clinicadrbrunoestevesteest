@@ -6,35 +6,36 @@ import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
 
-const TIMELINE = [
+const getTimeline = (t: (k: string) => string) => [
   {
     year: "1989",
     icon: GraduationCap,
-    title: "O começo com Dr. Jorge Thebit",
-    desc: "Um consultório em Belo Horizonte fundado sobre técnica apurada e relação de confiança com cada paciente.",
+    title: t("timeline.1989.title"),
+    desc: t("timeline.1989.desc"),
   },
   {
     year: "2005",
     icon: Building2,
-    title: "Uma clínica que cresce",
-    desc: "A demanda por odontologia de alta estética consolida a Thebit como referência no Anchieta.",
+    title: t("timeline.2005.title"),
+    desc: t("timeline.2005.desc"),
   },
   {
     year: "2020",
     icon: Sparkles,
-    title: "Nova estrutura",
-    desc: "Reforma completa: fachada com jardim vertical, recepção ampla e consultórios com tecnologia atualizada.",
+    title: t("timeline.2020.title"),
+    desc: t("timeline.2020.desc"),
   },
   {
     year: "Hoje",
     icon: Award,
-    title: "Nova gestão · Dr. Daniel Thebit",
-    desc: "A segunda geração amplia o propósito: unir saúde bucal, estética facial e medicina em um só lugar.",
+    title: t("timeline.today.title"),
+    desc: t("timeline.today.desc"),
   },
 ];
 
 export function ClinicStory() {
   const { t } = useI18n();
+  const timeline = getTimeline(t);
   return (
     <Spotlight tone="dark">
       <section
@@ -44,9 +45,9 @@ export function ClinicStory() {
       >
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="max-w-2xl">
-            <span className="eyebrow">Nossa história</span>
+            <span className="eyebrow">{t("nav.structure")}</span>
             <h2 className="title-display title-lux-dark mt-4 text-3xl md:text-5xl">
-              Uma história construída há mais de 35 anos.
+              {t("history.title")}
             </h2>
           </div>
 
@@ -55,7 +56,7 @@ export function ClinicStory() {
               aria-hidden="true"
               className="absolute left-0 top-6 hidden h-px w-full bg-gradient-to-r from-transparent via-gold/60 to-transparent md:block"
             />
-            {TIMELINE.map((step, i) => (
+            {timeline.map((step, i) => (
               <li
                 key={step.year}
                 data-reveal="scale"
@@ -87,28 +88,25 @@ export function ClinicStory() {
               />
             </div>
             <div data-reveal="right">
-              <span className="eyebrow">O fundador</span>
+              <span className="eyebrow">{t("history.founder.eyebrow")}</span>
               <h3 className="title-display title-lux-dark mt-4 text-3xl md:text-4xl">
-                Conheça quem iniciou essa história.
+                {t("history.founder.title")}
               </h3>
               <p className="mt-6 text-base leading-relaxed opacity-80">
-                Dr. Jorge Thebit abriu as portas da clínica há mais de 35 anos com uma convicção
-                simples: tratar pessoas, não apenas dentes. Construiu uma clientela fiel à base de
-                técnica minuciosa, honestidade no diagnóstico e presença constante.
+                {t("history.founder.p1")}
               </p>
               <p className="mt-4 text-base leading-relaxed opacity-80">
-                Esse legado se traduziu em método — e hoje segue vivo na conduta de toda a equipe,
-                sob a continuidade do seu filho, Dr. Daniel Thebit.
+                {t("history.founder.p2")}
               </p>
               <ul className="mt-7 grid gap-3 text-[17px] tracking-[0.02em]">
                 {[
-                  "Fundação da clínica e formação da primeira equipe",
-                  "Cultura de diagnóstico honesto e acompanhamento de longo prazo",
-                  "Base de pacientes que atravessa gerações",
+                  "history.founder.list1",
+                  "history.founder.list2",
+                  "history.founder.list3",
                 ].map((i) => (
                   <li key={i} className="flex gap-3">
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
-                    {i}
+                    {t(i)}
                   </li>
                 ))}
               </ul>
@@ -118,40 +116,38 @@ export function ClinicStory() {
           {/* Especialista em destaque */}
           <div className="mt-24 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div data-reveal="left">
-              <span className="eyebrow">Especialista em destaque</span>
+              <span className="eyebrow">{t("history.expert.eyebrow")}</span>
               <h3 className="title-display title-lux-dark mt-4 text-3xl md:text-4xl">
                 Dr. Daniel Thebit
               </h3>
-              <p className="micro-label mt-3 text-gold">CEO · Especialista em Dentística</p>
+              <p className="micro-label mt-3 text-gold">{t("history.expert.role")}</p>
               <p className="mt-6 text-base leading-relaxed opacity-80">
-                Cirurgião-dentista com formação avançada em Estética Dental pelo ILAPEO. Atua com
-                lentes de contato, laminados cerâmicos, facetas em resina e recontorno estético,
-                sempre buscando resultados extremamente naturais.
+                {t("history.expert.desc")}
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Formação ILAPEO",
-                  "Estética Dental Avançada",
-                  "Resultados naturais",
-                  "Planejamento individualizado",
+                  "history.expert.seal1",
+                  "history.expert.seal2",
+                  "history.expert.seal3",
+                  "history.expert.seal4",
                 ].map((b) => (
                   <div
                     key={b}
                     className="glass-dark rounded-2xl px-5 py-3 text-[17px] font-normal uppercase tracking-[0.08em]"
                   >
-                    {b}
+                    {t(b)}
                   </div>
                 ))}
               </div>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
-                  href={whatsappLink("Olá! Gostaria de agendar uma avaliação com o Dr. Daniel Thebit.")}
+                  href={whatsappLink(t("wa.expert"))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-lux"
                   data-magnetic
                 >
-                  Agendar com o especialista
+                  {t("cta.expert")}
                 </a>
                 <a
                   href="https://www.instagram.com/dr.danielthebit/"
@@ -200,6 +196,9 @@ export function ClinicStory() {
                 {CLINIC.address}
               </p>
               <span className="h-px w-0 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-500 group-hover:w-40" />
+              <span className="micro-label mt-2 text-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                {t("cta.maps")}
+              </span>
             </a>
           </div>
         </div>
