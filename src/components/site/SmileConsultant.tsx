@@ -28,10 +28,11 @@ import {
   LEGAL_NOTICE,
   PHOTO_TIPS,
   PROGRESS_STEPS,
-  SPECIALISTS,
   TESTIMONIALS,
   type Goal,
 } from "@/lib/smile-consultant";
+import { TEAM } from "@/lib/site";
+
 
 type Report = { resumo?: string; observacoes?: string[]; protocolo?: string[] };
 type ViewMode = "comparar" | "antes" | "depois" | "lado";
@@ -58,7 +59,7 @@ export function SmileConsultant({
   goals = GOALS,
   type = "smile",
 }: ConsultantProps) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const fileRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
   const compareRef = useRef<HTMLDivElement>(null);
@@ -122,7 +123,7 @@ export function SmileConsultant({
   const onFile = (file: File | undefined) => {
     if (!file) return;
     if (file.size > 8 * 1024 * 1024) {
-      setError("Envie uma imagem de até 8 MB.");
+      setError(t("consultant.error.size"));
       return;
     }
     const reader = new FileReader();
@@ -148,7 +149,12 @@ export function SmileConsultant({
     const analysis = fetch("/api/analise", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: original, goal: goal.label }),
+      body: JSON.stringify({ 
+        image: original, 
+        goal: t(goal.id),
+        lang,
+      }),
+
     })
       .then((r) => (r.ok ? (r.json() as Promise<Report>) : null))
       .catch(() => null);
@@ -156,7 +162,7 @@ export function SmileConsultant({
     try {
       await streamImage(
         "/api/simulacao",
-        { image: original, prompt: goal.simulation, instruction: goal.edit },
+        { image: original, prompt: t(`goal.${goal.id}.simulation`), instruction: goal.edit },
         (url, final) => {
           setResult(url);
           if (final) setIsFinal(true);
@@ -165,7 +171,7 @@ export function SmileConsultant({
       setProgress(100);
       setReport(await analysis);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Não foi possível gerar a simulação.");
+      setError(e instanceof Error ? e.message : t("consultant.error.gen"));
     } finally {
       setLoading(false);
     }
@@ -201,11 +207,12 @@ export function SmileConsultant({
     download();
   };
 
-  const specialist = goal ? SPECIALISTS[goal.specialist] : undefined;
+  const specialist = goal ? TEAM.find((m) => m.id === goal.specialistId) : undefined;
+  const waMessage = t(`wa.${type}.message`).replace(
+    "{simulation}",
+    goal ? t(`goal.${goal.id}.simulation`) : "",
+  );
 
-  const waMessage = `Olá!\nAcabei de realizar a simulação ilustrativa no site da Clínica Thebit.\nTratamento escolhido: ${
-    goal?.simulation ?? ""
-  }\nGostaria de agendar uma avaliação com o especialista indicado.`;
 
   const comparator = (
     <div
@@ -302,7 +309,7 @@ export function SmileConsultant({
           <div className="w-full max-w-xs text-center text-off-white">
             <Loader2 className="mx-auto size-7 animate-spin text-gold" />
             <p className="mt-4 font-grotesk text-[0.6rem] uppercase tracking-[0.24em]">
-              {PROGRESS_STEPS[progressStep]}
+              {t(PROGRESS_STEPS[progressStep] || "progress.step.0")}
             </p>
             <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-off-white/20">
               <div
@@ -490,7 +497,7 @@ export function SmileConsultant({
                 <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
                   {t(`${prefix}.simulation`)}
                 </p>
-                <p className="title-display mt-2 text-2xl text-foreground">{goal.simulation}</p>
+                <p className="title-display mt-2 text-2xl text-foreground">{t(`goal.${goal.id}.simulation`)}</p>
               </div>
             )}
           </div>
@@ -503,7 +510,7 @@ export function SmileConsultant({
               {t(`${prefix}.analysis`)}
             </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-              {[...goal.improvements, "Simulação ilustrativa"].map((i) => (
+              {[...[0, 1, 2, 3].map((i) => t(`goal.${goal.id}.imp.${i}`)), t("consultant.view.simulation_tag")].map((i) => (
                 <div key={i} className="vellum rounded-2xl px-5 py-4 text-sm text-foreground">
                   <Check className="mb-2 size-4 text-gold" />
                   {i}
@@ -565,9 +572,10 @@ export function SmileConsultant({
                 <span className="eyebrow">{t(`${prefix}.specialistEyebrow`)}</span>
                 <h3 className="title-display mt-3 text-2xl">{specialist.name}</h3>
                 <p className="mt-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-text-soft">
-                  {specialist.role}
+                  {t(`team.member.${specialist.id}.role`)}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-text-soft">{specialist.bio}</p>
+                <p className="mt-4 text-sm leading-relaxed text-text-soft">{t(`team.member.${specialist.id}.desc`)}</p>
+
                 <a
                   href={specialist.instagram}
                   target="_blank"
