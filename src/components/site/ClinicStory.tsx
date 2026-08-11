@@ -2,6 +2,7 @@ import { Award, Building2, GraduationCap, MapPin, Sparkles } from "lucide-react"
 
 import { Spotlight } from "./Spotlight";
 import { CLINIC, whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
 
@@ -33,6 +34,7 @@ const TIMELINE = [
 ];
 
 export function ClinicStory() {
+  const { t } = useI18n();
   return (
     <Spotlight tone="dark">
       <section
@@ -164,7 +166,7 @@ export function ClinicStory() {
             <div data-reveal="right" className="img-lux border border-gold/25">
               <img
                 src={lounge}
-                alt="Ambiente de atendimento da Clínica Thebit"
+                alt={t("clinic.comfort")}
                 loading="lazy"
                 width={652}
                 height={1020}
@@ -173,7 +175,10 @@ export function ClinicStory() {
             </div>
           </div>
 
-          <div data-reveal="scale" className="mt-16 flex justify-center">
+          <div data-reveal="scale" className="mt-16 flex flex-col items-center justify-center gap-6">
+            <p className="text-center text-lg italic opacity-80">
+              "{t("clinic.comfort")}"
+            </p>
             <a
               href={CLINIC.maps}
               target="_blank"
