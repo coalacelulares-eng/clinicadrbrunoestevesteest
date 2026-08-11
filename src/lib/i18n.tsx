@@ -1289,6 +1289,12 @@ const es: Dict = {
   "consultant.view.share": "Compartir",
   "consultant.after_tag": "Después · ilustrativo",
   "consultant.selected": "Seleccionado",
+  "facial.eyebrow": "Armonización y Dermatología",
+  "facial.title.a": "Simule su",
+  "facial.title.gold": "armonización facial",
+  "facial.description":
+    "Visualice una proyección ilustrativa de armonización orofacial o tratamientos dermatológicos, con resultados naturales y proporcionales a su rostro. La simulación es solo orientativa y se refinará en la evaluación presencial.",
+  "facial.step1": "Paso 1 · ¿Qué desea tratar?",
   "facial.reportTitle": "Análisis Facial Inteligente",
   "facial.ctaTitle": "¿Listo para tu protocolo facial?",
   "facial.ctaDesc": "Reserve su evaluación personalizada ahora. En la Clínica Thebit recibirá un plan completo realizado por especialistas.",
