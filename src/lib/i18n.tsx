@@ -36,7 +36,7 @@ const pt: Dict = {
   "about.text":
     "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e hoje administrada por seu filho, o Dr. Daniel Thebit, a Thebit Saúde e Estética une toda a equipe em torno de um propósito: ir além do tratamento do dente. Entendemos o paciente por inteiro e alinhamos saúde e estética.",
 
-  "facial.eyebrow": "Harmonização & Dermatologia",
+  "facial.eyebrow": "Harmonización & Dermatologia",
   "facial.title.a": "Simule a sua",
   "facial.title.gold": "harmonização facial",
   "facial.description":
@@ -421,6 +421,20 @@ const pt: Dict = {
   "consultant.view.share": "Compartilhar",
   "consultant.after_tag": "Depois · ilustrativo",
   "consultant.selected": "Selecionado",
+  "consultant.reportTitle": "Análise Inteligente do Seu Sorriso",
+  "consultant.ctaTitle": "Gostou da simulação?",
+  "consultant.ctaDesc": "Agende agora sua avaliação personalizada. Na Clínica Thebit você receberá um planejamento completo realizado por especialistas.",
+  "consultant.ctaBtn": "Agendar pelo WhatsApp",
+  "consultant.reportEyebrow": "Relatório personalizado",
+  "consultant.reportDisclaimer": "Esta análise é apenas ilustrativa e será confirmada durante sua avaliação presencial.",
+  "consultant.specialistEyebrow": "Especialista indicado",
+  "consultant.specialistBtn": "Conhecer especialista",
+  "consultant.statsText": "5,0 estrelas no Google.",
+  "consultant.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
+  "consultant.analysis": "O que foi melhorado",
+  "consultant.simulation": "Simulação realizada",
+  "facial.analysis": "O que foi melhorado",
+  "facial.simulation": "Simulação realizada",
 };
 
 const en: Dict = {
@@ -471,6 +485,14 @@ const en: Dict = {
   "facial.step1": "Step 1 · What do you want to treat?",
   "facial.reportTitle": "Intelligent Facial Analysis",
   "facial.ctaTitle": "Ready for your facial protocol?",
+  "facial.ctaDesc": "Schedule your personalized assessment now. At Thebit Clinic you will receive a complete plan carried out by specialists.",
+  "facial.ctaBtn": "Schedule via WhatsApp",
+  "facial.reportEyebrow": "Personalized report",
+  "facial.reportDisclaimer": "This analysis is only illustrative and will be confirmed during your in-person evaluation.",
+  "facial.specialistEyebrow": "Indicated specialist",
+  "facial.specialistBtn": "Meet the specialist",
+  "facial.statsText": "5.0 stars on Google.",
+  "facial.statsSub": "More than 35 years transforming lives and not just smiles.",
   "about_page.quote":
     "“And all this in order to transform and improve lives, and not just smiles. This is our mission here at Thebit.”",
   "about_page.p3":
@@ -832,6 +854,20 @@ const en: Dict = {
   "consultant.view.share": "Share",
   "consultant.after_tag": "After · illustrative",
   "consultant.selected": "Selected",
+  "consultant.reportTitle": "Intelligent Analysis of Your Smile",
+  "consultant.ctaTitle": "Did you like the simulation?",
+  "consultant.ctaDesc": "Schedule your personalized assessment now. At Thebit Clinic you will receive a complete planning carried out by specialists.",
+  "consultant.ctaBtn": "Schedule via WhatsApp",
+  "consultant.reportEyebrow": "Personalized report",
+  "consultant.reportDisclaimer": "This analysis is only illustrative and will be confirmed during your in-person evaluation.",
+  "consultant.specialistEyebrow": "Indicated specialist",
+  "consultant.specialistBtn": "Meet the specialist",
+  "consultant.statsText": "5.0 stars on Google.",
+  "consultant.statsSub": "More than 35 years transforming lives and not just smiles.",
+  "consultant.analysis": "What has been improved",
+  "consultant.simulation": "Simulation performed",
+  "facial.analysis": "What has been improved",
+  "facial.simulation": "Simulation performed",
 };
 
 const es: Dict = {
@@ -1235,6 +1271,36 @@ const es: Dict = {
   "consultant.view.share": "Compartir",
   "consultant.after_tag": "Después · ilustrativo",
   "consultant.selected": "Seleccionado",
+  "facial.eyebrow": "Armonización y Dermatología",
+  "facial.title.a": "Simule su",
+  "facial.title.gold": "armonización facial",
+  "facial.description":
+    "Visualice una proyección ilustrativa de armonización orofacial o tratamientos dermatológicos, con resultados naturales y proporcionales a su rostro. La simulación es solo orientativa y se refinará en la evaluación presencial.",
+  "facial.step1": "Paso 1 · ¿Qué desea tratar?",
+  "facial.reportTitle": "Análisis Facial Inteligente",
+  "facial.ctaTitle": "¿Listo para tu protocolo facial?",
+  "facial.ctaDesc": "Reserve su evaluación personalizada ahora. En la Clínica Thebit recibirá un plan completo realizado por especialistas.",
+  "facial.ctaBtn": "Agendar por WhatsApp",
+  "facial.reportEyebrow": "Informe personalizado",
+  "facial.reportDisclaimer": "Este análisis es solo ilustrativo y se confirmará durante su evaluación presencial.",
+  "facial.specialistEyebrow": "Especialista indicado",
+  "facial.specialistBtn": "Conocer al especialista",
+  "facial.statsText": "5,0 estrellas en Google.",
+  "facial.statsSub": "Más de 35 años transformando vidas y no solo sonrisas.",
+  "facial.analysis": "Qué se ha mejorado",
+  "facial.simulation": "Simulación realizada",
+  "consultant.reportTitle": "Análisis Inteligente de Su Sonrisa",
+  "consultant.ctaTitle": "¿Te gustó la simulación?",
+  "consultant.ctaDesc": "Agenda ahora tu avaliação personalizada. En Clínica Thebit recibirás un planeamiento completo realizado por especialistas.",
+  "consultant.ctaBtn": "Agendar por WhatsApp",
+  "consultant.reportEyebrow": "Relatorio personalizado",
+  "consultant.reportDisclaimer": "Este análisis es solo ilustrativo y se confirmará durante su evaluación presencial.",
+  "consultant.specialistEyebrow": "Especialista indicado",
+  "consultant.specialistBtn": "Conocer especialista",
+  "consultant.statsText": "5,0 estrellas en Google.",
+  "consultant.statsSub": "Más de 35 años transformando vidas y no solo sonrisas.",
+  "consultant.analysis": "Qué se ha mejorado",
+  "consultant.simulation": "Simulación realizada",
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };
