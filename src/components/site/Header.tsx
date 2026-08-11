@@ -65,7 +65,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-1.5 sm:flex">
+          <div className="flex items-center gap-2">
             {langs.map((l) => (
               <button
                 key={l}
@@ -114,20 +114,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="mt-5 flex items-center gap-3">
-            {langs.map((l) => (
-              <button
-                key={l}
-                type="button"
-                onClick={() => setLang(l)}
-                className={`font-grotesk text-[0.65rem] uppercase tracking-[0.2em] ${
-                  lang === l ? "text-gold" : "text-muted-foreground"
-                }`}
-              >
-                {l}
-              </button>
-            ))}
-          </div>
         </div>
       )}
     </header>
