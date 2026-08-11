@@ -926,6 +926,36 @@ const en: Dict = {
   "consultant.simulation": "Simulation performed",
   "facial.analysis": "What has been improved",
   "facial.simulation": "Simulation performed",
+
+  // Consultant Goals
+  "clareamento": "Whiten my teeth",
+  "espacos": "Close gaps between teeth",
+  "alinhamento": "Improve alignment",
+  "facetas": "Veneers or Contact Lenses",
+  "implantes": "Dental Implants",
+  "hof": "Orofacial Harmonization",
+  "pele": "Improve my skin",
+  "avaliacao": "I don't know what treatment I need. I want a smart assessment.",
+
+  // Photo Tips
+  "tips.photo": "Take a photo smiling.",
+  "tips.light": "Use good lighting.",
+  "tips.front": "Take it from the front.",
+  "tips.filter": "Avoid filters.",
+  "tips.teeth": "Keep your teeth fully visible.",
+
+  // Simulation Testimonials
+  "test.smile.q1": "“I got veneers with Dr. Daniel and the result was absolutely natural. Impeccable service.”",
+  "test.smile.author1": "Patient · Belo Horizonte",
+  "test.smile.q2": "“Beautiful clinic, attentive team and a care with details that I had never seen elsewhere.”",
+  "test.smile.author2": "Patient · Anchieta",
+  "test.smile.q3": "“I started smiling again without fear. It completely changed my self-esteem.”",
+  "test.smile.author3": "Patient · Comiteco",
+  "test.smile.q4": "“Excellent professionals, they explain everything calmly and the result exceeds expectations.”",
+  "test.smile.author4": "Patient · BH",
+
+  "consultant.legal": "This simulation is for illustrative purposes only. Real results may vary according to each patient's individual characteristics and will be confirmed during the in-person evaluation performed by Clínica Thebit specialists.",
+
 };
 
 const es: Dict = {
