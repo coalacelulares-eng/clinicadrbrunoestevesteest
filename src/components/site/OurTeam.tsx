@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { TEAM, whatsappLink } from "@/lib/site";
 import camilaAsset from "@/assets/dra-camila-attie.png.asset.json";
 import isabelaAsset from "@/assets/isabela-garzedin.png.asset.json";
 import fernandaAsset from "@/assets/dra-fernanda-montrezor.png.asset.json";
@@ -9,72 +10,16 @@ import katiellyAsset from "@/assets/dra-katielly-mendes.png.asset.json";
 import luizaAsset from "@/assets/dra-luiza-francino.png.asset.json";
 import biancaAsset from "@/assets/dra-bianca.png.asset.json";
 
-interface TeamMember {
-  name: string;
-  instagram: string;
-  specialty: string;
-  description: string;
-  photo: string;
-}
-
-const TEAM: TeamMember[] = [
-  {
-    name: "Dra. Fernanda Montrezor",
-    instagram: "https://www.instagram.com/dra.fernandamontrezor/",
-    specialty: "Odontologia Estética",
-    description: "Especialista em reabilitação oral e estética dental avançada.",
-    photo: fernandaAsset.url,
-  },
-  {
-    name: "Dra. Camila Attie",
-    instagram: "https://www.instagram.com/dra.camilaattie/",
-    specialty: "Dermatologia Clínica & Estética",
-    description: "Referência em Beleza natural com elegância",
-    photo: camilaAsset.url,
-  },
-  {
-    name: "Dra. Gabriela Jardim",
-    instagram: "https://www.instagram.com/gabrielajards/",
-    specialty: "Odontologia Estética",
-    description: "Especialista em reabilitação oral e estética dental avançada.",
-    photo: gabrielaAsset.url,
-  },
-  {
-    name: "Dr. Daniel Thebit",
-    instagram: "https://www.instagram.com/dr.danielthebit/",
-    specialty: "CEO Thebit & Implantodontia",
-    description: "CEO Thebit, e especialista em implantes de alta complexidade e carga imediata.",
-    photo: danielAsset.url,
-  },
-  {
-    name: "Dra. Katielly Mendes",
-    instagram: "https://www.instagram.com/dra.katiellymendes/",
-    specialty: "Harmonização FACIAL & CORPORAL",
-    description: "Especialista em procedimentos faciais e corporáis injetáveis e rejuvenescimento.",
-    photo: katiellyAsset.url,
-  },
-  {
-    name: "Dra. Luiza Francino",
-    instagram: "https://www.instagram.com/luizafrancino/",
-    specialty: "Odontologia estética & restauradora",
-    description: "Focada em tratamentos de pele e tecnologias regenerativas.",
-    photo: luizaAsset.url,
-  },
-  {
-    name: "Dra. Isabela Garzedin",
-    instagram: "https://www.instagram.com/isabela.garzedin/",
-    specialty: "Cirurgiã-Dentista & Periodontia",
-    description: "Especialista em reabilitação oral e estética dental avançada.",
-    photo: isabelaAsset.url,
-  },
-  {
-    name: "Dra. Bianca Medeiros",
-    instagram: "https://www.instagram.com/drabiancamedeiros/",
-    specialty: "Harmonização orofacial & Odontologia",
-    description: "Focada em tratamentos de pele e tecnologias regenerativas.",
-    photo: biancaAsset.url,
-  },
-];
+const PHOTOS: Record<string, string> = {
+  daniel: danielAsset.url,
+  bianca: biancaAsset.url,
+  katielly: katiellyAsset.url,
+  fernanda: fernandaAsset.url,
+  luiza: luizaAsset.url,
+  isabela: isabelaAsset.url,
+  gabriela: gabrielaAsset.url,
+  camila: camilaAsset.url,
+};
 
 export function OurTeam() {
   const { t } = useI18n();
@@ -95,13 +40,13 @@ export function OurTeam() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {TEAM.map((member) => (
             <div 
-              key={member.name}
+              key={member.id}
               className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
               {/* Photo Container */}
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img
-                  src={member.photo}
+                  src={PHOTOS[member.id]}
                   alt={member.name}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -126,20 +71,20 @@ export function OurTeam() {
                   {member.name}
                 </h3>
                 <span className="mt-1 text-xs font-bold uppercase tracking-widest text-gold">
-                  {member.specialty}
+                  {t(`team.member.${member.id}.role`)}
                 </span>
                 <p className="mt-4 text-sm leading-relaxed text-text-soft">
-                  {member.description}
+                  {t(`team.member.${member.id}.desc`)}
                 </p>
                 
                 <div className="mt-auto pt-6">
                   <a 
-                    href={member.instagram}
+                    href={whatsappLink(t("wa.team.book").replace("{name}", member.name))}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-graphite/60 transition-colors hover:text-gold"
                   >
-                    Conheça o perfil
+                    {t("nav.contact")}
                     <span className="h-px w-4 bg-gold/50" />
                   </a>
                 </div>
@@ -151,3 +96,4 @@ export function OurTeam() {
     </section>
   );
 }
+

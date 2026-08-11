@@ -245,7 +245,7 @@ const pt: Dict = {
   "history.expert.seal1": "Formação ILAPEO",
   "history.expert.seal2": "Estética Dental Avançada",
   "history.expert.seal3": "Resultados naturais",
-  "history.expert.seal4": "Planejamento individualizado",
+  "history.expert.seal4": "Planejameto individualizado",
   "wa.expert": "Olá! Gostaria de agendar uma avaliação com o Dr. Daniel Thebit.",
   "cta.expert": "Agendar com o especialista",
   "cta.maps": "Abrir no Google Maps",
@@ -330,6 +330,36 @@ const pt: Dict = {
   "tech_page.item.xray.desc":
     "Exames de imagem realizados no local, agilizando diagnóstico e plano de tratamento.",
   "tech_page.item.isolation.title": "Isolamento absoluto",
+
+  // Consultant Goals
+  "clareamento": "Clarear meus dentes",
+  "espacos": "Fechar espaços entre os dentes",
+  "alinhamento": "Melhorar o alinhamento",
+  "facetas": "Facetas ou Lentes de Contato",
+  "implantes": "Implantes Dentários",
+  "hof": "Harmonização Orofacial",
+  "pele": "Melhorar minha pele",
+  "avaliacao": "Não sei qual tratamento preciso. Quero uma avaliação inteligente.",
+
+  // Photo Tips
+  "tips.photo": "Tire uma foto sorrindo.",
+  "tips.light": "Utilize boa iluminação.",
+  "tips.front": "Fotografe de frente.",
+  "tips.filter": "Evite filtros.",
+  "tips.teeth": "Deixe os dentes totalmente aparentes.",
+
+  // Simulation Testimonials
+  "test.smile.q1": "“Fiz lentes de contato com o Dr. Daniel e o resultado ficou absolutamente natural. Atendimento impecável.”",
+  "test.smile.author1": "Paciente · Belo Horizonte",
+  "test.smile.q2": "“Clínica linda, equipe atenciosa e um cuidado com detalhes que eu nunca tinha visto em outro lugar.”",
+  "test.smile.author2": "Paciente · Anchieta",
+  "test.smile.q3": "“Voltei a sorrir sem medo. Mudou a minha autoestima por completo.”",
+  "test.smile.author3": "Paciente · Comiteco",
+  "test.smile.q4": "“Profissionais excelentes, explicam tudo com calma e o resultado supera a expectativa.”",
+  "test.smile.author4": "Paciente · BH",
+
+  "consultant.legal": "Esta simulação possui caráter exclusivamente ilustrativo. Os resultados reais podem variar conforme as características individuais de cada paciente e serão confirmados durante a avaliação presencial realizada pelos especialistas da Clínica Thebit.",
+
   "tech_page.item.isolation.desc":
     "Protocolo que aumenta a longevidade das restaurações e a segurança do procedimento.",
   "tech_page.item.injectables.title": "Injetáveis e HOF",
@@ -896,6 +926,36 @@ const en: Dict = {
   "consultant.simulation": "Simulation performed",
   "facial.analysis": "What has been improved",
   "facial.simulation": "Simulation performed",
+
+  // Consultant Goals
+  "clareamento": "Whiten my teeth",
+  "espacos": "Close gaps between teeth",
+  "alinhamento": "Improve alignment",
+  "facetas": "Veneers or Contact Lenses",
+  "implantes": "Dental Implants",
+  "hof": "Orofacial Harmonization",
+  "pele": "Improve my skin",
+  "avaliacao": "I don't know what treatment I need. I want a smart assessment.",
+
+  // Photo Tips
+  "tips.photo": "Take a photo smiling.",
+  "tips.light": "Use good lighting.",
+  "tips.front": "Take it from the front.",
+  "tips.filter": "Avoid filters.",
+  "tips.teeth": "Keep your teeth fully visible.",
+
+  // Simulation Testimonials
+  "test.smile.q1": "“I got veneers with Dr. Daniel and the result was absolutely natural. Impeccable service.”",
+  "test.smile.author1": "Patient · Belo Horizonte",
+  "test.smile.q2": "“Beautiful clinic, attentive team and a care with details that I had never seen elsewhere.”",
+  "test.smile.author2": "Patient · Anchieta",
+  "test.smile.q3": "“I started smiling again without fear. It completely changed my self-esteem.”",
+  "test.smile.author3": "Patient · Comiteco",
+  "test.smile.q4": "“Excellent professionals, they explain everything calmly and the result exceeds expectations.”",
+  "test.smile.author4": "Patient · BH",
+
+  "consultant.legal": "This simulation is for illustrative purposes only. Real results may vary according to each patient's individual characteristics and will be confirmed during the in-person evaluation performed by Clínica Thebit specialists.",
+
 };
 
 const es: Dict = {
@@ -1343,6 +1403,36 @@ const es: Dict = {
   "consultant.statsSub": "Más de 35 años transformando vidas y no solo sonrisas.",
   "consultant.analysis": "Qué se ha mejorado",
   "consultant.simulation": "Simulación realizada",
+
+  // Consultant Goals
+  "clareamento": "Blanquear mis dientes",
+  "espacos": "Cerrar espacios entre los dientes",
+  "alinhamento": "Mejorar el alineamiento",
+  "facetas": "Carillas o Lentes de Contacto",
+  "implantes": "Implantes Dentales",
+  "hof": "Armonización Orofacial",
+  "pele": "Mejorar mi piel",
+  "avaliacao": "No sé qué tratamiento necesito. Quiero una evaluación inteligente.",
+
+  // Photo Tips
+  "tips.photo": "Tómate una foto sonriendo.",
+  "tips.light": "Usa buena iluminación.",
+  "tips.front": "Fotografía de frente.",
+  "tips.filter": "Evita filtros.",
+  "tips.teeth": "Deja los dientes totalmente visibles.",
+
+  // Simulation Testimonials
+  "test.smile.q1": "“Me hice carillas con el Dr. Daniel y el resultado quedó absolutamente natural. Atención impecable.”",
+  "test.smile.author1": "Paciente · Belo Horizonte",
+  "test.smile.q2": "“Clínica hermosa, equipo atento y un cuidado por los detalles que nunca había visto en otro lugar.”",
+  "test.smile.author2": "Paciente · Anchieta",
+  "test.smile.q3": "“Volví a sonreír sin miedo. Cambió mi autoestima por completo.”",
+  "test.smile.author3": "Paciente · Comiteco",
+  "test.smile.q4": "“Profesionales excelentes, explican todo con calma y el resultado supera la expectativa.”",
+  "test.smile.author4": "Paciente · BH",
+
+  "consultant.legal": "Esta simulación es exclusivamente ilustrativa. Los resultados reales pueden variar según las características individuales de cada paciente y serán confirmados durante la evaluación presencial realizada por los especialistas de Clínica Thebit.",
+
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };

@@ -179,36 +179,36 @@ export const PROGRESS_STEPS = [
 ];
 
 export const PHOTO_TIPS = [
-  "Tire uma foto sorrindo.",
-  "Utilize boa iluminação.",
-  "Fotografe de frente.",
-  "Evite filtros.",
-  "Deixe os dentes totalmente aparentes.",
+  "tips.photo",
+  "tips.light",
+  "tips.front",
+  "tips.filter",
+  "tips.teeth",
 ];
+
 
 export const TESTIMONIALS = [
   {
-    quote:
-      "Fiz lentes de contato com o Dr. Daniel e o resultado ficou absolutamente natural. Atendimento impecável.",
-    author: "Paciente · Belo Horizonte",
+    quote: "test.smile.q1",
+    author: "test.smile.author1",
   },
   {
-    quote:
-      "Clínica linda, equipe atenciosa e um cuidado com detalhes que eu nunca tinha visto em outro lugar.",
-    author: "Paciente · Anchieta",
+    quote: "test.smile.q2",
+    author: "test.smile.author2",
   },
   {
-    quote: "Voltei a sorrir sem medo. Mudou a minha autoestima por completo.",
-    author: "Paciente · Comiteco",
+    quote: "test.smile.q3",
+    author: "test.smile.author3",
   },
   {
-    quote: "Profissionais excelentes, explicam tudo com calma e o resultado supera a expectativa.",
-    author: "Paciente · BH",
+    quote: "test.smile.q4",
+    author: "test.smile.author4",
   },
 ];
 
-export const LEGAL_NOTICE =
-  "Esta simulação possui caráter exclusivamente ilustrativo. Os resultados reais podem variar conforme as características individuais de cada paciente e serão confirmados durante a avaliação presencial realizada pelos especialistas da Clínica Thebit.";
+
+export const LEGAL_NOTICE = "consultant.legal";
+
 export const DENTAL_GOAL_IDS = [
   "clareamento",
   "espacos",

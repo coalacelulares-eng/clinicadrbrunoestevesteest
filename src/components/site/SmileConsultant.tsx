@@ -350,7 +350,8 @@ export function SmileConsultant({
                   >
                     <Icon className="size-4" />
                   </span>
-                  <p className="mt-3 text-sm leading-snug text-foreground">{g.label}</p>
+                  <p className="mt-3 text-sm leading-snug text-foreground">{t(g.id)}</p>
+
                   {active && (
                     <span className="mt-3 inline-flex items-center gap-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-gold">
                       <Check className="size-3" /> {t("consultant.selected")}
@@ -406,10 +407,11 @@ export function SmileConsultant({
                 {PHOTO_TIPS.map((tip) => (
                   <li key={tip} className="flex items-start gap-2">
                     <Check className="mt-0.5 size-3.5 shrink-0 text-gold" />
-                    {tip}
+                    {t(tip)}
                   </li>
                 ))}
               </ul>
+
             </div>
 
             <button
@@ -591,21 +593,22 @@ export function SmileConsultant({
             {t(`${prefix}.statsSub`)}
           </p>
           <div className="relative mx-auto mt-8 h-32 max-w-2xl">
-            {TESTIMONIALS.map((t, i) => (
+            {TESTIMONIALS.map((te, i) => (
               <figure
-                key={t.quote}
+                key={te.quote}
                 className={`vellum absolute inset-0 rounded-3xl p-7 transition-all duration-700 ${
                   i === slide ? "opacity-100" : "pointer-events-none opacity-0"
                 }`}
               >
                 <blockquote className="font-display text-base leading-snug text-foreground">
-                  “{t.quote}”
+                  {t(te.quote)}
                 </blockquote>
                 <figcaption className="mt-3 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-text-soft">
-                  {t.author}
+                  {t(te.author)}
                 </figcaption>
               </figure>
             ))}
+
           </div>
           <div className="mt-4 flex justify-center gap-2">
             {TESTIMONIALS.map((t, i) => (
@@ -644,8 +647,9 @@ export function SmileConsultant({
         </div>
 
         <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-text-soft">
-          {LEGAL_NOTICE}
+          {t(LEGAL_NOTICE)}
         </p>
+
       </div>
 
       {fullscreen && result && (
