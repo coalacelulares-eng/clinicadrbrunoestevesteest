@@ -435,6 +435,16 @@ const pt: Dict = {
   "consultant.simulation": "Simulação realizada",
   "facial.reportTitle": "Análise Facial Inteligente",
   "facial.ctaTitle": "Pronto para o seu protocolo facial?",
+  "facial.ctaDesc": "Agende agora sua avaliação personalizada. Na Clínica Thebit você receberá um planejamento completo realizado por especialistas.",
+  "facial.ctaBtn": "Agendar pelo WhatsApp",
+  "facial.reportEyebrow": "Relatório personalizado",
+  "facial.reportDisclaimer": "Esta análise é apenas ilustrativa e será confirmada durante sua avaliação presencial.",
+  "facial.specialistEyebrow": "Especialista indicado",
+  "facial.specialistBtn": "Conhecer especialista",
+  "facial.statsText": "5,0 estrelas no Google.",
+  "facial.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
+  "facial.analysis": "O que foi melhorado",
+  "facial.simulation": "Simulação realizada",
 };
 
 const en: Dict = {
