@@ -83,13 +83,12 @@ export function OurTeam() {
     <section className="px-6 py-24 bg-off-white" id="equipe">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="eyebrow">Nossa Equipe</span>
+          <span className="eyebrow">{t("team.eyebrow")}</span>
           <h2 className="title-display mt-4 text-3xl md:text-5xl">
-            Profissionais que fazem a diferença
+            {t("team.title")}
           </h2>
           <p className="section-lede mt-6 text-text-soft">
-            Conheça os especialistas dedicados a transformar sorrisos e elevar a autoestima 
-            através de um atendimento personalizado, técnico e profundamente humano.
+            {t("team.intro")}
           </p>
         </div>
 

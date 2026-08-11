@@ -471,6 +471,14 @@ const en: Dict = {
   "facial.step1": "Step 1 · What do you want to treat?",
   "facial.reportTitle": "Intelligent Facial Analysis",
   "facial.ctaTitle": "Ready for your facial protocol?",
+  "facial.ctaDesc": "Schedule your personalized assessment now. At Thebit Clinic you will receive a complete plan carried out by specialists.",
+  "facial.ctaBtn": "Schedule via WhatsApp",
+  "facial.reportEyebrow": "Personalized report",
+  "facial.reportDisclaimer": "This analysis is only illustrative and will be confirmed during your in-person evaluation.",
+  "facial.specialistEyebrow": "Indicated specialist",
+  "facial.specialistBtn": "Meet the specialist",
+  "facial.statsText": "5.0 stars on Google.",
+  "facial.statsSub": "More than 35 years transforming lives and not just smiles.",
   "about_page.quote":
     "“And all this in order to transform and improve lives, and not just smiles. This is our mission here at Thebit.”",
   "about_page.p3":

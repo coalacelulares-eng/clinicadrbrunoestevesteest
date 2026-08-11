@@ -74,8 +74,8 @@ export function SmileConsultant({
   );
   const description = t(`${prefix}.description`);
   const stepLabel = t(`${prefix}.step1`);
-  const reportTitle = type === "smile" ? "Análise Inteligente do Seu Sorriso" : t("facial.reportTitle");
-  const ctaTitle = type === "smile" ? "Gostou da simulação?" : t("facial.ctaTitle");
+  const reportTitle = t(`${prefix}.reportTitle`);
+  const ctaTitle = t(`${prefix}.ctaTitle`);
 
   const [goal, setGoal] = useState<Goal | null>(null);
   const [original, setOriginal] = useState<string | null>(null);
@@ -486,7 +486,7 @@ export function SmileConsultant({
             {result && goal && (
               <div>
                 <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
-                  Simulação realizada
+                  {t(`${prefix}.simulation`)}
                 </p>
                 <p className="title-display mt-2 text-2xl text-foreground">{goal.simulation}</p>
               </div>
@@ -498,7 +498,7 @@ export function SmileConsultant({
         {result && goal && (
           <div data-reveal className="mt-14">
             <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
-              O que foi melhorado
+              {t(`${prefix}.analysis`)}
             </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               {[...goal.improvements, "Simulação ilustrativa"].map((i) => (
@@ -515,7 +515,7 @@ export function SmileConsultant({
         {result && (
           <div data-reveal className="mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
             <div className="vellum rounded-3xl p-8">
-              <span className="eyebrow">Relatório personalizado</span>
+              <span className="eyebrow">{t(`${prefix}.reportEyebrow`)}</span>
               <h3 className="title-display mt-3 text-2xl">{reportTitle}</h3>
               {report ? (
                 <>
@@ -554,14 +554,13 @@ export function SmileConsultant({
                 </div>
               )}
               <p className="mt-6 text-xs leading-relaxed text-text-soft">
-                Esta análise é apenas ilustrativa e será confirmada durante sua avaliação
-                presencial.
+                {t(`${prefix}.reportDisclaimer`)}
               </p>
             </div>
 
             {specialist && (
               <div className="vellum vellum-hover rounded-3xl p-8">
-                <span className="eyebrow">Especialista indicado</span>
+                <span className="eyebrow">{t(`${prefix}.specialistEyebrow`)}</span>
                 <h3 className="title-display mt-3 text-2xl">{specialist.name}</h3>
                 <p className="mt-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-text-soft">
                   {specialist.role}
@@ -573,7 +572,7 @@ export function SmileConsultant({
                   rel="noopener noreferrer"
                   className="btn-slide-gold mt-6 text-foreground"
                 >
-                  Conhecer especialista
+                  {t(`${prefix}.specialistBtn`)}
                 </a>
               </div>
             )}
@@ -587,9 +586,9 @@ export function SmileConsultant({
               <Star key={i} className="size-4 fill-current" />
             ))}
           </div>
-          <p className="mt-3 text-sm text-foreground">5,0 estrelas no Google.</p>
+          <p className="mt-3 text-sm text-foreground">{t(`${prefix}.statsText`)}</p>
           <p className="text-sm text-text-soft">
-            Mais de 35 anos transformando vidas e não apenas sorrisos.
+            {t(`${prefix}.statsSub`)}
           </p>
           <div className="relative mx-auto mt-8 h-32 max-w-2xl">
             {TESTIMONIALS.map((t, i) => (
@@ -631,8 +630,7 @@ export function SmileConsultant({
         >
           <h3 className="title-display text-2xl md:text-4xl">{ctaTitle}</h3>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-text-soft">
-            Agende agora sua avaliação personalizada. Na Clínica Thebit você receberá um
-            planejamento completo realizado por especialistas.
+            {t(`${prefix}.ctaDesc`)}
           </p>
           <a
             href={whatsappLink(waMessage)}
@@ -641,7 +639,7 @@ export function SmileConsultant({
             className="btn-gold-lux mt-7"
             data-magnetic
           >
-            Agendar pelo WhatsApp
+            {t(`${prefix}.ctaBtn`)}
           </a>
         </div>
 
