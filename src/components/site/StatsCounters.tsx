@@ -1,9 +1,11 @@
 import { Star } from "lucide-react";
-
+import { useI18n } from "@/lib/i18n";
 import { CountUp } from "./CountUp";
 import { Spotlight } from "./Spotlight";
 
 export function StatsCounters() {
+  const { t } = useI18n();
+
   return (
     <Spotlight tone="light">
       <section
@@ -13,9 +15,9 @@ export function StatsCounters() {
       >
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="text-center">
-            <span className="eyebrow">Números Thebit</span>
+            <span className="eyebrow">{t("stats.eyebrow")}</span>
             <h2 id="numeros-thebit" className="title-display mt-4 text-3xl md:text-5xl">
-              Uma trajetória que se mede em confiança.
+              {t("stats.title")}
             </h2>
           </div>
 
@@ -25,7 +27,7 @@ export function StatsCounters() {
                 <p className="title-display text-5xl text-gold">
                   <CountUp to={35} suffix="+" />
                 </p>
-                <p className="micro-label mt-3 text-text-soft">Anos de história</p>
+                <p className="micro-label mt-3 text-text-soft">{t("stats.item1.label")}</p>
               </div>
             </article>
 
@@ -43,7 +45,7 @@ export function StatsCounters() {
                 <p className="title-display mt-3 text-3xl text-gold">
                   <CountUp to={5} decimals={1} />
                 </p>
-                <p className="micro-label mt-2 text-text-soft">Nota máxima no Google</p>
+                <p className="micro-label mt-2 text-text-soft">{t("stats.item2.label")}</p>
               </div>
             </article>
 
@@ -52,7 +54,7 @@ export function StatsCounters() {
                 <p className="title-display text-5xl text-gold">
                   <CountUp to={1000} suffix="+" duration={2300} />
                 </p>
-                <p className="micro-label mt-3 text-text-soft">Sorrisos transformados</p>
+                <p className="micro-label mt-3 text-text-soft">{t("stats.item3.label")}</p>
               </div>
             </article>
 
@@ -61,7 +63,7 @@ export function StatsCounters() {
                 <p className="title-display text-5xl text-gold">
                   <CountUp to={100} suffix="%" />
                 </p>
-                <p className="micro-label mt-3 text-text-soft">Planejamento personalizado</p>
+                <p className="micro-label mt-3 text-text-soft">{t("stats.item4.label")}</p>
               </div>
             </article>
           </div>
