@@ -535,7 +535,9 @@ const pt: Dict = {
   "facial.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
   "facial.analysis": "O que foi melhorado",
   "facial.simulation": "Simulação realizada",
+  "consultant.view.simulation_tag": "Simulação ilustrativa",
 };
+
 
 const en: Dict = {
   ...pt,
