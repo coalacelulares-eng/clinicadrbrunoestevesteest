@@ -149,7 +149,7 @@ export function SmileConsultant({
     const analysis = fetch("/api/analise", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: original, goal: goal.label }),
+      body: JSON.stringify({ image: original, goal: t(goal.id) }),
     })
       .then((r) => (r.ok ? (r.json() as Promise<Report>) : null))
       .catch(() => null);
@@ -157,7 +157,7 @@ export function SmileConsultant({
     try {
       await streamImage(
         "/api/simulacao",
-        { image: original, prompt: goal.simulation, instruction: goal.edit },
+        { image: original, prompt: t(`goal.${goal.id}.simulation`), instruction: goal.edit },
         (url, final) => {
           setResult(url);
           if (final) setIsFinal(true);
@@ -202,11 +202,12 @@ export function SmileConsultant({
     download();
   };
 
-  const specialist = goal ? SPECIALISTS[goal.specialist] : undefined;
+  const specialist = goal ? TEAM.find((m) => m.id === goal.specialistId) : undefined;
+  const waMessage = t(`wa.${type}.message`).replace(
+    "{simulation}",
+    goal ? t(`goal.${goal.id}.simulation`) : "",
+  );
 
-  const waMessage = `Olá!\nAcabei de realizar a simulação ilustrativa no site da Clínica Thebit.\nTratamento escolhido: ${
-    goal?.simulation ?? ""
-  }\nGostaria de agendar uma avaliação com o especialista indicado.`;
 
   const comparator = (
     <div
@@ -491,7 +492,7 @@ export function SmileConsultant({
                 <p className="font-grotesk text-[0.55rem] uppercase tracking-[0.32em] text-text-soft">
                   {t(`${prefix}.simulation`)}
                 </p>
-                <p className="title-display mt-2 text-2xl text-foreground">{goal.simulation}</p>
+                <p className="title-display mt-2 text-2xl text-foreground">{t(`goal.${goal.id}.simulation`)}</p>
               </div>
             )}
           </div>
@@ -504,7 +505,7 @@ export function SmileConsultant({
               {t(`${prefix}.analysis`)}
             </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-              {[...goal.improvements, "Simulação ilustrativa"].map((i) => (
+              {[...[0, 1, 2, 3].map((i) => t(`goal.${goal.id}.imp.${i}`)), t("consultant.view.simulation_tag")].map((i) => (
                 <div key={i} className="vellum rounded-2xl px-5 py-4 text-sm text-foreground">
                   <Check className="mb-2 size-4 text-gold" />
                   {i}
