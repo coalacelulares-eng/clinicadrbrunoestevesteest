@@ -371,6 +371,8 @@ const en: Dict = {
   "wa.default": "Hello! I'd like to book an assessment at Thebit Saúde e Estética.",
   "wa.goal": "Hello! My goal today is:",
   "wa.quiz": "Hello! I'd like an assessment. Area of interest:",
+  "wa.visit": "Hello! I would like to visit the clinic and schedule a tour.",
+  "cta.visit": "Schedule Visit",
 
   "footer.rights": "All rights reserved.",
   "footer.disclaimer":
