@@ -36,9 +36,28 @@ const pt: Dict = {
   "about.text":
     "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e hoje administrada por seu filho, o Dr. Daniel Thebit, a Thebit Saúde e Estética une toda a equipe em torno de um propósito: ir além do tratamento do dente. Entendemos o paciente por inteiro e alinhamos saúde e estética.",
   "about.c1": "Especialistas em Dentística e Estética Dental Avançada",
-
   "about.c2": "Equipe multidisciplinar de odontologia e medicina",
   "about.c3": "Nota máxima 5.0 nas avaliações dos pacientes",
+
+  "about_page.eyebrow": "A Thebit",
+  "about_page.title": "Transformar vidas,",
+  "about_page.title.gold": "não apenas sorrisos",
+  "about_page.intro":
+    "Estética avançada e especialistas em Dentística no coração do Anchieta, em Belo Horizonte.",
+  "about_page.img_alt": "Recepção da Thebit Saúde e Estética",
+  "about_page.p1":
+    "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e totalmente renovada há 5 anos, a clínica é hoje administrada por seu filho, o Dr. Daniel Thebit, cirurgião-dentista com foco internacional em Estética Dental Avançada.",
+  "about_page.p2":
+    "Em conjunto com todos os colaboradores, nossa equipe utiliza o que há de mais recente em ciência e tecnologia para ir além dos tratamentos de dente. Abrangemos os problemas de cada paciente e alinhamos saúde e estética.",
+  "about_page.quote":
+    "“E tudo isso a fim de transformar e melhorar vidas, e não apenas sorrisos. Essa é a nossa missão aqui na Thebit.”",
+  "about_page.p3":
+    "O Dr. Daniel Thebit tem formação avançada em estética e reabilitação oral pelo ILAPEO (Instituto Latino Americano de Pesquisa e Ensino Odontológico, PR), com atuação focada em facetas de resina composta, laminados cerâmicos (lentes de contato dentais) e recontorno estético. Fora do consultório, é faixa preta de Jiu-Jitsu (FP Team BJJ).",
+  "about_page.list1": "Nota máxima 5.0 nas avaliações dos pacientes",
+  "about_page.list2": "Trabalhos de alta estética em facetas e resinas",
+  "about_page.list3": "Estrutura moderna e tecnologias avançadas",
+  "about_page.list4": "Atendimento acolhedor desde a recepção",
+  "about_page.director": "Dr. Daniel Thebit · CRO-MG · Especialista em Dentística",
 
   "barbies.eyebrow": "Nosso método",
   "barbies.title": "Saúde e estética no mesmo plano.",
@@ -358,6 +377,26 @@ const en: Dict = {
   "about.c2": "Multidisciplinary dental and medical team",
   "about.c3": "Perfect 5.0 patient rating",
 
+  "about_page.eyebrow": "About Thebit",
+  "about_page.title": "Transforming lives,",
+  "about_page.title.gold": "not just smiles",
+  "about_page.intro":
+    "Advanced aesthetics and Restorative specialists in the heart of Anchieta, Belo Horizonte.",
+  "about_page.img_alt": "Thebit Health and Aesthetics Reception",
+  "about_page.p1":
+    "Founded by Dr. Jorge Thebit over 35 years ago and completely renovated 5 years ago, the clinic is now managed by his son, Dr. Daniel Thebit, a dentist with an international focus on Advanced Dental Aesthetics.",
+  "about_page.p2":
+    "Together with all employees, our team uses the latest in science and technology to go beyond tooth treatments. We cover each patient's problems and align health and aesthetics.",
+  "about_page.quote":
+    "“And all this in order to transform and improve lives, and not just smiles. This is our mission here at Thebit.”",
+  "about_page.p3":
+    "Dr. Daniel Thebit has advanced training in aesthetics and oral rehabilitation from ILAPEO (Latin American Institute for Research and Dental Education, PR), with a focus on composite resin veneers, ceramic laminates (dental contact lenses) and aesthetic recontouring. Outside the office, he is a Jiu-Jitsu black belt (FP Team BJJ).",
+  "about_page.list1": "Perfect 5.0 patient rating",
+  "about_page.list2": "High aesthetic work in veneers and resins",
+  "about_page.list3": "Modern structure and advanced technologies",
+  "about_page.list4": "Welcoming service from reception",
+  "about_page.director": "Dr. Daniel Thebit · CRO-MG · Restorative Dentistry Specialist",
+
   "barbies.eyebrow": "Our method",
   "barbies.title": "Health and aesthetics in the same plan.",
   "barbies.text":
@@ -673,6 +712,26 @@ const es: Dict = {
   "about.c1": "Especialistas en dentística y estética dental avanzada",
   "about.c2": "Equipo multidisciplinario odontológico y médico",
   "about.c3": "Calificación máxima 5.0 de los pacientes",
+
+  "about_page.eyebrow": "La Thebit",
+  "about_page.title": "Transformar vidas,",
+  "about_page.title.gold": "no solo sonrisas",
+  "about_page.intro":
+    "Estética avanzada y especialistas en Odontología Restauradora en el corazón de Anchieta, Belo Horizonte.",
+  "about_page.img_alt": "Recepción de Thebit Salud y Estética",
+  "about_page.p1":
+    "Fundada por el Dr. Jorge Thebit hace más de 35 años y totalmente renovada hace 5 años, la clínica es hoy administrada por su hijo, el Dr. Daniel Thebit, cirujano dentista con enfoque internacional en Estética Dental Avanzada.",
+  "about_page.p2":
+    "Junto con todos los colaboradores, nuestro equipo utiliza lo último en ciencia y tecnología para ir más allá de los tratamientos dentales. Abarcamos los problemas de cada paciente y alineamos salud y estética.",
+  "about_page.quote":
+    "“Y todo esto para transformar y mejorar vidas, y no solo sonrisas. Esa es nuestra misión aquí en Thebit.”",
+  "about_page.p3":
+    "El Dr. Daniel Thebit tiene formación avanzada en estética y rehabilitación oral por el ILAPEO (Instituto Latinoamericano de Investigación y Enseñanza Odontológica, PR), con actuación enfocada en facetas de resina compuesta, laminados cerámicos (lentes de contacto dentales) y recontorno estético. Fuera del consultorio, es cinturón negro de Jiu-Jitsu (FP Team BJJ).",
+  "about_page.list1": "Calificación máxima 5.0 en las evaluaciones de pacientes",
+  "about_page.list2": "Trabajos de alta estética en facetas y resinas",
+  "about_page.list3": "Estructura moderna y tecnologías avanzadas",
+  "about_page.list4": "Atención acogedora desde la recepción",
+  "about_page.director": "Dr. Daniel Thebit · CRO-MG · Especialista en Odontología Restauradora",
 
   "barbies.eyebrow": "Nuestro método",
   "barbies.title": "Salud y estética en el mismo plan.",
