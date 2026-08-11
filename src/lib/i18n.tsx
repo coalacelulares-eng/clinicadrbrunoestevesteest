@@ -158,6 +158,44 @@ const pt: Dict = {
   "footer.rights": "Todos os direitos reservados.",
   "footer.disclaimer":
     "Conteúdo informativo, sem promessa de resultado. Resultados variam de paciente para paciente.",
+
+  "contact.eyebrow": "Contato",
+  "contact.title": "Vamos conversar.",
+  "contact.desc":
+    "Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário.",
+  "contact.address": "Endereço",
+  "contact.whatsapp": "WhatsApp",
+  "contact.email": "E-mail",
+  "contact.hours": "Horários",
+  "contact.visit.title": "Primeira consulta",
+  "contact.visit.subtitle": "Como funciona a sua avaliação",
+  "contact.visit.step1":
+    "A avaliação inicial é feita com o Dr. Daniel Thebit, que orienta quais procedimentos são indicados para o seu caso.",
+  "contact.visit.step2":
+    "Não é necessário levar exames: os exames de imagem são solicitados e realizados na própria clínica.",
+  "contact.visit.step3":
+    "Para reservar o horário pedimos nome completo, RG, CPF, endereço com CEP e informação sobre alergias.",
+  "contact.visit.step4":
+    "Consulta no valor de R$ 450, com pagamento em dinheiro, Pix, transferência, cheque ou cartão.",
+  "contact.visit.step5":
+    "Se vier de carro, ligue ao chegar que abrimos o portão para você.",
+
+  "form.eyebrow": "Agendamento",
+  "form.title": "Reserve a sua avaliação.",
+  "form.desc":
+    "Preencha os dados abaixo e a nossa recepção continua o atendimento pelo WhatsApp.",
+  "form.name": "Nome completo",
+  "form.phone": "Telefone",
+  "form.whatsapp": "WhatsApp",
+  "form.email": "E-mail",
+  "form.city": "Cidade",
+  "form.goal": "Objetivo",
+  "form.message": "Mensagem",
+  "form.select": "Selecione",
+  "form.submit": "Agendar Avaliação",
+  "form.sending": "Enviando",
+  "form.sent": "Enviado — continue no WhatsApp",
+  "form.disclaimer": "Seus dados são usados apenas para o contato do agendamento.",
 };
 
 const en: Dict = {
@@ -306,6 +344,43 @@ const en: Dict = {
   "footer.rights": "All rights reserved.",
   "footer.disclaimer":
     "Informational content, with no promise of results. Results vary from patient to patient.",
+
+  "contact.eyebrow": "Contact",
+  "contact.title": "Let's talk.",
+  "contact.desc":
+    "Our reception answers via WhatsApp and helps you choose the best time.",
+  "contact.address": "Address",
+  "contact.whatsapp": "WhatsApp",
+  "contact.email": "Email",
+  "contact.hours": "Hours",
+  "contact.visit.title": "First consultation",
+  "contact.visit.subtitle": "How your evaluation works",
+  "contact.visit.step1":
+    "The initial evaluation is done with Dr. Daniel Thebit, who guides which procedures are indicated for your case.",
+  "contact.visit.step2":
+    "No need to bring exams: image exams are requested and performed at the clinic itself.",
+  "contact.visit.step3":
+    "To reserve the time, we ask for full name, ID, Social Security Number (CPF), address with ZIP code, and information about allergies.",
+  "contact.visit.step4":
+    "Consultation valued at R$ 450, with payment in cash, Pix, wire transfer, check, or card.",
+  "contact.visit.step5":
+    "If you come by car, call upon arrival and we will open the gate for you.",
+
+  "form.eyebrow": "Scheduling",
+  "form.title": "Book your evaluation.",
+  "form.desc": "Fill in the details below and our reception will continue the service via WhatsApp.",
+  "form.name": "Full name",
+  "form.phone": "Phone",
+  "form.whatsapp": "WhatsApp",
+  "form.email": "Email",
+  "form.city": "City",
+  "form.goal": "Goal",
+  "form.message": "Message",
+  "form.select": "Select",
+  "form.submit": "Schedule Evaluation",
+  "form.sending": "Sending",
+  "form.sent": "Sent — continue on WhatsApp",
+  "form.disclaimer": "Your data is only used for the scheduling contact.",
 };
 
 const es: Dict = {
@@ -454,6 +529,44 @@ const es: Dict = {
   "footer.rights": "Todos los derechos reservados.",
   "footer.disclaimer":
     "Contenido informativo, sin promesa de resultado. Los resultados varían de paciente a paciente.",
+
+  "contact.eyebrow": "Contacto",
+  "contact.title": "Vamos conversar.",
+  "contact.desc":
+    "Nuestra recepción responde por WhatsApp y te ayuda a elegir el mejor horario.",
+  "contact.address": "Dirección",
+  "contact.whatsapp": "WhatsApp",
+  "contact.email": "Email",
+  "contact.hours": "Horarios",
+  "contact.visit.title": "Primera consulta",
+  "contact.visit.subtitle": "Cómo funciona su evaluación",
+  "contact.visit.step1":
+    "La evaluación inicial se realiza con el Dr. Daniel Thebit, quien orienta qué procedimientos están indicados para su caso.",
+  "contact.visit.step2":
+    "No es necesario traer exámenes: los exámenes de imagen se solicitan y realizan en la propia clínica.",
+  "contact.visit.step3":
+    "Para reservar el horario solicitamos nombre completo, identificación, número de documento (CPF), dirección con código postal e información sobre alergias.",
+  "contact.visit.step4":
+    "Consulta por valor de R$ 450, con pago en efectivo, Pix, transferencia, cheque o tarjeta.",
+  "contact.visit.step5":
+    "Si viene en coche, llame al llegar y le abriremos el portón.",
+
+  "form.eyebrow": "Cita",
+  "form.title": "Reserve su evaluación.",
+  "form.desc":
+    "Complete los datos a continuación y nuestra recepción continuará la atención por WhatsApp.",
+  "form.name": "Nombre completo",
+  "form.phone": "Teléfono",
+  "form.whatsapp": "WhatsApp",
+  "form.email": "Email",
+  "form.city": "Ciudad",
+  "form.goal": "Objetivo",
+  "form.message": "Mensaje",
+  "form.select": "Seleccionar",
+  "form.submit": "Agendar Evaluación",
+  "form.sending": "Enviando",
+  "form.sent": "Enviado — continúe por WhatsApp",
+  "form.disclaimer": "Sus datos solo se utilizan para el contacto de la cita.",
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };
