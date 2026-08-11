@@ -1,53 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/site/PageShell";
+import { useI18n } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 
 const groups = [
-  {
-    name: "Estética Dental e Cosmética",
-    items: [
-      ["Facetas e Lentes de Contato", "Correções de formato, cor e espaçamento dos dentes."],
-      [
-        "Restaurações em Resina Composta",
-        "Fechamento de diastemas e recontorno cosmético do sorriso.",
-      ],
-      ["Clareamento Dental", "Remoção de manchas e restauração do brilho natural."],
-    ],
-  },
-  {
-    name: "Reabilitação Oral e Ortodontia",
-    items: [
-      ["Implante Dentário", "Substituição de dentes perdidos com pinos de titânio."],
-      ["Prótese Protocolo", "Reabilitação total e fixa de arcadas dentárias."],
-      ["Invisalign / Alinhadores", "Aparelhos ortodônticos invisíveis e removíveis."],
-      ["Aparelho Ortodôntico", "Modelos convencionais e estéticos para alinhamento."],
-      ["Prótese Dentária", "Opções removíveis ou fixas parciais."],
-    ],
-  },
-  {
-    name: "Harmonização e Estética Avançada",
-    items: [
-      [
-        "Harmonização Orofacial",
-        "Procedimentos injetáveis e tecnologias para equilíbrio estético facial.",
-      ],
-      ["Dermatologia Clínica e Estética", "Tratamentos focados na saúde e rejuvenescimento da pele."],
-    ],
-  },
-  {
-    name: "Cuidados Clínicos e Saúde Bucal",
-    items: [
-      ["Consulta Geral", "Avaliações de rotina e diagnóstico preventivo."],
-      ["Limpeza Dental", "Profilaxia para remoção de tártaro e placa bacteriana."],
-      ["Tratamento de Canal", "Procedimentos endodônticos para infecções internas."],
-      ["Tratamento Periodontal", "Cuidados com a gengiva e os tecidos de suporte."],
-      ["Extração de Siso", "Remoção cirúrgica de dentes inclusos ou desalinhados."],
-      ["Bruxismo e DTM", "Diagnóstico e placas de mordida para disfunções na mandíbula."],
-      ["Odontopediatria", "Atendimento especializado voltado para crianças."],
-      ["Radiografia Odontológica", "Exames de imagem realizados na própria clínica."],
-    ],
-  },
+  { id: "g1", items: ["i1", "i2", "i3"] },
+  { id: "g2", items: ["i1", "i2", "i3", "i4", "i5"] },
+  { id: "g3", items: ["i1", "i2"] },
+  { id: "g4", items: ["i1", "i2", "i3", "i4", "i5", "i6", "i7", "i8"] },
 ];
 
 export const Route = createFileRoute("/especialidades")({
@@ -72,35 +33,49 @@ export const Route = createFileRoute("/especialidades")({
 });
 
 function Especialidades() {
+  const { t } = useI18n();
+  const title = t("spec_page.title");
+  const highlight = title.includes("um só lugar")
+    ? "um só lugar"
+    : title.includes("one place")
+      ? "one place"
+      : "un solo lugar";
+  const [before, after = ""] = title.split(highlight);
+
   return (
     <PageShell
-      eyebrow="Tratamentos"
+      eyebrow={t("spec_page.eyebrow")}
       title={
         <>
-          Tudo em <span className="gold-text">um só lugar</span>.
+          {before}
+          <span className="gold-text">{highlight}</span>
+          {after}
         </>
       }
-      intro="Odontologia estética, reabilitação, harmonização e saúde bucal integrativa em uma clínica só."
+      intro={t("spec_page.intro")}
     >
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl space-y-16">
           {groups.map((g) => (
-            <div key={g.name} data-reveal>
-              <h2 className="title-display text-2xl md:text-3xl">{g.name}</h2>
+            <div key={g.id} data-reveal>
+              <h2 className="title-display text-2xl md:text-3xl">{t(`spec_page.${g.id}.name`)}</h2>
               <span className="gold-rule mt-4 block w-20" />
               <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {g.items.map(([title, desc]) => (
+                {g.items.map((item) => {
+                  const itemTitle = t(`spec_page.${g.id}.${item}.t`);
+                  return (
                   <a
-                    key={title}
-                    href={whatsappLink(`Olá! Gostaria de saber mais sobre: ${title}`)}
+                    key={item}
+                    href={whatsappLink(`${t("spec_page.wa")} ${itemTitle}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="vellum vellum-hover block rounded-3xl p-6"
                   >
-                    <h3 className="font-display text-lg text-foreground">{title}</h3>
-                    <p className="section-lede-sm mt-2">{desc}</p>
+                    <h3 className="font-display text-lg text-foreground">{itemTitle}</h3>
+                    <p className="section-lede-sm mt-2">{t(`spec_page.${g.id}.${item}.d`)}</p>
                   </a>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
