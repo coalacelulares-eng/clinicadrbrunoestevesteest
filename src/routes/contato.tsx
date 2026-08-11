@@ -30,10 +30,10 @@ function Contato() {
   const { t } = useI18n();
 
   const cards = [
-    { icon: MapPin, label: "Endereço", value: CLINIC.address },
-    { icon: Phone, label: "WhatsApp", value: CLINIC.phone },
-    { icon: Mail, label: "E-mail", value: CLINIC.email },
-    { icon: Clock, label: "Horários", value: CLINIC.hours },
+    { icon: MapPin, label: "contact.address", value: CLINIC.address },
+    { icon: Phone, label: "contact.whatsapp", value: CLINIC.phone },
+    { icon: Mail, label: "contact.email", value: CLINIC.email },
+    { icon: Clock, label: "contact.hours", value: CLINIC.hours },
   ];
 
   return (
@@ -41,10 +41,11 @@ function Contato() {
       eyebrow={t("nav.contact")}
       title={
         <>
-          Vamos <span className="gold-text">conversar</span>.
+          {t("contact.title").split(" ")[0]}{" "}
+          <span className="gold-text">{t("contact.title").split(" ")[1]}</span>
         </>
       }
-      intro="Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário."
+      intro={t("contact.desc")}
     >
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
@@ -53,20 +54,26 @@ function Contato() {
               <span className="grid size-11 place-items-center rounded-full border border-gold/40">
                 <c.icon className="size-4 text-gold" />
               </span>
-              <p className="eyebrow mt-5">{c.label}</p>
+              <p className="eyebrow mt-5">{t(c.label)}</p>
               <p className="mt-2 text-sm leading-relaxed text-text-soft">{c.value}</p>
             </div>
           ))}
         </div>
 
         <div data-reveal className="mx-auto mt-12 max-w-5xl vellum rounded-[2rem] p-8">
-          <span className="eyebrow">Primeira consulta</span>
-          <h2 className="title-display mt-3 text-2xl md:text-3xl">Como funciona a sua avaliação</h2>
+          <span className="eyebrow">{t("contact.visit.title")}</span>
+          <h2 className="title-display mt-3 text-2xl md:text-3xl">{t("contact.visit.subtitle")}</h2>
           <ul className="mt-6 grid gap-3 text-sm leading-relaxed text-text-soft">
-            {FIRST_VISIT.steps.map((s) => (
+            {[
+              "contact.visit.step1",
+              "contact.visit.step2",
+              "contact.visit.step3",
+              "contact.visit.step4",
+              "contact.visit.step5",
+            ].map((s) => (
               <li key={s} className="flex gap-3">
                 <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
-                {s}
+                {t(s)}
               </li>
             ))}
           </ul>
