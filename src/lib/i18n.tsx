@@ -1403,6 +1403,36 @@ const es: Dict = {
   "consultant.statsSub": "Más de 35 años transformando vidas y no solo sonrisas.",
   "consultant.analysis": "Qué se ha mejorado",
   "consultant.simulation": "Simulación realizada",
+
+  // Consultant Goals
+  "clareamento": "Blanquear mis dientes",
+  "espacos": "Cerrar espacios entre los dientes",
+  "alinhamento": "Mejorar el alineamiento",
+  "facetas": "Carillas o Lentes de Contacto",
+  "implantes": "Implantes Dentales",
+  "hof": "Armonización Orofacial",
+  "pele": "Mejorar mi piel",
+  "avaliacao": "No sé qué tratamiento necesito. Quiero una evaluación inteligente.",
+
+  // Photo Tips
+  "tips.photo": "Tómate una foto sonriendo.",
+  "tips.light": "Usa buena iluminación.",
+  "tips.front": "Fotografía de frente.",
+  "tips.filter": "Evita filtros.",
+  "tips.teeth": "Deja los dientes totalmente visibles.",
+
+  // Simulation Testimonials
+  "test.smile.q1": "“Me hice carillas con el Dr. Daniel y el resultado quedó absolutamente natural. Atención impecable.”",
+  "test.smile.author1": "Paciente · Belo Horizonte",
+  "test.smile.q2": "“Clínica hermosa, equipo atento y un cuidado por los detalles que nunca había visto en otro lugar.”",
+  "test.smile.author2": "Paciente · Anchieta",
+  "test.smile.q3": "“Volví a sonreír sin miedo. Cambió mi autoestima por completo.”",
+  "test.smile.author3": "Paciente · Comiteco",
+  "test.smile.q4": "“Profesionales excelentes, explican todo con calma y el resultado supera la expectativa.”",
+  "test.smile.author4": "Paciente · BH",
+
+  "consultant.legal": "Esta simulación es exclusivamente ilustrativa. Los resultados reales pueden variar según las características individuales de cada paciente y serán confirmados durante la evaluación presencial realizada por los especialistas de Clínica Thebit.",
+
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };
