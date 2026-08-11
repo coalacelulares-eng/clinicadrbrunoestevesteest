@@ -229,6 +229,35 @@ const pt: Dict = {
   "form.sending": "Enviando",
   "form.sent": "Enviado — continue no WhatsApp",
   "form.disclaimer": "Seus dados são usados apenas para o contato do agendamento.",
+  "team.eyebrow": "Equipe",
+  "team.title": "Especialistas que trabalham juntos.",
+  "team.intro":
+    "Uma equipe multidisciplinar de odontologia e medicina, reunida para cuidar do paciente por inteiro.",
+  "team.member.daniel.role": "CEO · Especialista em Dentística",
+  "team.member.daniel.desc":
+    "Cirurgião-dentista com especialização em Dentística e estética avançada (KSH ILAPEO/PR): lentes de contato, laminados cerâmicos, facetas de resina e recontorno estético. Faixa preta de Jiu-Jitsu (FP Team BJJ).",
+  "team.member.bianca.role": "Harmonização Orofacial",
+  "team.member.bianca.desc":
+    "Especialista em HOF e Odontologia Estética Restauradora: contorno facial, fios de sustentação, toxina botulínica e lipo de papada.",
+  "team.member.katielly.role": "Estética Orofacial",
+  "team.member.katielly.desc":
+    "Foco em procedimentos injetáveis harmônicos, rinomodelação e aplicação de toxina botulínica.",
+  "team.member.fernanda.role": "Clínica Geral e Estética",
+  "team.member.fernanda.desc":
+    "Odontologia estética e restauradora, isolamento absoluto para longevidade de restaurações, profilaxia e clareamentos.",
+  "team.member.luiza.role": "Estética Restauradora",
+  "team.member.luiza.desc": "Dedicada à reabilitação estética e a limpezas profiláticas detalhadas.",
+  "team.member.isabela.role": "Periodontia Integrativa",
+  "team.member.isabela.desc":
+    "Saúde bucal integrativa e periodontia, correlacionando saúde da gengiva e do organismo, com manejo odontológico de pacientes com doenças sistêmicas e autoimunes (artrite reumatoide, lúpus).",
+  "team.member.gabriela.role": "Odontologia Preventiva",
+  "team.member.gabriela.desc":
+    "Odontologia preventiva, clínica e educacional, promovendo saúde bucal diária e técnicas corretas de higiene biológica.",
+  "team.member.camila.role": "Dermatologia Clínica e Estética",
+  "team.member.camila.desc":
+    "Médica especialista em gerenciamento de pele, tratamentos injetáveis avançados e rejuvenescimento natural.",
+  "cta.book.person": "Agendar",
+  "wa.team.book": "Olá! Gostaria de agendar com {name}.",
 };
 
 const en: Dict = {
@@ -447,6 +476,35 @@ const en: Dict = {
   "form.sending": "Sending",
   "form.sent": "Sent — continue on WhatsApp",
   "form.disclaimer": "Your data is only used for the scheduling contact.",
+  "team.eyebrow": "Team",
+  "team.title": "Specialists working together.",
+  "team.intro":
+    "A multidisciplinary team of dentistry and medicine, gathered to care for the patient as a whole.",
+  "team.member.daniel.role": "CEO · Restorative Dentistry Specialist",
+  "team.member.daniel.desc":
+    "Dentist specializing in Restorative and advanced aesthetics (KSH ILAPEO/PR): veneers, ceramic laminates, resin facets and aesthetic reshaping. Jiu-Jitsu black belt (FP Team BJJ).",
+  "team.member.bianca.role": "Orofacial Harmonization",
+  "team.member.bianca.desc":
+    "Specialist in HOF and Restorative Aesthetic Dentistry: facial contouring, thread lifts, botulinum toxin and double chin lipo.",
+  "team.member.katielly.role": "Orofacial Aesthetics",
+  "team.member.katielly.desc":
+    "Focus on harmonic injectable procedures, nose reshaping and botulinum toxin application.",
+  "team.member.fernanda.role": "General and Aesthetic Dentistry",
+  "team.member.fernanda.desc":
+    "Aesthetic and restorative dentistry, absolute isolation for restoration longevity, prophylaxis and whitening.",
+  "team.member.luiza.role": "Restorative Aesthetics",
+  "team.member.luiza.desc": "Dedicated to aesthetic rehabilitation and detailed prophylactic cleanings.",
+  "team.member.isabela.role": "Integrative Periodontics",
+  "team.member.isabela.desc":
+    "Integrative oral health and periodontics, correlating gum and body health, with dental management of patients with systemic and autoimmune diseases (rheumatoid arthritis, lupus).",
+  "team.member.gabriela.role": "Preventive Dentistry",
+  "team.member.gabriela.desc":
+    "Preventive, clinical and educational dentistry, promoting daily oral health and correct biological hygiene techniques.",
+  "team.member.camila.role": "Clinical and Aesthetic Dermatology",
+  "team.member.camila.desc":
+    "Medical specialist in skin management, advanced injectable treatments and natural rejuvenation.",
+  "cta.book.person": "Book now",
+  "wa.team.book": "Hello! I would like to schedule with {name}.",
 };
 
 const es: Dict = {
@@ -666,6 +724,35 @@ const es: Dict = {
   "form.sending": "Enviando",
   "form.sent": "Enviado — continúe por WhatsApp",
   "form.disclaimer": "Sus datos solo se utilizan para el contacto de la cita.",
+  "team.eyebrow": "Equipo",
+  "team.title": "Especialistas que trabajan juntos.",
+  "team.intro":
+    "Un equipo multidisciplinario de odontología y medicina, reunido para cuidar al paciente en su totalidad.",
+  "team.member.daniel.role": "CEO · Especialista en Odontología Restauradora",
+  "team.member.daniel.desc":
+    "Cirujano dentista especializado en Odontología Restauradora y estética avanzada (KSH ILAPEO/PR): carillas, laminados cerámicos, facetas de resina y recontorno estético. Cinturón negro de Jiu-Jitsu (FP Team BJJ).",
+  "team.member.bianca.role": "Armonización Orofacial",
+  "team.member.bianca.desc":
+    "Especialista en HOF y Odontología Estética Restauradora: contorno facial, hilos de sustentación, toxina botulínica y lipo de papada.",
+  "team.member.katielly.role": "Estética Orofacial",
+  "team.member.katielly.desc":
+    "Enfoque en procedimientos inyectables armónicos, rinomodelación y aplicación de toxina botulínica.",
+  "team.member.fernanda.role": "Odontología General y Estética",
+  "team.member.fernanda.desc":
+    "Odontología estética y restauradora, aislamiento absoluto para la longevidad de las restauraciones, profilaxis y blanqueamientos.",
+  "team.member.luiza.role": "Estética Restauradora",
+  "team.member.luiza.desc": "Dedicada a la rehabilitación estética y limpiezas profilácticas detalladas.",
+  "team.member.isabela.role": "Periodoncia Integrativa",
+  "team.member.isabela.desc":
+    "Salud bucal integrativa y periodoncia, correlacionando la salud de las encías y del organismo, con manejo odontológico de pacientes con enfermedades sistémicas y autoinmunes (artritis reumatoide, lupus).",
+  "team.member.gabriela.role": "Odontología Preventiva",
+  "team.member.gabriela.desc":
+    "Odontología preventiva, clínica y educativa, promoviendo la salud bucal diaria y técnicas correctas de higiene biológica.",
+  "team.member.camila.role": "Dermatología Clínica y Estética",
+  "team.member.camila.desc":
+    "Médica especialista en gestión de la piel, tratamientos inyectables avanzados y rejuvenecimiento natural.",
+  "cta.book.person": "Agendar",
+  "wa.team.book": "¡Hola! Me gustaría agendar con {name}.",
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };

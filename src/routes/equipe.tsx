@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/site/PageShell";
 import { TEAM, whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/equipe")({
   head: () => ({
@@ -25,31 +26,41 @@ export const Route = createFileRoute("/equipe")({
 });
 
 function Equipe() {
+  const { t } = useI18n();
+
   return (
     <PageShell
-      eyebrow="Equipe"
+      eyebrow={t("team.eyebrow")}
       title={
         <>
-          Especialistas que <span className="gold-text">trabalham juntos</span>.
+          {t("team.title").split("trabalham juntos")[0]}
+          <span className="gold-text">
+            {t("team.title").includes("trabalham juntos") ? "trabalham juntos" : 
+             t("team.title").includes("working together") ? "working together" : 
+             "trabajan juntos"}
+          </span>
+          {t("team.title").split("trabalham juntos").length > 1 ? t("team.title").split("trabalham juntos")[1] : 
+           t("team.title").split("working together").length > 1 ? t("team.title").split("working together")[1] : 
+           t("team.title").split("trabajan juntos").length > 1 ? t("team.title").split("trabajan juntos")[1] : ""}
         </>
       }
-      intro="Uma equipe multidisciplinar de odontologia e medicina, reunida para cuidar do paciente por inteiro."
+      intro={t("team.intro")}
     >
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {TEAM.map((p) => (
             <article key={p.name} data-reveal className="vellum vellum-hover rounded-3xl p-7">
-              <span className="eyebrow">{p.role}</span>
+              <span className="eyebrow">{t(`team.member.${p.id}.role`)}</span>
               <h2 className="title-display mt-3 text-xl">{p.name}</h2>
-              <p className="section-lede-sm mt-3">{p.desc}</p>
+              <p className="section-lede-sm mt-3">{t(`team.member.${p.id}.desc`)}</p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a
-                  href={whatsappLink(`Olá! Gostaria de agendar com ${p.name}.`)}
+                  href={whatsappLink(t("wa.team.book").replace("{name}", p.name))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-slide-gold text-foreground"
                 >
-                  Agendar
+                  {t("cta.book.person")}
                 </a>
                 <a
                   href={p.instagram}

@@ -28,51 +28,43 @@ export const FIRST_VISIT = {
 
 export const TEAM = [
   {
+    id: "daniel",
     name: "Dr. Daniel Thebit",
-    role: "CEO · Especialista em Dentística",
-    desc: "Cirurgião-dentista com especialização em Dentística e estética avançada (KSH ILAPEO/PR): lentes de contato, laminados cerâmicos, facetas de resina e recontorno estético. Faixa preta de Jiu-Jitsu (FP Team BJJ).",
     instagram: "https://www.instagram.com/dr.danielthebit/",
   },
   {
+    id: "bianca",
     name: "Dra. Bianca Medeiros",
-    role: "Harmonização Orofacial",
-    desc: "Especialista em HOF e Odontologia Estética Restauradora: contorno facial, fios de sustentação, toxina botulínica e lipo de papada.",
     instagram: "https://www.instagram.com/drabiancamedeiros/",
   },
   {
+    id: "katielly",
     name: "Dra. Katielly Mendes",
-    role: "Estética Orofacial",
-    desc: "Foco em procedimentos injetáveis harmônicos, rinomodelação e aplicação de toxina botulínica.",
     instagram: "https://www.instagram.com/dra.katiellymendes/",
   },
   {
+    id: "fernanda",
     name: "Dra. Fernanda Montrezor",
-    role: "Clínica Geral e Estética",
-    desc: "Odontologia estética e restauradora, isolamento absoluto para longevidade de restaurações, profilaxia e clareamentos.",
     instagram: "https://www.instagram.com/dra.fernandamontrezor/",
   },
   {
+    id: "luiza",
     name: "Luiza Francino",
-    role: "Estética Restauradora",
-    desc: "Dedicada à reabilitação estética e a limpezas profiláticas detalhadas.",
     instagram: "https://www.instagram.com/luizafrancino/",
   },
   {
+    id: "isabela",
     name: "Dra. Isabela Garzedin",
-    role: "Periodontia Integrativa",
-    desc: "Saúde bucal integrativa e periodontia, correlacionando saúde da gengiva e do organismo, com manejo odontológico de pacientes com doenças sistêmicas e autoimunes (artrite reumatoide, lúpus).",
     instagram: "https://www.instagram.com/isabela.garzedin/",
   },
   {
+    id: "gabriela",
     name: "Gabriela Jardim",
-    role: "Odontologia Preventiva",
-    desc: "Odontologia preventiva, clínica e educacional, promovendo saúde bucal diária e técnicas corretas de higiene biológica.",
     instagram: "https://www.instagram.com/gabrielajards/",
   },
   {
+    id: "camila",
     name: "Dra. Camila Attiê",
-    role: "Dermatologia Clínica e Estética",
-    desc: "Médica especialista em gerenciamento de pele, tratamentos injetáveis avançados e rejuvenescimento natural.",
     instagram: "https://www.instagram.com/dra.camilaattie/",
   },
 ];
