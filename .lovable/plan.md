@@ -12,7 +12,8 @@ Address untranslated text in the "Smile Consultant" simulation goals, photo tips
 - Add missing translations for Spanish/English for these new keys.
 
 ### Simulation Library (`src/lib/smile-consultant.ts`)
-- Add `ids` to `PHOTO_TIPS` and `TESTIMONIALS` to facilitate translation.
+- The `GOALS`, `PHOTO_TIPS`, `TESTIMONIALS`, and `LEGAL_NOTICE` are constants.
+- Modify `SmileConsultant` component to use `t()` on these constants or move labels to the dictionary.
 
 ### Smile Consultant Component (`src/components/site/SmileConsultant.tsx`)
 - Update `goals.map` to use `t(g.id)` for labels.
