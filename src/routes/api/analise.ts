@@ -4,7 +4,7 @@ export const Route = createFileRoute("/api/analise")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const body = (await request.json()) as { image?: string; goal?: string };
+        const body = (await request.json()) as { image?: string; goal?: string; lang?: string };
         if (!body.image) return new Response("Imagem obrigatória", { status: 400 });
 
         const key = process.env["LOVABLE_API_KEY"];
