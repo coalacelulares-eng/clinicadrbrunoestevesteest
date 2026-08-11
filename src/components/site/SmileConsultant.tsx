@@ -22,7 +22,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { streamImage } from "@/lib/stream-image";
 import { whatsappLink } from "@/lib/site";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type Language } from "@/lib/i18n";
 import {
   GOALS,
   LEGAL_NOTICE,
@@ -149,7 +149,12 @@ export function SmileConsultant({
     const analysis = fetch("/api/analise", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: original, goal: t(goal.id) }),
+      body: JSON.stringify({ 
+        image: original, 
+        goal: t(goal.id),
+        lang: (window as any).__LOCALE__ || 'pt'
+      }),
+
     })
       .then((r) => (r.ok ? (r.json() as Promise<Report>) : null))
       .catch(() => null);
