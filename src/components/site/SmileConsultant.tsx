@@ -567,9 +567,10 @@ export function SmileConsultant({
                 <span className="eyebrow">{t(`${prefix}.specialistEyebrow`)}</span>
                 <h3 className="title-display mt-3 text-2xl">{specialist.name}</h3>
                 <p className="mt-1 font-grotesk text-[0.55rem] uppercase tracking-[0.24em] text-text-soft">
-                  {specialist.role}
+                  {t(`team.member.${specialist.id}.role`)}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-text-soft">{specialist.bio}</p>
+                <p className="mt-4 text-sm leading-relaxed text-text-soft">{t(`team.member.${specialist.id}.desc`)}</p>
+
                 <a
                   href={specialist.instagram}
                   target="_blank"
