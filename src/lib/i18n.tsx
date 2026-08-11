@@ -36,7 +36,7 @@ const pt: Dict = {
   "about.text":
     "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e hoje administrada por seu filho, o Dr. Daniel Thebit, a Thebit Saúde e Estética une toda a equipe em torno de um propósito: ir além do tratamento do dente. Entendemos o paciente por inteiro e alinhamos saúde e estética.",
 
-  "facial.eyebrow": "Harmonización & Dermatologia",
+  "facial.eyebrow": "Harmonização & Dermatologia",
   "facial.title.a": "Simule a sua",
   "facial.title.gold": "harmonização facial",
   "facial.description":
