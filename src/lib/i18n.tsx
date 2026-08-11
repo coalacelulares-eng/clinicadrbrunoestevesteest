@@ -154,6 +154,8 @@ const pt: Dict = {
   "wa.default": "Olá! Gostaria de agendar uma avaliação na Thebit Saúde e Estética.",
   "wa.goal": "Olá! Meu objetivo hoje é:",
   "wa.quiz": "Olá! Quero uma avaliação. Área de interesse:",
+  "wa.visit": "Olá! Gostaria de conhecer a clínica e agendar uma visita.",
+  "cta.visit": "Agendar visita",
 
   "footer.rights": "Todos os direitos reservados.",
   "footer.disclaimer":
