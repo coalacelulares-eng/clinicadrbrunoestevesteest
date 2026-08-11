@@ -258,6 +258,29 @@ const pt: Dict = {
     "Médica especialista em gerenciamento de pele, tratamentos injetáveis avançados e rejuvenescimento natural.",
   "cta.book.person": "Agendar",
   "wa.team.book": "Olá! Gostaria de agendar com {name}.",
+
+  "tech_page.eyebrow": "Tecnologia",
+  "tech_page.title": "Ciência que sustenta o resultado.",
+  "tech_page.intro":
+    "Usamos o que há de mais recente em ciência e tecnologia para ir além do tratamento do dente.",
+  "tech_page.item.lenses.title": "Lentes de contato dental",
+  "tech_page.item.lenses.desc":
+    "Cerâmicas ultrafinas com desgaste mínimo, planejadas em prova estética antes do definitivo.",
+  "tech_page.item.resin.title": "Resina composta estratificada",
+  "tech_page.item.resin.desc":
+    "Recontorno cosmético e fechamento de diastemas com camadas que imitam o esmalte natural.",
+  "tech_page.item.invisalign.title": "Invisalign e alinhadores",
+  "tech_page.item.invisalign.desc":
+    "Planejamento digital do movimento dentário com aparelhos invisíveis e removíveis.",
+  "tech_page.item.xray.title": "Radiografia na clínica",
+  "tech_page.item.xray.desc":
+    "Exames de imagem realizados no local, agilizando diagnóstico e plano de tratamento.",
+  "tech_page.item.isolation.title": "Isolamento absoluto",
+  "tech_page.item.isolation.desc":
+    "Protocolo que aumenta a longevidade das restaurações e a segurança do procedimento.",
+  "tech_page.item.injectables.title": "Injetáveis e HOF",
+  "tech_page.item.injectables.desc":
+    "Toxina botulínica, fios de sustentação, rinomodelação e contorno facial harmônico.",
 };
 
 const en: Dict = {
@@ -505,6 +528,29 @@ const en: Dict = {
     "Medical specialist in skin management, advanced injectable treatments and natural rejuvenation.",
   "cta.book.person": "Book now",
   "wa.team.book": "Hello! I would like to schedule with {name}.",
+
+  "tech_page.eyebrow": "Technology",
+  "tech_page.title": "Science that sustains the result.",
+  "tech_page.intro":
+    "We use the latest in science and technology to go beyond treating teeth.",
+  "tech_page.item.lenses.title": "Porcelain Veneers",
+  "tech_page.item.lenses.desc":
+    "Ultra-thin ceramics with minimal wear, planned in aesthetic proof before the final one.",
+  "tech_page.item.resin.title": "Stratified Composite Resin",
+  "tech_page.item.resin.desc":
+    "Cosmetic recontouring and closing of diastemas with layers that mimic natural enamel.",
+  "tech_page.item.invisalign.title": "Invisalign and Aligners",
+  "tech_page.item.invisalign.desc":
+    "Digital planning of tooth movement with invisible and removable appliances.",
+  "tech_page.item.xray.title": "In-clinic Radiography",
+  "tech_page.item.xray.desc":
+    "Imaging tests performed on site, speeding up diagnosis and treatment planning.",
+  "tech_page.item.isolation.title": "Absolute Isolation",
+  "tech_page.item.isolation.desc":
+    "Protocol that increases the longevity of restorations and the safety of the procedure.",
+  "tech_page.item.injectables.title": "Injectables and HOF",
+  "tech_page.item.injectables.desc":
+    "Botulinum toxin, lifting threads, rhinomodeling and harmonic facial contouring.",
 };
 
 const es: Dict = {
@@ -753,6 +799,29 @@ const es: Dict = {
     "Médica especialista en gestión de la piel, tratamientos inyectables avanzados y rejuvenecimiento natural.",
   "cta.book.person": "Agendar",
   "wa.team.book": "¡Hola! Me gustaría agendar con {name}.",
+
+  "tech_page.eyebrow": "Tecnología",
+  "tech_page.title": "Ciencia que sustenta el resultado.",
+  "tech_page.intro":
+    "Utilizamos lo último en ciencia y tecnología para ir más allá del tratamiento dental.",
+  "tech_page.item.lenses.title": "Lentes de contacto dental",
+  "tech_page.item.lenses.desc":
+    "Cerámicas ultrafinas con mínimo desgaste, planificadas en prueba estética antes de la definitiva.",
+  "tech_page.item.resin.title": "Resina compuesta estratificada",
+  "tech_page.item.resin.desc":
+    "Recontorno cosmético y cierre de diastemas con capas que imitan el esmalte natural.",
+  "tech_page.item.invisalign.title": "Invisalign y alineadores",
+  "tech_page.item.invisalign.desc":
+    "Planificación digital del movimiento dental con aparatos invisibles y extraíbles.",
+  "tech_page.item.xray.title": "Radiografía en la clínica",
+  "tech_page.item.xray.desc":
+    "Pruebas de imagen realizadas en el sitio, agilizando el diagnóstico y el plan de tratamiento.",
+  "tech_page.item.isolation.title": "Aislamiento absoluto",
+  "tech_page.item.isolation.desc":
+    "Protocolo que aumenta la longevidad de las restauraciones y la seguridad del procedimiento.",
+  "tech_page.item.injectables.title": "Inyectables y HOF",
+  "tech_page.item.injectables.desc":
+    "Toxina botulínica, hilos tensores, rinomodelación y contorno facial armónico.",
 };
 
 const dicts: Record<Lang, Dict> = { pt, en, es };

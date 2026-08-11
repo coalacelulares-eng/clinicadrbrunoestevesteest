@@ -69,6 +69,15 @@ export const TEAM = [
   },
 ];
 
+export const TECH_ITEMS = [
+  { id: "lenses" },
+  { id: "resin" },
+  { id: "invisalign" },
+  { id: "xray" },
+  { id: "isolation" },
+  { id: "injectables" },
+];
+
 export function whatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

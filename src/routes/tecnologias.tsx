@@ -2,39 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Camera, Layers, Ruler, ScanLine, Smile, Syringe } from "lucide-react";
 
 import { PageShell } from "@/components/site/PageShell";
+import { useI18n } from "@/lib/i18n";
+import { TECH_ITEMS } from "@/lib/site";
 
-const items = [
-  {
-    icon: Smile,
-    title: "Lentes de contato dental",
-    desc: "Cerâmicas ultrafinas com desgaste mínimo, planejadas em prova estética antes do definitivo.",
-  },
-  {
-    icon: Layers,
-    title: "Resina composta estratificada",
-    desc: "Recontorno cosmético e fechamento de diastemas com camadas que imitam o esmalte natural.",
-  },
-  {
-    icon: Ruler,
-    title: "Invisalign e alinhadores",
-    desc: "Planejamento digital do movimento dentário com aparelhos invisíveis e removíveis.",
-  },
-  {
-    icon: ScanLine,
-    title: "Radiografia na clínica",
-    desc: "Exames de imagem realizados no local, agilizando diagnóstico e plano de tratamento.",
-  },
-  {
-    icon: Camera,
-    title: "Isolamento absoluto",
-    desc: "Protocolo que aumenta a longevidade das restaurações e a segurança do procedimento.",
-  },
-  {
-    icon: Syringe,
-    title: "Injetáveis e HOF",
-    desc: "Toxina botulínica, fios de sustentação, rinomodelação e contorno facial harmônico.",
-  },
-];
+const ICON_MAP = {
+  lenses: Smile,
+  resin: Layers,
+  invisalign: Ruler,
+  xray: ScanLine,
+  isolation: Camera,
+  injectables: Syringe,
+};
 
 export const Route = createFileRoute("/tecnologias")({
   head: () => ({
@@ -58,27 +36,46 @@ export const Route = createFileRoute("/tecnologias")({
 });
 
 function Tecnologias() {
+  const { t } = useI18n();
+
   return (
     <PageShell
-      eyebrow="Tecnologia"
+      eyebrow={t("tech_page.eyebrow")}
       title={
         <>
-          Ciência que sustenta o <span className="gold-text">resultado</span>.
+          {t("tech_page.title").includes("resultado") ? (
+            <>
+              {t("tech_page.title").split("resultado")[0]}
+              <span className="gold-text">resultado</span>
+              {t("tech_page.title").split("resultado")[1]}
+            </>
+          ) : t("tech_page.title").includes("result") ? (
+            <>
+              {t("tech_page.title").split("result")[0]}
+              <span className="gold-text">result</span>
+              {t("tech_page.title").split("result")[1]}
+            </>
+          ) : (
+            t("tech_page.title")
+          )}
         </>
       }
-      intro="Usamos o que há de mais recente em ciência e tecnologia para ir além do tratamento do dente."
+      intro={t("tech_page.intro")}
     >
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((i) => (
-            <div key={i.title} data-reveal className="vellum vellum-hover rounded-3xl p-7">
-              <span className="grid size-12 place-items-center rounded-full border border-gold/40">
-                <i.icon className="size-5 text-gold" />
-              </span>
-              <h2 className="title-display mt-6 text-xl">{i.title}</h2>
-              <p className="section-lede-sm mt-2">{i.desc}</p>
-            </div>
-          ))}
+          {TECH_ITEMS.map((item) => {
+            const Icon = ICON_MAP[item.id as keyof typeof ICON_MAP];
+            return (
+              <div key={item.id} data-reveal className="vellum vellum-hover rounded-3xl p-7">
+                <span className="grid size-12 place-items-center rounded-full border border-gold/40">
+                  <Icon className="size-5 text-gold" />
+                </span>
+                <h2 className="title-display mt-6 text-xl">{t(`tech_page.item.${item.id}.title`)}</h2>
+                <p className="section-lede-sm mt-2">{t(`tech_page.item.${item.id}.desc`)}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
     </PageShell>
