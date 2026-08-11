@@ -6,35 +6,36 @@ import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
 
-const TIMELINE = [
+const getTimeline = (t: (k: string) => string) => [
   {
     year: "1989",
     icon: GraduationCap,
-    title: "O começo com Dr. Jorge Thebit",
-    desc: "Um consultório em Belo Horizonte fundado sobre técnica apurada e relação de confiança com cada paciente.",
+    title: t("timeline.1989.title"),
+    desc: t("timeline.1989.desc"),
   },
   {
     year: "2005",
     icon: Building2,
-    title: "Uma clínica que cresce",
-    desc: "A demanda por odontologia de alta estética consolida a Thebit como referência no Anchieta.",
+    title: t("timeline.2005.title"),
+    desc: t("timeline.2005.desc"),
   },
   {
     year: "2020",
     icon: Sparkles,
-    title: "Nova estrutura",
-    desc: "Reforma completa: fachada com jardim vertical, recepção ampla e consultórios com tecnologia atualizada.",
+    title: t("timeline.2020.title"),
+    desc: t("timeline.2020.desc"),
   },
   {
     year: "Hoje",
     icon: Award,
-    title: "Nova gestão · Dr. Daniel Thebit",
-    desc: "A segunda geração amplia o propósito: unir saúde bucal, estética facial e medicina em um só lugar.",
+    title: t("timeline.today.title"),
+    desc: t("timeline.today.desc"),
   },
 ];
 
 export function ClinicStory() {
   const { t } = useI18n();
+  const timeline = getTimeline(t);
   return (
     <Spotlight tone="dark">
       <section
@@ -44,9 +45,9 @@ export function ClinicStory() {
       >
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="max-w-2xl">
-            <span className="eyebrow">Nossa história</span>
+            <span className="eyebrow">{t("nav.structure")}</span>
             <h2 className="title-display title-lux-dark mt-4 text-3xl md:text-5xl">
-              Uma história construída há mais de 35 anos.
+              {t("history.title")}
             </h2>
           </div>
 
@@ -55,7 +56,7 @@ export function ClinicStory() {
               aria-hidden="true"
               className="absolute left-0 top-6 hidden h-px w-full bg-gradient-to-r from-transparent via-gold/60 to-transparent md:block"
             />
-            {TIMELINE.map((step, i) => (
+            {timeline.map((step, i) => (
               <li
                 key={step.year}
                 data-reveal="scale"
