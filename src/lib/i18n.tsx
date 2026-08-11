@@ -625,6 +625,7 @@ const es: Dict = {
   "history.expert.seal4": "Planificación individualizada",
   "wa.expert": "¡Hola! Me gustaría programar una evaluación con el Dr. Daniel Thebit.",
   "cta.expert": "Agendar con el especialista",
+  "cta.maps": "Abrir en Google Maps",
 
   "clinic.comfort": "Un espacio pensado para su comodidad.",
   "contact.whatsapp": "WhatsApp",
