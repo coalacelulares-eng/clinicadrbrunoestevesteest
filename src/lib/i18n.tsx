@@ -874,6 +874,8 @@ const en: Dict = {
   "consultant.statsSub": "More than 35 years transforming lives and not just smiles.",
   "consultant.analysis": "What has been improved",
   "consultant.simulation": "Simulation performed",
+  "facial.reportTitle": "Intelligent Facial Analysis",
+  "facial.ctaTitle": "Ready for your facial protocol?",
   "facial.ctaDesc": "Schedule your personalized assessment now. At Thebit Clinic you will receive a complete planning carried out by specialists.",
   "facial.ctaBtn": "Schedule via WhatsApp",
   "facial.reportEyebrow": "Personalized report",
