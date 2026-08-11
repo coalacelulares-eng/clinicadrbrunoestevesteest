@@ -1,6 +1,7 @@
 import { Check, Loader2, Send } from "lucide-react";
 import { useMemo, useState } from "react";
 
+import { useI18n } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/site";
 
 type Field = "nome" | "telefone" | "whatsapp" | "email" | "cidade" | "objetivo" | "mensagem";
@@ -34,13 +35,13 @@ function maskPhone(value: string) {
 }
 
 const LABELS: Record<Field, string> = {
-  nome: "Nome completo",
-  telefone: "Telefone",
-  whatsapp: "WhatsApp",
-  email: "E-mail",
-  cidade: "Cidade",
-  objetivo: "Objetivo",
-  mensagem: "Mensagem",
+  nome: "form.name",
+  telefone: "form.phone",
+  whatsapp: "form.whatsapp",
+  email: "form.email",
+  cidade: "form.city",
+  objetivo: "form.goal",
+  mensagem: "form.message",
 };
 
 function validate(field: Field, value: string): string | null {
@@ -126,14 +127,17 @@ export function PremiumForm() {
     ].join(" ");
   };
 
-  const renderLabel = (field: Field) => (
-    <label
-      htmlFor={field}
-      className="pointer-events-none absolute left-5 top-4 origin-left font-grotesk text-[0.72rem] font-bold uppercase tracking-[0.2em] text-text-soft transition-all duration-300 peer-focus:top-2 peer-focus:text-[0.6rem] peer-focus:text-gold peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-[0.6rem]"
-    >
-      {LABELS[field]}
-    </label>
-  );
+  const renderLabel = (field: Field) => {
+    const { t } = useI18n();
+    return (
+      <label
+        htmlFor={field}
+        className="pointer-events-none absolute left-5 top-4 origin-left font-grotesk text-[0.72rem] font-bold uppercase tracking-[0.2em] text-text-soft transition-all duration-300 peer-focus:top-2 peer-focus:text-[0.6rem] peer-focus:text-gold peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-[0.6rem]"
+      >
+        {t(LABELS[field])}
+      </label>
+    );
+  };
 
   const feedback = (field: Field) =>
     touched[field] && errors[field] ? (
@@ -159,12 +163,12 @@ export function PremiumForm() {
       className="glass-lux mx-auto max-w-3xl rounded-[2rem] p-8 md:p-10"
       noValidate
     >
-      <span className="eyebrow">Agendamento</span>
+      <span className="eyebrow">{t("form.eyebrow")}</span>
       <h2 className="title-display mt-3 text-2xl md:text-4xl">
-        Reserve a sua avaliação.
+        {t("form.title")}
       </h2>
       <p className="mt-3 text-sm leading-relaxed text-text-soft">
-        Preencha os dados abaixo e a nossa recepção continua o atendimento pelo WhatsApp.
+        {t("form.desc")}
       </p>
 
       <div className="mt-9 grid gap-5 sm:grid-cols-2">
@@ -175,7 +179,7 @@ export function PremiumForm() {
                 id={field}
                 name={field}
                 type={type}
-                placeholder={LABELS[field]}
+                placeholder={t(LABELS[field])}
                 autoComplete={autoComplete}
                 list={list}
                 value={values[field]}
@@ -205,7 +209,7 @@ export function PremiumForm() {
               onBlur={() => setTouched((t) => ({ ...t, objetivo: true }))}
               className="w-full appearance-none rounded-2xl border border-border bg-transparent px-5 pb-3 pt-6 text-sm text-foreground outline-none transition-all duration-500 focus:border-gold focus:shadow-[0_0_0_4px_oklch(72.5%_0.088_78/0.15)]"
             >
-              <option value="">Selecione</option>
+              <option value="">{t("form.select")}</option>
               {OBJETIVOS.map((o) => (
                 <option key={o} value={o}>
                   {o}
@@ -213,7 +217,7 @@ export function PremiumForm() {
               ))}
             </select>
             <span className="pointer-events-none absolute left-5 top-2 font-grotesk text-[0.6rem] font-bold uppercase tracking-[0.2em] text-gold">
-              {LABELS.objetivo}
+              {t(LABELS.objetivo)}
             </span>
           </div>
           {feedback("objetivo")}
@@ -225,7 +229,7 @@ export function PremiumForm() {
               id="mensagem"
               name="mensagem"
               rows={4}
-              placeholder={LABELS.mensagem}
+              placeholder={t(LABELS.mensagem)}
               value={values.mensagem}
               onChange={(e) => set("mensagem", e.target.value)}
               onBlur={() => setTouched((t) => ({ ...t, mensagem: true }))}
@@ -244,21 +248,21 @@ export function PremiumForm() {
       >
         {sending ? (
           <>
-            <Loader2 className="size-4 animate-spin" /> Enviando
+            <Loader2 className="size-4 animate-spin" /> {t("form.sending")}
           </>
         ) : sent ? (
           <>
-            <Check className="size-4" /> Enviado — continue no WhatsApp
+            <Check className="size-4" /> {t("form.sent")}
           </>
         ) : (
           <>
-            <Send className="size-4" /> Agendar Avaliação
+            <Send className="size-4" /> {t("form.submit")}
           </>
         )}
       </button>
 
       <p className="mt-4 text-center text-xs leading-relaxed text-text-soft">
-        Seus dados são usados apenas para o contato do agendamento.
+        {t("form.disclaimer")}
       </p>
     </form>
   );
