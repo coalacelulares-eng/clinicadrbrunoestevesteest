@@ -35,6 +35,15 @@ const pt: Dict = {
   "about.title": "35 anos de história, uma clínica renovada.",
   "about.text":
     "Fundada pelo Dr. Jorge Thebit há mais de 35 anos e hoje administrada por seu filho, o Dr. Daniel Thebit, a Thebit Saúde e Estética une toda a equipe em torno de um propósito: ir além do tratamento do dente. Entendemos o paciente por inteiro e alinhamos saúde e estética.",
+
+  "facial.eyebrow": "Harmonização & Dermatologia",
+  "facial.title.a": "Simule a sua",
+  "facial.title.gold": "harmonização facial",
+  "facial.description":
+    "Visualize uma projeção ilustrativa de harmonização orofacial ou de tratamentos dermatológicos, com resultados naturais e proporcionais ao seu rosto. A simulação é apenas orientativa e será refinada na avaliação presencial.",
+  "facial.step1": "Passo 1 · O que você deseja tratar?",
+  "facial.reportTitle": "Análise Facial Inteligente",
+  "facial.ctaTitle": "Pronto para o seu protocolo facial?",
   "about.c1": "Especialistas em Dentística e Estética Dental Avançada",
   "about.c2": "Equipe multidisciplinar de odontologia e medicina",
   "about.c3": "Nota máxima 5.0 nas avaliações dos pacientes",
@@ -453,6 +462,15 @@ const en: Dict = {
     "Founded by Dr. Jorge Thebit over 35 years ago and completely renovated 5 years ago, the clinic is now managed by his son, Dr. Daniel Thebit, a dentist with an international focus on Advanced Dental Aesthetics.",
   "about_page.p2":
     "Together with all employees, our team uses the latest in science and technology to go beyond tooth treatments. We cover each patient's problems and align health and aesthetics.",
+
+  "facial.eyebrow": "Harmonization & Dermatology",
+  "facial.title.a": "Simulate your",
+  "facial.title.gold": "facial harmonization",
+  "facial.description":
+    "Visualize an illustrative projection of orofacial harmonization or dermatological treatments, with natural and proportional results for your face. The simulation is only for guidance and will be refined during the in-person assessment.",
+  "facial.step1": "Step 1 · What do you want to treat?",
+  "facial.reportTitle": "Intelligent Facial Analysis",
+  "facial.ctaTitle": "Ready for your facial protocol?",
   "about_page.quote":
     "“And all this in order to transform and improve lives, and not just smiles. This is our mission here at Thebit.”",
   "about_page.p3":
