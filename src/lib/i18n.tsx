@@ -164,6 +164,7 @@ const pt: Dict = {
   "contact.desc":
     "Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário.",
   "contact.address": "Endereço",
+  "clinic.comfort": "Um espaço pensado para o seu conforto.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "E-mail",
   "contact.hours": "Horários",
@@ -350,6 +351,7 @@ const en: Dict = {
   "contact.desc":
     "Our reception answers via WhatsApp and helps you choose the best time.",
   "contact.address": "Address",
+  "clinic.comfort": "A space designed for your comfort.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "Email",
   "contact.hours": "Hours",
@@ -535,6 +537,7 @@ const es: Dict = {
   "contact.desc":
     "Nuestra recepción responde por WhatsApp y te ayuda a elegir el mejor horario.",
   "contact.address": "Dirección",
+  "clinic.comfort": "Un espacio pensado para su comodidad.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "Email",
   "contact.hours": "Horarios",
