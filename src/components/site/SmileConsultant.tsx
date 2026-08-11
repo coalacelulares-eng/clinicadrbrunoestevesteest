@@ -28,10 +28,11 @@ import {
   LEGAL_NOTICE,
   PHOTO_TIPS,
   PROGRESS_STEPS,
-  SPECIALISTS,
   TESTIMONIALS,
   type Goal,
 } from "@/lib/smile-consultant";
+import { TEAM } from "@/lib/site";
+
 
 type Report = { resumo?: string; observacoes?: string[]; protocolo?: string[] };
 type ViewMode = "comparar" | "antes" | "depois" | "lado";
