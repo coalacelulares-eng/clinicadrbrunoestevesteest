@@ -116,40 +116,38 @@ export function ClinicStory() {
           {/* Especialista em destaque */}
           <div className="mt-24 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div data-reveal="left">
-              <span className="eyebrow">Especialista em destaque</span>
+              <span className="eyebrow">{t("history.expert.eyebrow")}</span>
               <h3 className="title-display title-lux-dark mt-4 text-3xl md:text-4xl">
                 Dr. Daniel Thebit
               </h3>
-              <p className="micro-label mt-3 text-gold">CEO · Especialista em Dentística</p>
+              <p className="micro-label mt-3 text-gold">{t("history.expert.role")}</p>
               <p className="mt-6 text-base leading-relaxed opacity-80">
-                Cirurgião-dentista com formação avançada em Estética Dental pelo ILAPEO. Atua com
-                lentes de contato, laminados cerâmicos, facetas em resina e recontorno estético,
-                sempre buscando resultados extremamente naturais.
+                {t("history.expert.desc")}
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Formação ILAPEO",
-                  "Estética Dental Avançada",
-                  "Resultados naturais",
-                  "Planejamento individualizado",
+                  "history.expert.seal1",
+                  "history.expert.seal2",
+                  "history.expert.seal3",
+                  "history.expert.seal4",
                 ].map((b) => (
                   <div
                     key={b}
                     className="glass-dark rounded-2xl px-5 py-3 text-[17px] font-normal uppercase tracking-[0.08em]"
                   >
-                    {b}
+                    {t(b)}
                   </div>
                 ))}
               </div>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
-                  href={whatsappLink("Olá! Gostaria de agendar uma avaliação com o Dr. Daniel Thebit.")}
+                  href={whatsappLink(t("wa.expert"))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-lux"
                   data-magnetic
                 >
-                  Agendar com o especialista
+                  {t("cta.expert")}
                 </a>
                 <a
                   href="https://www.instagram.com/dr.danielthebit/"
