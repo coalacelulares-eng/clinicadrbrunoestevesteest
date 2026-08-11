@@ -154,6 +154,8 @@ const pt: Dict = {
   "wa.default": "Olá! Gostaria de agendar uma avaliação na Thebit Saúde e Estética.",
   "wa.goal": "Olá! Meu objetivo hoje é:",
   "wa.quiz": "Olá! Quero uma avaliação. Área de interesse:",
+  "wa.visit": "Olá! Gostaria de conhecer a clínica e agendar uma visita.",
+  "cta.visit": "Agendar visita",
 
   "footer.rights": "Todos os direitos reservados.",
   "footer.disclaimer":
@@ -371,6 +373,8 @@ const en: Dict = {
   "wa.default": "Hello! I'd like to book an assessment at Thebit Saúde e Estética.",
   "wa.goal": "Hello! My goal today is:",
   "wa.quiz": "Hello! I'd like an assessment. Area of interest:",
+  "wa.visit": "Hello! I would like to visit the clinic and schedule a tour.",
+  "cta.visit": "Schedule Visit",
 
   "footer.rights": "All rights reserved.",
   "footer.disclaimer":
@@ -587,6 +591,8 @@ const es: Dict = {
   "wa.default": "¡Hola! Quisiera agendar una evaluación en Thebit Saúde e Estética.",
   "wa.goal": "¡Hola! Mi objetivo hoy es:",
   "wa.quiz": "¡Hola! Quiero una evaluación. Área de interés:",
+  "wa.visit": "¡Hola! Me gustaría conocer la clínica y agendar una visita.",
+  "cta.visit": "Agendar visita",
 
   "footer.rights": "Todos los derechos reservados.",
   "footer.disclaimer":

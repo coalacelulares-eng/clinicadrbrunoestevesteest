@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-
 import { PageShell } from "@/components/site/PageShell";
 import { CLINIC, whatsappLink } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import recepcao from "@/assets/clinica-3.webp";
 import lounge from "@/assets/clinica-4.webp";
@@ -36,12 +36,15 @@ export const Route = createFileRoute("/estrutura")({
 });
 
 function Estrutura() {
+  const { t } = useI18n();
+
   return (
     <PageShell
-      eyebrow="Estrutura"
+      eyebrow={t("nav.structure")}
       title={
         <>
-          Um espaço pensado para o seu <span className="gold-text">conforto</span>.
+          {t("clinic.comfort").split(" ").slice(0, 5).join(" ")}{" "}
+          <span className="gold-text">{t("clinic.comfort").split(" ").slice(5).join(" ").replace(".", "")}</span>.
         </>
       }
       intro={CLINIC.address}
@@ -65,13 +68,13 @@ function Estrutura() {
         <div data-reveal className="mx-auto mt-14 max-w-3xl text-center">
           <p className="text-base leading-relaxed text-text-soft">{CLINIC.hours}</p>
           <a
-            href={whatsappLink("Olá! Gostaria de conhecer a clínica e agendar uma visita.")}
+            href={whatsappLink(t("wa.visit"))}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold-lux mt-8"
             data-magnetic
           >
-            Agendar visita
+            {t("cta.visit")}
           </a>
         </div>
       </section>
