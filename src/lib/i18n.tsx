@@ -192,6 +192,7 @@ const pt: Dict = {
   "history.expert.seal4": "Planejamento individualizado",
   "wa.expert": "Olá! Gostaria de agendar uma avaliação com o Dr. Daniel Thebit.",
   "cta.expert": "Agendar com o especialista",
+  "cta.maps": "Abrir no Google Maps",
 
   "clinic.comfort": "Um espaço pensado para o seu conforto.",
   "contact.whatsapp": "WhatsApp",
@@ -408,6 +409,7 @@ const en: Dict = {
   "history.expert.seal4": "Individualized Planning",
   "wa.expert": "Hello! I would like to schedule an evaluation with Dr. Daniel Thebit.",
   "cta.expert": "Schedule with the specialist",
+  "cta.maps": "Open in Google Maps",
 
   "clinic.comfort": "A space designed for your comfort.",
   "contact.whatsapp": "WhatsApp",

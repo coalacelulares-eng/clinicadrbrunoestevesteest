@@ -196,6 +196,9 @@ export function ClinicStory() {
                 {CLINIC.address}
               </p>
               <span className="h-px w-0 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-500 group-hover:w-40" />
+              <span className="micro-label mt-2 text-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                {t("cta.maps")}
+              </span>
             </a>
           </div>
         </div>
