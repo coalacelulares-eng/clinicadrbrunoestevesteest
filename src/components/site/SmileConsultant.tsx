@@ -22,7 +22,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { streamImage } from "@/lib/stream-image";
 import { whatsappLink } from "@/lib/site";
-import { useI18n, type Language } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n";
 import {
   GOALS,
   LEGAL_NOTICE,
@@ -59,7 +59,7 @@ export function SmileConsultant({
   goals = GOALS,
   type = "smile",
 }: ConsultantProps) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const fileRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
   const compareRef = useRef<HTMLDivElement>(null);
@@ -152,7 +152,7 @@ export function SmileConsultant({
       body: JSON.stringify({ 
         image: original, 
         goal: t(goal.id),
-        lang: (window as any).__LOCALE__ || 'pt'
+        lang,
       }),
 
     })
