@@ -50,34 +50,32 @@ const GOAL_ICONS: Record<string, LucideIcon> = {
 export type ConsultantProps = {
   id?: string;
   goals?: Goal[];
-  eyebrow?: string;
-  title?: React.ReactNode;
-  description?: string;
-  stepLabel?: string;
-  reportTitle?: string;
-  ctaTitle?: string;
+  type?: "smile" | "facial";
 };
 
 export function SmileConsultant({
   id = "consultor",
   goals = GOALS,
-}: Omit<ConsultantProps, "eyebrow" | "title" | "description" | "stepLabel" | "reportTitle" | "ctaTitle"> = {}) {
+  type = "smile",
+}: ConsultantProps) {
   const { t } = useI18n();
   const fileRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
   const compareRef = useRef<HTMLDivElement>(null);
 
-  const eyebrow = t("consultant.eyebrow");
+  const prefix = type === "smile" ? "consultant" : "facial";
+
+  const eyebrow = t(`${prefix}.eyebrow`);
   const title = (
     <>
-      {t("consultant.title.a")}{" "}
-      <span className="gold-text">{t("consultant.title.gold")}</span>.
+      {t(`${prefix}.title.a`)}{" "}
+      <span className="gold-text">{t(`${prefix}.title.gold`)}</span>.
     </>
   );
-  const description = t("consultant.description");
-  const stepLabel = t("consultant.step1");
-  const reportTitle = "Análise Inteligente do Seu Sorriso";
-  const ctaTitle = "Gostou da simulação?";
+  const description = t(`${prefix}.description`);
+  const stepLabel = t(`${prefix}.step1`);
+  const reportTitle = type === "smile" ? "Análise Inteligente do Seu Sorriso" : t("facial.reportTitle");
+  const ctaTitle = type === "smile" ? "Gostou da simulação?" : t("facial.ctaTitle");
 
   const [goal, setGoal] = useState<Goal | null>(null);
   const [original, setOriginal] = useState<string | null>(null);
