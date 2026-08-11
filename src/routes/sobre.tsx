@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-
 import { PageShell } from "@/components/site/PageShell";
-import { CLINIC } from "@/lib/site";
+import { useI18n } from "@/lib/i18n";
 import recepcao from "@/assets/clinica-3.webp";
 
 export const Route = createFileRoute("/sobre")({
@@ -26,22 +25,25 @@ export const Route = createFileRoute("/sobre")({
 });
 
 function Sobre() {
+  const { t } = useI18n();
+
   return (
     <PageShell
-      eyebrow="A Thebit"
+      eyebrow={t("about_page.eyebrow")}
       title={
         <>
-          Transformar vidas, <span className="gold-text">não apenas sorrisos</span>.
+          {t("about_page.title")}{" "}
+          <span className="gold-text">{t("about_page.title.gold")}</span>.
         </>
       }
-      intro="Estética avançada e especialistas em Dentística no coração do Anchieta, em Belo Horizonte."
+      intro={t("about_page.intro")}
     >
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <div data-reveal>
             <img
               src={recepcao}
-              alt="Recepção da Thebit Saúde e Estética"
+              alt={t("about_page.img_alt")}
               loading="lazy"
               width={1280}
               height={854}
@@ -49,32 +51,18 @@ function Sobre() {
             />
           </div>
           <div data-reveal className="section-lede space-y-6">
-            <p>
-              Fundada pelo Dr. Jorge Thebit há mais de 35 anos e totalmente renovada há 5 anos, a
-              clínica é hoje administrada por seu filho, o Dr. Daniel Thebit, cirurgião-dentista
-              com foco internacional em Estética Dental Avançada.
-            </p>
-            <p>
-              Em conjunto com todos os colaboradores, nossa equipe utiliza o que há de mais recente
-              em ciência e tecnologia para ir além dos tratamentos de dente. Abrangemos os problemas
-              de cada paciente e alinhamos saúde e estética.
-            </p>
+            <p>{t("about_page.p1")}</p>
+            <p>{t("about_page.p2")}</p>
             <p className="font-display text-xl text-foreground">
-              “E tudo isso a fim de transformar e melhorar vidas, e não apenas sorrisos. Essa é a
-              nossa missão aqui na Thebit.”
+              {t("about_page.quote")}
             </p>
-            <p>
-              O Dr. Daniel Thebit tem formação avançada em estética e reabilitação oral pelo ILAPEO
-              (Instituto Latino Americano de Pesquisa e Ensino Odontológico, PR), com atuação
-              focada em facetas de resina composta, laminados cerâmicos (lentes de contato dentais)
-              e recontorno estético. Fora do consultório, é faixa preta de Jiu-Jitsu (FP Team BJJ).
-            </p>
+            <p>{t("about_page.p3")}</p>
             <ul className="grid gap-3 text-sm text-foreground">
               {[
-                "Nota máxima 5.0 nas avaliações dos pacientes",
-                "Trabalhos de alta estética em facetas e resinas",
-                "Estrutura moderna e tecnologias avançadas",
-                "Atendimento acolhedor desde a recepção",
+                t("about_page.list1"),
+                t("about_page.list2"),
+                t("about_page.list3"),
+                t("about_page.list4"),
               ].map((i) => (
                 <li key={i} className="flex gap-3">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
@@ -83,7 +71,7 @@ function Sobre() {
               ))}
             </ul>
             <p className="font-grotesk text-[0.6rem] uppercase tracking-[0.24em]">
-              {CLINIC.director} · {CLINIC.crm}
+              {t("about_page.director")}
             </p>
           </div>
         </div>
