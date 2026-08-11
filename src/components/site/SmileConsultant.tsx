@@ -309,7 +309,7 @@ export function SmileConsultant({
           <div className="w-full max-w-xs text-center text-off-white">
             <Loader2 className="mx-auto size-7 animate-spin text-gold" />
             <p className="mt-4 font-grotesk text-[0.6rem] uppercase tracking-[0.24em]">
-              {PROGRESS_STEPS[progressStep]}
+              {t(PROGRESS_STEPS[progressStep] || "progress.step.0")}
             </p>
             <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-off-white/20">
               <div
