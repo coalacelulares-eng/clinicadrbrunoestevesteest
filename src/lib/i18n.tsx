@@ -433,16 +433,8 @@ const pt: Dict = {
   "consultant.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
   "consultant.analysis": "O que foi melhorado",
   "consultant.simulation": "Simulação realizada",
-  "facial.ctaDesc": "Agende agora sua avaliação personalizada. Na Clínica Thebit você receberá um planejamento completo realizado por especialistas.",
-  "facial.ctaBtn": "Agendar pelo WhatsApp",
-  "facial.reportEyebrow": "Relatório personalizado",
-  "facial.reportDisclaimer": "Esta análise é apenas ilustrativa e será confirmada durante sua avaliação presencial.",
-  "facial.specialistEyebrow": "Especialista indicado",
-  "facial.specialistBtn": "Conhecer especialista",
-  "facial.statsText": "5,0 estrelas no Google.",
-  "facial.statsSub": "Mais de 35 anos transformando vidas e não apenas sorrisos.",
-  "facial.analysis": "O que foi melhorado",
-  "facial.simulation": "Simulação realizada",
+  "facial.reportTitle": "Análise Facial Inteligente",
+  "facial.ctaTitle": "Pronto para o seu protocolo facial?",
 };
 
 const en: Dict = {
@@ -1303,7 +1295,7 @@ const es: Dict = {
   "facial.simulation": "Simulación realizada",
   "consultant.reportTitle": "Análisis Inteligente de Su Sonrisa",
   "consultant.ctaTitle": "¿Te gustó la simulación?",
-  "consultant.ctaDesc": "Agenda ahora tu evaluación personalizada. En Clínica Thebit recibirás un planeamiento completo realizado por especialistas.",
+  "consultant.ctaDesc": "Agenda ahora tu avaliação personalizada. En Clínica Thebit recibirás un planeamiento completo realizado por especialistas.",
   "consultant.ctaBtn": "Agendar por WhatsApp",
   "consultant.reportEyebrow": "Relatorio personalizado",
   "consultant.reportDisclaimer": "Este análisis es solo ilustrativo y se confirmará durante su evaluación presencial.",
