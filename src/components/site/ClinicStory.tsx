@@ -88,28 +88,25 @@ export function ClinicStory() {
               />
             </div>
             <div data-reveal="right">
-              <span className="eyebrow">O fundador</span>
+              <span className="eyebrow">{t("history.founder.eyebrow")}</span>
               <h3 className="title-display title-lux-dark mt-4 text-3xl md:text-4xl">
-                Conheça quem iniciou essa história.
+                {t("history.founder.title")}
               </h3>
               <p className="mt-6 text-base leading-relaxed opacity-80">
-                Dr. Jorge Thebit abriu as portas da clínica há mais de 35 anos com uma convicção
-                simples: tratar pessoas, não apenas dentes. Construiu uma clientela fiel à base de
-                técnica minuciosa, honestidade no diagnóstico e presença constante.
+                {t("history.founder.p1")}
               </p>
               <p className="mt-4 text-base leading-relaxed opacity-80">
-                Esse legado se traduziu em método — e hoje segue vivo na conduta de toda a equipe,
-                sob a continuidade do seu filho, Dr. Daniel Thebit.
+                {t("history.founder.p2")}
               </p>
               <ul className="mt-7 grid gap-3 text-[17px] tracking-[0.02em]">
                 {[
-                  "Fundação da clínica e formação da primeira equipe",
-                  "Cultura de diagnóstico honesto e acompanhamento de longo prazo",
-                  "Base de pacientes que atravessa gerações",
+                  "history.founder.list1",
+                  "history.founder.list2",
+                  "history.founder.list3",
                 ].map((i) => (
                   <li key={i} className="flex gap-3">
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
-                    {i}
+                    {t(i)}
                   </li>
                 ))}
               </ul>

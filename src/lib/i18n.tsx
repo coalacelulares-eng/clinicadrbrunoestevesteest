@@ -173,6 +173,15 @@ const pt: Dict = {
   "timeline.2020.desc": "Reforma completa: fachada com jardim vertical, recepção ampla e consultórios com tecnologia atualizada.",
   "timeline.today.title": "Nova gestão · Dr. Daniel Thebit",
   "timeline.today.desc": "A segunda geração amplia o propósito: unir saúde bucal, estética facial e medicina em um só lugar.",
+  "history.founder.eyebrow": "O fundador",
+  "history.founder.title": "Conheça quem iniciou essa história.",
+  "history.founder.p1":
+    "Dr. Jorge Thebit abriu as portas da clínica há mais de 35 anos com uma convicção simples: tratar pessoas, não apenas dentes. Construiu uma clientela fiel à base de técnica minuciosa, honestidade no diagnóstico e presença constante.",
+  "history.founder.p2":
+    "Esse legado se traduziu em método — e hoje segue vivo na conduta de toda a equipe, sob a continuidade do seu filho, Dr. Daniel Thebit.",
+  "history.founder.list1": "Fundação da clínica e formação da primeira equipe",
+  "history.founder.list2": "Cultura de diagnóstico honesto e acompanhamento de longo prazo",
+  "history.founder.list3": "Base de pacientes que atravessa gerações",
   "clinic.comfort": "Um espaço pensado para o seu conforto.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "E-mail",
@@ -369,6 +378,15 @@ const en: Dict = {
   "timeline.2020.desc": "Complete renovation: vertical garden facade, spacious reception and rooms with updated technology.",
   "timeline.today.title": "New management · Dr. Daniel Thebit",
   "timeline.today.desc": "The second generation expands the purpose: uniting oral health, facial aesthetics and medicine in one place.",
+  "history.founder.eyebrow": "The Founder",
+  "history.founder.title": "Meet who started this story.",
+  "history.founder.p1":
+    "Dr. Jorge Thebit opened the clinic's doors over 35 years ago with a simple conviction: to treat people, not just teeth. He built a loyal clientele based on meticulous technique, honesty in diagnosis and constant presence.",
+  "history.founder.p2":
+    "This legacy translated into method — and today remains alive in the conduct of the entire team, under the continuity of his son, Dr. Daniel Thebit.",
+  "history.founder.list1": "Foundation of the clinic and formation of the first team",
+  "history.founder.list2": "Culture of honest diagnosis and long-term follow-up",
+  "history.founder.list3": "Patient base that spans generations",
   "clinic.comfort": "A space designed for your comfort.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "Email",
@@ -564,6 +582,15 @@ const es: Dict = {
   "timeline.2020.desc": "Reforma completa: fachada con jardín vertical, recepción amplia y consultorios con tecnología actualizada.",
   "timeline.today.title": "Nueva gestión · Dr. Daniel Thebit",
   "timeline.today.desc": "La segunda generación amplía el propósito: unir salud bucal, estética facial y medicina en un solo lugar.",
+  "history.founder.eyebrow": "El fundador",
+  "history.founder.title": "Conozca a quien inició esta historia.",
+  "history.founder.p1":
+    "El Dr. Jorge Thebit abrió las puertas de la clínica hace más de 35 años con una convicción sencilla: tratar a las personas, no solo a los dientes. Construyó una clientela fiel a base de técnica minuciosa, honestidad en el diagnóstico y presencia constante.",
+  "history.founder.p2":
+    "Este legado se tradujo en método — y hoy sigue vivo en la conducta de todo el equipo, bajo la continuidad de su hijo, el Dr. Daniel Thebit.",
+  "history.founder.list1": "Fundación de la clínica y formación del primer equipo",
+  "history.founder.list2": "Cultura de diagnóstico honesto y seguimiento a largo plazo",
+  "history.founder.list3": "Base de pacientes que atraviesa generaciones",
   "clinic.comfort": "Un espacio pensado para su comodidad.",
   "contact.whatsapp": "WhatsApp",
   "contact.email": "Email",
