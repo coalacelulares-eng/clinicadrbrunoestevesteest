@@ -220,33 +220,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Tratamentos */}
-      <section className="px-6 py-24" id="especialidades">
-        <div className="mx-auto max-w-6xl">
-          <div data-reveal className="max-w-2xl">
-            <span className="eyebrow">{t("spec.eyebrow")}</span>
-            <h2 className="title-display mt-4 text-3xl md:text-5xl">{t("spec.title")}</h2>
-            <p className="section-lede-sm mt-4">{t("spec.text")}</p>
-          </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {specialties.map((s) => (
-              <button
-                key={s.title}
-                type="button"
-                data-reveal
-                onClick={() => setArea(t(s.title))}
-                className="vellum vellum-hover rounded-3xl p-7 text-left"
-              >
-                <span className="grid size-12 place-items-center rounded-full border border-gold/40">
-                  <s.icon className="size-5 text-gold" />
-                </span>
-                <h3 className="title-display mt-6 text-xl">{t(s.title)}</h3>
-                <p className="section-lede-sm mt-2">{t(s.desc)}</p>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Differentials />
 
