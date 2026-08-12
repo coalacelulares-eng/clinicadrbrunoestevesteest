@@ -112,11 +112,11 @@ const pt: Dict = {
   "exp.i4": "Seg a sex, 09h às 20h · Sáb, 09h às 12h",
 
   "ba.eyebrow": "Antes & depois",
-  "ba.title": "Sorrisos que respeitam a naturalidade.",
+  "ba.title": "Transformações reais",
   "ba.before": "Antes",
   "ba.after": "Depois",
   "ba.disclaimer":
-    "Imagens ilustrativas e autorizadas. Cada caso é único e os resultados variam conforme anatomia e indicação clínica.",
+    "Imagens de casos clínicos reais realizados em nossa unidade. Cada sorriso é único e os resultados dependem de avaliação individual.",
 
   "test.eyebrow": "Depoimentos",
   "test.title": "Quem confiou o próprio sorriso.",
@@ -221,6 +221,8 @@ const pt: Dict = {
     "Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário.",
   "contact.address": "Endereço",
   "history.title": "Uma história construída há mais de 35 anos.",
+  "success.case5.q": "Excelente atendimento e profissionais de altíssimo nível. Recomendo a todos.",
+  "success.case6.q": "O melhor investimento que fiz na minha saúde e autoestima. Gratidão à equipe.",
   "timeline.1989.title": "O começo com Dr. Jorge Thebit",
   "timeline.1989.desc": "Um consultório em Belo Horizonte fundado sobre técnica apurada e relação de confiança com cada paciente.",
   "timeline.2005.title": "Uma clínica que cresce",
@@ -563,8 +565,10 @@ const en: Dict = {
     "More than 35 years in Belo Horizonte. Science, technology and an integrative approach that aligns oral health, facial aesthetics and wellbeing.",
   "hero.scroll": "Scroll",
 
-  "about.eyebrow": "About Thebit",
-  "about.title": "35 years of history, a renewed clinic.",
+  "ba.eyebrow": "Before & after",
+  "ba.title": "Real transformations",
+  "ba.disclaimer":
+    "Images of real clinical cases performed in our unit. Each smile is unique and results depend on individual evaluation.",
   "about.text":
     "Founded by Dr. Jorge Thebit over 35 years ago and now led by his son, Dr. Daniel Thebit, Thebit Saúde e Estética unites the whole team around one purpose: to go beyond treating teeth. We look at the whole patient and align health with aesthetics.",
   "about.c1": "Specialists in restorative and advanced dental aesthetics",
