@@ -285,6 +285,10 @@ function Home() {
         <div className="mx-auto max-w-6xl relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-reveal="fade-right">
+              <h2 className="title-display mb-8 text-2xl md:text-3xl lg:hidden">
+                {t("team.manifesto.title")}
+              </h2>
+
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-gold/50 to-gold/20 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative overflow-hidden rounded-[2rem] border border-gold/30 aspect-video lg:aspect-[4/3]">
