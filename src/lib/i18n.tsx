@@ -858,6 +858,7 @@ const en: Dict = {
     "Medical specialist in skin management, advanced injectable treatments and natural rejuvenation.",
   "cta.book.person": "Book now",
   "wa.team.book": "Hello! I would like to schedule with {name}.",
+  "team.manifesto.eyebrow": "Our Purpose",
   "team.manifesto.title": "Behind each patient cared for here, there is an entire team working with care, dedication and purpose!✨",
   "team.manifesto.p1": "From reception to biosafety, from organization to clinical care, every detail matters. Because we believe that care begins long before each appointment.",
   "team.manifesto.p2": "We are a team united by the same commitment: to welcome, care for and transform each patient's experience with professionalism, respect and love for what we do.",
