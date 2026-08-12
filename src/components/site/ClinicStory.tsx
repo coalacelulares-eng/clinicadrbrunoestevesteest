@@ -6,7 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
 import drDaniel from "@/assets/dr-daniel-thebit.jpg.asset.json";
-import reception from "@/assets/clinic-reception.webp.asset.json";
+import fachadaNoturna from "@/assets/clinica-fachada-noturna.webp.asset.json";
 
 const getTimeline = (t: (k: string) => string) => [
   {
@@ -81,8 +81,8 @@ export function ClinicStory() {
           <div className="mt-24 grid items-center gap-12 lg:grid-cols-2">
             <div data-reveal="left" className="img-lux border border-gold/25 overflow-hidden">
               <img
-                src={reception.url}
-                alt="Recepção luxuosa da Clínica Thebit"
+                src={fachadaNoturna.url}
+                alt="Fachada noturna iluminada da Clínica Thebit"
                 loading="lazy"
                 width={1200}
                 height={900}
