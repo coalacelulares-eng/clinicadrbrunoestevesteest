@@ -857,6 +857,11 @@ const en: Dict = {
     "Medical specialist in skin management, advanced injectable treatments and natural rejuvenation.",
   "cta.book.person": "Book now",
   "wa.team.book": "Hello! I would like to schedule with {name}.",
+  "team.manifesto.title": "Behind each patient cared for here, there is an entire team working with care, dedication and purpose!✨",
+  "team.manifesto.p1": "From reception to biosafety, from organization to clinical care, every detail matters. Because we believe that care begins long before each appointment.",
+  "team.manifesto.p2": "We are a team united by the same commitment: to welcome, care for and transform each patient's experience with professionalism, respect and love for what we do.",
+  "team.manifesto.p3": "Here, you are not just another appointment. You are part of our mission ✨",
+
 
   "tech_page.eyebrow": "Technology",
   "tech_page.title": "Science that sustains the result.",
@@ -1369,6 +1374,11 @@ const es: Dict = {
     "Médica especialista en gestión de la piel, tratamientos inyectables avanzados y rejuvenecimiento natural.",
   "cta.book.person": "Agendar",
   "wa.team.book": "¡Hola! Me gustaría agendar con {name}.",
+  "team.manifesto.title": "¡Detrás de cada paciente atendido aquí, hay un equipo entero trabajando con cariño, dedicación y propósito!✨",
+  "team.manifesto.p1": "Desde la recepción hasta la bioseguridad, desde la organización hasta la atención clínica, cada detalle importa. Porque creemos que el cuidado comienza mucho antes de cada cita.",
+  "team.manifesto.p2": "Somos un equipo unido por el mismo compromiso: acoger, cuidar y transformar la experiencia de cada paciente con profesionalismo, respeto y amor por lo que hacemos.",
+  "team.manifesto.p3": "Aquí, no eres solo una cita más. Eres parte de nuestra misión ✨",
+
 
   "tech_page.eyebrow": "Tecnología",
   "tech_page.title": "Ciencia que sustenta el resultado.",
