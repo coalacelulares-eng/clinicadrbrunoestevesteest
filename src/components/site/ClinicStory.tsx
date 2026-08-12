@@ -167,7 +167,7 @@ export function ClinicStory() {
                 loading="lazy"
                 width={816}
                 height={1020}
-                className="h-[28rem] w-full object-cover md:h-[38rem]"
+                className="h-[28rem] w-full object-contain bg-graphite md:h-[38rem]"
               />
             </div>
           </div>
