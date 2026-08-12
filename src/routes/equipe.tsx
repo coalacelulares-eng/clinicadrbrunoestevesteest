@@ -33,15 +33,12 @@ function Equipe() {
       eyebrow={t("team.eyebrow")}
       title={
         <>
-          {t("team.title").split("trabalham juntos")[0]}
+          {t("team.title").replace(/trabalham juntos|working together|trabajan juntos/gi, "").trim()}{" "}
           <span className="gold-text">
-            {t("team.title").includes("trabalham juntos") ? "trabalham juntos" : 
-             t("team.title").includes("working together") ? "working together" : 
+            {t("team.title").toLowerCase().includes("trabalham juntos") ? "trabalham juntos" : 
+             t("team.title").toLowerCase().includes("working together") ? "working together" : 
              "trabajan juntos"}
           </span>
-          {t("team.title").split("trabalham juntos").length > 1 ? t("team.title").split("trabalham juntos")[1] : 
-           t("team.title").split("working together").length > 1 ? t("team.title").split("working together")[1] : 
-           t("team.title").split("trabajan juntos").length > 1 ? t("team.title").split("trabajan juntos")[1] : ""}
         </>
       }
       intro={t("team.intro")}
