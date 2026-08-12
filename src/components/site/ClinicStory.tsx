@@ -1,4 +1,4 @@
-import { Award, Building2, GraduationCap, MapPin, Sparkles } from "lucide-react";
+import { Award, Building2, GraduationCap, Instagram, MapPin, Sparkles } from "lucide-react";
 
 import { Spotlight } from "./Spotlight";
 import { CLINIC, whatsappLink } from "@/lib/site";
@@ -155,8 +155,9 @@ export function ClinicStory() {
                   href="https://www.instagram.com/dr.danielthebit/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="micro-label text-gold"
+                  className="micro-label flex items-center gap-2 text-gold transition-opacity hover:opacity-80"
                 >
+                  <Instagram size={14} />
                   Instagram
                 </a>
               </div>
