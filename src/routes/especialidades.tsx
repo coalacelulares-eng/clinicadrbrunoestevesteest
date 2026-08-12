@@ -35,21 +35,20 @@ export const Route = createFileRoute("/especialidades")({
 function Especialidades() {
   const { t } = useI18n();
   const title = t("spec_page.title");
-  const highlight = title.includes("um só lugar")
+  const highlight = title.toLowerCase().includes("um só lugar")
     ? "um só lugar"
-    : title.includes("one place")
+    : title.toLowerCase().includes("one place")
       ? "one place"
       : "un solo lugar";
-  const [before, after = ""] = title.split(highlight);
+  const baseTitle = title.replace(new RegExp(highlight, "gi"), "").trim();
 
   return (
     <PageShell
       eyebrow={t("spec_page.eyebrow")}
       title={
         <>
-          {before}
+          {baseTitle}{" "}
           <span className="gold-text">{highlight}</span>
-          {after}
         </>
       }
       intro={t("spec_page.intro")}

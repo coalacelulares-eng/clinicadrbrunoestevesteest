@@ -43,21 +43,10 @@ function Tecnologias() {
       eyebrow={t("tech_page.eyebrow")}
       title={
         <>
-          {t("tech_page.title").includes("resultado") ? (
-            <>
-              {t("tech_page.title").split("resultado")[0]}
-              <span className="gold-text">resultado</span>
-              {t("tech_page.title").split("resultado")[1]}
-            </>
-          ) : t("tech_page.title").includes("result") ? (
-            <>
-              {t("tech_page.title").split("result")[0]}
-              <span className="gold-text">result</span>
-              {t("tech_page.title").split("result")[1]}
-            </>
-          ) : (
-            t("tech_page.title")
-          )}
+          {t("tech_page.title").replace(/resultado|result|resultado/gi, "").trim()}{" "}
+          <span className="gold-text">
+            {t("tech_page.title").toLowerCase().includes("resultado") ? "resultado" : "result"}
+          </span>
         </>
       }
       intro={t("tech_page.intro")}
