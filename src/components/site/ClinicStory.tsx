@@ -5,6 +5,7 @@ import { CLINIC, whatsappLink } from "@/lib/site";
 import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
+import drDaniel from "@/assets/dr-daniel-thebit.jpg.asset.json";
 
 const getTimeline = (t: (k: string) => string) => [
   {
@@ -161,12 +162,12 @@ export function ClinicStory() {
             </div>
             <div data-reveal="right" className="img-lux border border-gold/25">
               <img
-                src={lounge}
-                alt={t("clinic.comfort")}
+                src={drDaniel.url}
+                alt="Dr. Daniel Thebit - CEO da Thebit Saúde e Estética"
                 loading="lazy"
-                width={652}
+                width={816}
                 height={1020}
-                className="h-[26rem] w-full object-cover md:h-[34rem]"
+                className="h-[28rem] w-full object-cover md:h-[38rem]"
               />
             </div>
           </div>
