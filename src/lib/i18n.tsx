@@ -656,11 +656,11 @@ const en: Dict = {
   "exp.i4": "Mon–Fri 9am–8pm · Sat 9am–12pm",
 
   "ba.eyebrow": "Before & after",
-  "ba.title": "Smiles that respect what is natural.",
+  "ba.title": "Real transformations",
   "ba.before": "Before",
   "ba.after": "After",
   "ba.disclaimer":
-    "Illustrative, authorized images. Every case is unique and results vary with anatomy and clinical indication.",
+    "Images of real clinical cases performed in our unit. Each smile is unique and results depend on individual evaluation.",
 
   "test.eyebrow": "Testimonials",
   "test.title": "Those who trusted their smile to us.",
