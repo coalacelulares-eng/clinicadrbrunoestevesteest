@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 
 import logoThebit from "@/assets/logo-thebit.webp";
 import { useI18n } from "@/lib/i18n";
@@ -23,6 +24,15 @@ export function Footer() {
               {CLINIC.specialty} · {CLINIC.crm}
             </p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed opacity-70">{CLINIC.hours}</p>
+            <a 
+              href={CLINIC.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center gap-2 text-sm text-gold transition-all hover:scale-105 hover:opacity-80"
+            >
+              <Instagram size={18} />
+              <span className="font-semibold uppercase tracking-wider">Instagram</span>
+            </a>
           </div>
 
           <div className="space-y-2">
