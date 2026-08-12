@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 
 import { PageShell } from "@/components/site/PageShell";
 import { TEAM, whatsappLink } from "@/lib/site";
@@ -63,8 +64,9 @@ function Equipe() {
                   href={p.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-gold"
+                  className="flex items-center gap-2 font-grotesk text-[0.6rem] uppercase tracking-[0.24em] text-gold transition-opacity hover:opacity-80"
                 >
+                  <Instagram size={12} />
                   Instagram
                 </a>
               </div>
