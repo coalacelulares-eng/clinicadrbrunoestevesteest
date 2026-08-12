@@ -278,7 +278,7 @@ function Home() {
         </div>
       </section>
 
-      <BeforeAfterShowcase />
+      
 
       <SuccessCases />
 
