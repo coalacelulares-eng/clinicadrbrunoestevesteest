@@ -43,9 +43,9 @@ function Tecnologias() {
       eyebrow={t("tech_page.eyebrow")}
       title={
         <>
-          {t("tech_page.title").replace(/resultado|result|resultado/gi, "").trim()}{" "}
+          {t("tech_page.title").replace(/resultado|result/gi, "").replace(/\.$/, "").trim()}{" "}
           <span className="gold-text">
-            {t("tech_page.title").toLowerCase().includes("resultado") ? "resultado" : "result"}
+            {t("tech_page.title").toLowerCase().includes("resultado") ? "resultado." : "result."}
           </span>
         </>
       }
