@@ -33,6 +33,7 @@ import recepcao from "@/assets/clinica-3.webp";
 import lounge from "@/assets/clinica-4.webp";
 import estar from "@/assets/clinica-1.webp";
 import clinicaVideo from "@/assets/clinicathebit.mp4.asset.json";
+import teamGroupAsset from "@/assets/team-group.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -288,7 +289,7 @@ function Home() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-gold/50 to-gold/20 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative overflow-hidden rounded-[2rem] border border-gold/30 aspect-video lg:aspect-[4/3]">
                   <img
-                    src={(await import("@/assets/team-group.jpg.asset.json")).default.url}
+                    src={teamGroupAsset.url}
                     alt="Equipe Thebit Saúde e Estética"
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
