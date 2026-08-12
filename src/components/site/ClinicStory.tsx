@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import fachada from "@/assets/clinica-2.webp";
 import lounge from "@/assets/clinica-4.webp";
 import drDaniel from "@/assets/dr-daniel-thebit.jpg.asset.json";
+import reception from "@/assets/clinic-reception.webp.asset.json";
 
 const getTimeline = (t: (k: string) => string) => [
   {
@@ -78,14 +79,14 @@ export function ClinicStory() {
 
           {/* Fundador */}
           <div className="mt-24 grid items-center gap-12 lg:grid-cols-2">
-            <div data-reveal="left" className="img-lux border border-gold/25">
+            <div data-reveal="left" className="img-lux border border-gold/25 overflow-hidden">
               <img
-                src={fachada}
-                alt="Fachada histórica da Clínica Thebit em Belo Horizonte"
+                src={reception.url}
+                alt="Recepção luxuosa da Clínica Thebit"
                 loading="lazy"
-                width={1280}
-                height={854}
-                className="h-[24rem] w-full object-cover md:h-[30rem]"
+                width={1200}
+                height={900}
+                className="h-[24rem] w-full object-cover md:h-[30rem] transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div data-reveal="right">
