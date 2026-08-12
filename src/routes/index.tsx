@@ -285,8 +285,8 @@ function Home() {
         <div className="mx-auto max-w-6xl relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-reveal="fade-right">
-              <h2 className="title-display mb-8 text-2xl md:text-3xl lg:hidden">
-                {t("team.manifesto.title")}
+              <h2 className="title-display mb-8 text-2xl md:text-3xl lg:hidden text-gold">
+                {t("team.manifesto.eyebrow")}
               </h2>
 
               <div className="relative group">
