@@ -565,10 +565,8 @@ const en: Dict = {
     "More than 35 years in Belo Horizonte. Science, technology and an integrative approach that aligns oral health, facial aesthetics and wellbeing.",
   "hero.scroll": "Scroll",
 
-  "ba.eyebrow": "Before & after",
-  "ba.title": "Real transformations",
-  "ba.disclaimer":
-    "Images of real clinical cases performed in our unit. Each smile is unique and results depend on individual evaluation.",
+  "about.eyebrow": "About Thebit",
+  "about.title": "35 years of history, a renewed clinic.",
   "about.text":
     "Founded by Dr. Jorge Thebit over 35 years ago and now led by his son, Dr. Daniel Thebit, Thebit Saúde e Estética unites the whole team around one purpose: to go beyond treating teeth. We look at the whole patient and align health with aesthetics.",
   "about.c1": "Specialists in restorative and advanced dental aesthetics",
