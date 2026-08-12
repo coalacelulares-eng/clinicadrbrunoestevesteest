@@ -1,54 +1,57 @@
-import { Quote, Star } from "lucide-react";
-
-import beforeAfter from "@/assets/sorriso-antes-depois.jpg";
-import clinica1 from "@/assets/clinica-1.webp";
-import clinica3 from "@/assets/clinica-3.webp";
-import clinica4 from "@/assets/clinica-4.webp";
-import { whatsappLink } from "@/lib/site";
+import { Star, Quote } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { whatsappLink } from "@/lib/site";
 
-const CASES_IDS = ["case1", "case2", "case3", "case4"];
-const IMAGES: Record<string, string> = {
-  case1: beforeAfter,
-  case2: clinica4,
-  case3: clinica1,
-  case4: clinica3,
-};
+// Import asset pointers
+import diastemaAsset from "@/assets/before-after/diastema-resina.jpg.asset.json";
+import resinaDesignAsset from "@/assets/before-after/resina-design.jpg.asset.json";
+import retratamentoAsset from "@/assets/before-after/retratamento.jpg.asset.json";
+import traumaAsset from "@/assets/before-after/trauma-restauracao.jpg.asset.json";
+import facetasAsset from "@/assets/before-after/facetas-resina.jpg.asset.json";
+import saudeAsset from "@/assets/before-after/saude-reabilitacao.jpg.asset.json";
+
+const CASES = [
+  { id: "case1", img: diastemaAsset.url },
+  { id: "case2", img: resinaDesignAsset.url },
+  { id: "case3", img: retratamentoAsset.url },
+  { id: "case4", img: traumaAsset.url },
+  { id: "case5", img: facetasAsset.url },
+  { id: "case6", img: saudeAsset.url },
+];
 
 export function SuccessCases() {
   const { t } = useI18n();
-  const row = [...CASES_IDS, ...CASES_IDS];
+  // Double the cases for the infinite marquee effect
+  const row = [...CASES, ...CASES];
 
   return (
     <section className="overflow-hidden py-24" id="casos">
-      <div className="mx-auto max-w-6xl px-6">
-        <div data-reveal className="max-w-2xl">
-          <span className="eyebrow">{t("success.eyebrow")}</span>
+      <div className="mx-auto max-w-6xl px-6 text-center">
+        <div data-reveal className="mx-auto max-w-2xl">
+          <span className="eyebrow">{t("ba.eyebrow")}</span>
           <h2 className="title-display mt-4 text-3xl md:text-5xl">
-            {t("success.title")}
+            {t("ba.title")}
           </h2>
           <p className="section-lede-sm mt-4">
-            {t("success.disclaimer")}
+            {t("ba.disclaimer")}
           </p>
         </div>
       </div>
 
       <div className="marquee-mask mt-12">
-        <div className="animate-marquee animate-marquee-slow gap-5">
-          {row.map((id, i) => (
+        <div className="animate-marquee animate-marquee-slow flex gap-5">
+          {row.map((item, i) => (
             <article
-              key={`${id}-${i}`}
+              key={`${item.id}-${i}`}
               className="tilt-card vellum relative mr-5 w-[19rem] shrink-0 overflow-hidden rounded-[2rem] p-0 sm:w-[23rem]"
             >
               <div>
-                <div className="img-lux rounded-none">
+                <div className="img-lux rounded-none h-72 sm:h-80 overflow-hidden">
                   <img
-                    src={IMAGES[id]}
-                    alt={`Caso de ${t(`success.${id}.t`)} na Clínica Thebit`}
+                    src={item.img}
+                    alt={`Caso clínico ${item.id} na Clínica Thebit`}
                     loading="lazy"
-                    width={900}
-                    height={600}
-                    className="h-56 w-full object-cover"
+                    className="size-full object-cover transition-transform duration-700 hover:scale-110"
                   />
                 </div>
                 <div className="p-7">
@@ -57,12 +60,14 @@ export function SuccessCases() {
                       <Star key={s} className="size-3.5 fill-current" />
                     ))}
                   </div>
-                  <p className="micro-label mt-4 text-gold">{t(`success.${id}.t`)}</p>
-                  <Quote className="mt-4 size-4 text-gold" />
-                  <blockquote className="mt-3 font-display text-lg leading-snug text-foreground">
-                    {t(`success.${id}.q`)}
+                  <Quote className="mt-4 size-4 text-gold opacity-50" />
+                  <blockquote className="mt-2 font-display text-lg leading-snug text-foreground/90 italic">
+                    {t(`success.${item.id}.q`) || t("test.q1")}
                   </blockquote>
-                  <p className="mt-4 text-xs text-text-soft">{t(`success.${id}.a`)}</p>
+                  <div className="mt-4 h-px w-8 bg-gold/30" />
+                  <p className="mt-4 text-[0.65rem] uppercase tracking-widest text-text-soft">
+                    {t(`success.${item.id}.a`) || t("success.case1.a")}
+                  </p>
                 </div>
               </div>
             </article>

@@ -112,11 +112,11 @@ const pt: Dict = {
   "exp.i4": "Seg a sex, 09h às 20h · Sáb, 09h às 12h",
 
   "ba.eyebrow": "Antes & depois",
-  "ba.title": "Sorrisos que respeitam a naturalidade.",
+  "ba.title": "Transformações reais",
   "ba.before": "Antes",
   "ba.after": "Depois",
   "ba.disclaimer":
-    "Imagens ilustrativas e autorizadas. Cada caso é único e os resultados variam conforme anatomia e indicação clínica.",
+    "Imagens de casos clínicos reais realizados em nossa unidade. Cada sorriso é único e os resultados dependem de avaliação individual.",
 
   "test.eyebrow": "Depoimentos",
   "test.title": "Quem confiou o próprio sorriso.",
@@ -221,6 +221,8 @@ const pt: Dict = {
     "Nossa recepção responde pelo WhatsApp e ajuda você a escolher o melhor horário.",
   "contact.address": "Endereço",
   "history.title": "Uma história construída há mais de 35 anos.",
+  "success.case5.q": "Excelente atendimento e profissionais de altíssimo nível. Recomendo a todos.",
+  "success.case6.q": "O melhor investimento que fiz na minha saúde e autoestima. Gratidão à equipe.",
   "timeline.1989.title": "O começo com Dr. Jorge Thebit",
   "timeline.1989.desc": "Um consultório em Belo Horizonte fundado sobre técnica apurada e relação de confiança com cada paciente.",
   "timeline.2005.title": "Uma clínica que cresce",
@@ -652,11 +654,11 @@ const en: Dict = {
   "exp.i4": "Mon–Fri 9am–8pm · Sat 9am–12pm",
 
   "ba.eyebrow": "Before & after",
-  "ba.title": "Smiles that respect what is natural.",
+  "ba.title": "Real transformations",
   "ba.before": "Before",
   "ba.after": "After",
   "ba.disclaimer":
-    "Illustrative, authorized images. Every case is unique and results vary with anatomy and clinical indication.",
+    "Images of real clinical cases performed in our unit. Each smile is unique and results depend on individual evaluation.",
 
   "test.eyebrow": "Testimonials",
   "test.title": "Those who trusted their smile to us.",
@@ -1163,11 +1165,11 @@ const es: Dict = {
   "exp.i4": "Lun a vie 09–20h · Sáb 09–12h",
 
   "ba.eyebrow": "Antes y después",
-  "ba.title": "Sonrisas que respetan lo natural.",
+  "ba.title": "Transformaciones reales",
   "ba.before": "Antes",
   "ba.after": "Después",
   "ba.disclaimer":
-    "Imágenes ilustrativas y autorizadas. Cada caso es único y los resultados varían según anatomía e indicación clínica.",
+    "Imágenes de casos clínicos reales realizados en nuestra unidad. Cada sonrisa es única y los resultados dependen de evaluación individual.",
 
   "test.eyebrow": "Testimonios",
   "test.title": "Quienes confiaron su sonrisa.",
