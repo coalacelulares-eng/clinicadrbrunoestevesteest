@@ -1376,6 +1376,7 @@ const es: Dict = {
     "Médica especialista en gestión de la piel, tratamientos inyectables avanzados y rejuvenecimiento natural.",
   "cta.book.person": "Agendar",
   "wa.team.book": "¡Hola! Me gustaría agendar con {name}.",
+  "team.manifesto.eyebrow": "Nuestro Propósito",
   "team.manifesto.title": "¡Detrás de cada paciente atendido aquí, hay un equipo entero trabajando con cariño, dedicación y propósito!✨",
   "team.manifesto.p1": "Desde la recepción hasta la bioseguridad, desde la organización hasta la atención clínica, cada detalle importa. Porque creemos que el cuidado comienza mucho antes de cada cita.",
   "team.manifesto.p2": "Somos un equipo unido por el mismo compromiso: acoger, cuidar y transformar la experiencia de cada paciente con profesionalismo, respeto y amor por lo que hacemos.",
