@@ -306,7 +306,7 @@ function Home() {
             <div data-reveal="fade-left" className="space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20">
                 <HeartPulse className="size-3 text-gold fill-gold/20" />
-                <span className="font-grotesk text-[0.6rem] uppercase tracking-[0.2em] text-gold">{t("team.eyebrow")}</span>
+                <span className="font-grotesk text-[0.6rem] uppercase tracking-[0.2em] text-gold">{t("team.manifesto.eyebrow")}</span>
               </div>
               
               <h2 className="title-display text-3xl md:text-4xl leading-tight">
