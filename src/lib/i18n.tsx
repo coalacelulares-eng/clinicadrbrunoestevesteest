@@ -1165,11 +1165,11 @@ const es: Dict = {
   "exp.i4": "Lun a vie 09–20h · Sáb 09–12h",
 
   "ba.eyebrow": "Antes y después",
-  "ba.title": "Sonrisas que respetan lo natural.",
+  "ba.title": "Transformaciones reales",
   "ba.before": "Antes",
   "ba.after": "Después",
   "ba.disclaimer":
-    "Imágenes ilustrativas y autorizadas. Cada caso es único y los resultados varían según anatomía e indicación clínica.",
+    "Imágenes de casos clínicos reales realizados en nuestra unidad. Cada sonrisa es única y los resultados dependen de evaluación individual.",
 
   "test.eyebrow": "Testimonios",
   "test.title": "Quienes confiaron su sonrisa.",
