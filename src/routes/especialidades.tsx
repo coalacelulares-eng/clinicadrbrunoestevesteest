@@ -47,8 +47,8 @@ function Especialidades() {
       eyebrow={t("spec_page.eyebrow")}
       title={
         <>
-          {baseTitle}{" "}
-          <span className="gold-text">{highlight}</span>
+          {baseTitle.replace(/\.$/, "")}{" "}
+          <span className="gold-text">{highlight}.</span>
         </>
       }
       intro={t("spec_page.intro")}
