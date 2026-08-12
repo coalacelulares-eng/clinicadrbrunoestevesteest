@@ -314,6 +314,11 @@ const pt: Dict = {
     "Médica especialista em gerenciamento de pele, tratamentos injetáveis avançados e rejuvenescimento natural.",
   "cta.book.person": "Agendar",
   "wa.team.book": "Olá! Gostaria de agendar com {name}.",
+  "team.manifesto.title": "Por trás de cada paciente cuidado aqui, existe um time inteiro trabalhando com carinho, dedicação e propósito!✨",
+  "team.manifesto.p1": "Da recepção à biossegurança, da organização ao atendimento clínico, cada detalhe importa. Porque acreditamos que o cuidado começa muito antes de cada agendamento.",
+  "team.manifesto.p2": "Somos uma equipe unida pelo mesmo compromisso: acolher, cuidar e transformar a experiência de cada paciente com profissionalismo, respeito e amor pelo que fazemos.",
+  "team.manifesto.p3": "Aqui, você não é só mais um atendimento. Você é parte da nossa missão ✨",
+
 
   "tech_page.eyebrow": "Tecnologia",
   "tech_page.title": "Ciência que sustenta o resultado.",
