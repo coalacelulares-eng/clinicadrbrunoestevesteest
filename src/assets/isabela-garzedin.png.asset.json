@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "a5f70d87-dad0-4736-b231-4137b3495eb1",
-  "project_id": "f0efa455-21ca-474c-bc05-b08bcb0c30ab",
-  "url": "/__l5e/assets-v1/a5f70d87-dad0-4736-b231-4137b3495eb1/isabela-garzedin.png",
-  "r2_key": "a/v1/f0efa455-21ca-474c-bc05-b08bcb0c30ab/a5f70d87-dad0-4736-b231-4137b3495eb1/isabela-garzedin.png",
-  "original_filename": "isabela-garzedin.png",
-  "size": 2715875,
   "content_type": "image/png",
-  "created_at": "2026-08-09T15:00:30Z"
+  "created_at": "2026-08-09T15:00:30Z",
+  "original_filename": "isabela-garzedin.png",
+  "project_id": "860818d4-12a3-4adc-a07e-e7a8593d22a7",
+  "r2_key": "a/v1/860818d4-12a3-4adc-a07e-e7a8593d22a7/a5f70d87-dad0-4736-b231-4137b3495eb1/isabela-garzedin.png",
+  "size": 2715875,
+  "url": "/__l5e/assets-v1/a5f70d87-dad0-4736-b231-4137b3495eb1/isabela-garzedin.png",
+  "version": 1
 }

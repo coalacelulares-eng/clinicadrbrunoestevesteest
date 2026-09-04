@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "e09d7620-970d-4bb8-848a-395d73390afe",
-  "project_id": "f0efa455-21ca-474c-bc05-b08bcb0c30ab",
-  "url": "/__l5e/assets-v1/e09d7620-970d-4bb8-848a-395d73390afe/clinica-fachada-noturna.webp",
-  "r2_key": "a/v1/f0efa455-21ca-474c-bc05-b08bcb0c30ab/e09d7620-970d-4bb8-848a-395d73390afe/clinica-fachada-noturna.webp",
-  "original_filename": "clinica-fachada-noturna.webp",
-  "size": 66388,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-12T01:15:16Z"
+  "created_at": "2026-08-12T01:15:16Z",
+  "original_filename": "clinica-fachada-noturna.webp",
+  "project_id": "860818d4-12a3-4adc-a07e-e7a8593d22a7",
+  "r2_key": "a/v1/860818d4-12a3-4adc-a07e-e7a8593d22a7/e09d7620-970d-4bb8-848a-395d73390afe/clinica-fachada-noturna.webp",
+  "size": 66388,
+  "url": "/__l5e/assets-v1/e09d7620-970d-4bb8-848a-395d73390afe/clinica-fachada-noturna.webp",
+  "version": 1
 }
